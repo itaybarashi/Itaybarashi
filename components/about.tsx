@@ -16,10 +16,7 @@ export function About() {
           className="flex justify-center"
         >
           <div className="relative h-80 w-80 overflow-hidden rounded-2xl border border-border bg-muted shadow-xl transition duration-500 hover:scale-[1.03]">
-
-            {/* Glow */}
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent opacity-40" />
-
             <img
               src="/me.jpg"
               alt="איתי ברשי - קליסטניקס"
@@ -66,13 +63,11 @@ export function About() {
             זה מי שאתה נהיה בדרך.
           </p>
 
-          {/* Location */}
           <div className="mt-6 flex items-center gap-2 text-muted-foreground">
             <MapPin className="h-4 w-4 text-primary" />
             נס ציונה
           </div>
 
-          {/* CTA */}
           <a
             href="https://wa.me/972532814545"
             target="_blank"
@@ -86,5 +81,4 @@ export function About() {
       </div>
     </section>
   )
-}
 }
