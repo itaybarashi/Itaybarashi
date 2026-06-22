@@ -6,7 +6,7 @@ import { MapPin, MessageCircle } from "lucide-react"
 export function About() {
   return (
     <section id="about" className="relative px-5 py-28">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
+      <div className="mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-2">
 
         {/* Image Gallery */}
         <motion.div
@@ -15,17 +15,20 @@ export function About() {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <div className="relative h-[400px] w-[350px]">
-            {/* תמונה ראשית */}
-            <div className="absolute top-0 right-0 h-80 w-64 overflow-hidden rounded-2xl border border-border bg-muted shadow-xl transition duration-500 hover:scale-[1.03] z-10">
+          {/* מכל הגלריה - גובה ורוחב מוגדרים כאן */}
+          <div className="relative h-[450px] w-[350px]">
+            
+            {/* התמונה הראשית (מימין) */}
+            <div className="absolute top-0 right-0 h-80 w-64 overflow-hidden rounded-2xl border-4 border-background shadow-2xl z-10 transition duration-500 hover:scale-[1.03]">
               <img
                 src="/me.png"
-                alt="איתי ברשי - קליסטניקס"
+                alt="איתי ברשי - דיוקן"
                 className="h-full w-full object-cover"
               />
             </div>
-            {/* תמונת Action */}
-            <div className="absolute bottom-0 left-0 h-48 w-48 overflow-hidden rounded-2xl border border-border bg-muted shadow-xl transition duration-500 hover:scale-[1.03] z-20">
+            
+            {/* תמונת הפעולה (משמאל למטה) */}
+            <div className="absolute bottom-0 left-0 h-64 w-60 overflow-hidden rounded-2xl border-4 border-background shadow-2xl z-20 transition duration-500 hover:scale-[1.03]">
               <img
                 src="/me-action.png"
                 alt="איתי ברשי - בפעולה"
@@ -49,22 +52,25 @@ export function About() {
             היי, אני איתי
           </h2>
 
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            אני מתעסק בעולם הקליסטניקס והתנועה כבר קרוב לעשור. 
-            הרבה חושבים שזה כישרון, או שהתחלתי מנקודת פתיחה גבוהה — אבל האמת היא שהתחלתי מאפס.
-            <br /><br />
-            לא הצלחתי לעשות אפילו מתח אחד, ולקח לי יותר מחצי שנה להגיע לעליית הכוח הראשונה שלי. תרגילים שלאנשים לוקח כמה חודשים, לי לקחו שנים.
-            <br /><br />
-            דווקא בגלל הדרך הזאת, למדתי להבין את הגוף לעומק, להתמודד עם כשלונות, להבין את החשיבות של התמדה וחזרות, ולעבור גם פציעות — וללמוד איך להתגבר עליהן.
-            <br /><br />
-            מעבר לכוח, מצאתי דרך, קהילה, וחברים לחיים שאני איתם עד היום.
-            <br /><br />
-            <strong className="text-foreground">האני מאמין שלי הוא פשוט: זה לא רק מה שאתה משיג — זה מי שאתה נהיה בדרך.</strong>
-            <br /><br />
-            אני מאמין בללמד אתכם איך להתאמן, להבין את עקרונות האימון ולדעת לעבוד עם ההיגיון הבריא שלכם, הרבה יותר מאשר רק לחזור אחרי מה שאני עושה. המטרה היא שתבינו את ה'למה' מאחורי כל תנועה, ותהפכו למתאמנים עצמאיים וחזקים יותר.
-          </p>
+          <div className="mt-6 text-lg leading-relaxed text-muted-foreground space-y-4">
+            <p>
+              אני מתעסק בעולם הקליסטניקס והתנועה כבר קרוב לעשור. הרבה חושבים שזה כישרון, או שהתחלתי מנקודת פתיחה גבוהה — אבל האמת היא שהתחלתי מאפס.
+            </p>
+            <p>
+              לא הצלחתי לעשות אפילו מתח אחד, ולקח לי יותר מחצי שנה להגיע לעליית הכוח הראשונה שלי. תרגילים שלאנשים לוקח כמה חודשים, לי לקחו שנים.
+            </p>
+            <p>
+              דווקא בגלל הדרך הזאת, למדתי להבין את הגוף לעומק, להתמודד עם כשלונות, להבין את החשיבות של התמדה וחזרות, ולעבור גם פציעות — וללמוד איך להתגבר עליהן.
+            </p>
+            <p>
+              <strong className="text-foreground">האני מאמין שלי הוא פשוט: זה לא רק מה שאתה משיג — זה מי שאתה נהיה בדרך.</strong>
+            </p>
+            <p>
+              אני מאמין בללמד אתכם איך להתאמן, להבין את עקרונות האימון ולדעת לעבוד עם ההיגיון הבריא שלכם, הרבה יותר מאשר רק לחזור אחרי מה שאני עושה.
+            </p>
+          </div>
 
-          <div className="mt-6 flex items-center gap-2 text-muted-foreground">
+          <div className="mt-8 flex items-center gap-2 text-muted-foreground">
             <MapPin className="h-4 w-4 text-primary" />
             נס ציונה
           </div>
