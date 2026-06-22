@@ -34,41 +34,17 @@ export function About() {
           <p className="mb-4 text-sm font-semibold tracking-[0.25em] text-primary">
             מי אני
           </p>
-
           <h2 className="text-3xl font-black leading-tight sm:text-4xl">
             היי, אני איתי
           </h2>
-
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            אני מתעסק בעולם הקליסטניקס והתנועה כבר קרוב לעשור. 
-            הרבה חושבים שזה כישרון, או שהתחלתי מנקודת פתיחה גבוהה — אבל האמת היא שהתחלתי מאפס.
-            <br /><br />
-            לא הצלחתי לעשות אפילו מתח אחד, ולקח לי יותר מחצי שנה להגיע לעליית הכוח הראשונה שלי. תרגילים שלאנשים לוקח כמה חודשים, לי לקחו שנים.
-            <br /><br />
-            דווקא בגלל הדרך הזאת, למדתי להבין את הגוף לעומק, להתמודד עם כשלונות, להבין את החשיבות של התמדה וחזרות, ולעבור גם פציעות — וללמוד איך להתגבר עליהן.
-            <br /><br />
-            מעבר לכוח, מצאתי דרך, קהילה, וחברים לחיים שאני איתם עד היום.
-            <br /><br />
-            <strong className="text-foreground">האני מאמין שלי הוא פשוט: זה לא רק מה שאתה משיג — זה מי שאתה נהיה בדרך.</strong>
-            <br /><br />
-            אני מאמין בללמד אתכם איך להתאמן, להבין את עקרונות האימון ולדעת לעבוד עם ההיגיון הבריא שלכם, הרבה יותר מאשר רק לחזור אחרי מה שאני עושה. המטרה היא שתבינו את ה'למה' מאחורי כל תנועה, ותהפכו למתאמנים עצמאיים וחזקים יותר.
+            אני מתעסק בעולם הקליסטניקס והתנועה כבר קרוב לעשור.
           </p>
-
           <div className="mt-6 flex items-center gap-2 text-muted-foreground">
             <MapPin className="h-4 w-4 text-primary" />
             נס ציונה
           </div>
-
-          <a
-            href="https://wa.me/972532814545"
-            target="_blank"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-medium text-black transition hover:scale-105"
-          >
-            <MessageCircle className="h-4 w-4" />
-            דבר איתי בוואטסאפ
-          </a>
         </motion.div>
-
       </div>
     </section>
   )
