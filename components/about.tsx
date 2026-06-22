@@ -30,7 +30,7 @@ export function About() {
             {/* תמונת הפעולה (משמאל למטה) */}
             <div className="absolute bottom-0 left-0 h-64 w-60 overflow-hidden rounded-2xl border-4 border-background shadow-2xl z-20 transition duration-500 hover:scale-[1.03]">
               <img
-                src="/me-action.png"
+                src="/macoco.jpg"
                 alt="איתי ברשי - בפעולה"
                 className="h-full w-full object-cover"
               />
