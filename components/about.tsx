@@ -15,10 +15,10 @@ export function About() {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          {/* מכל הגלריה - גובה ורוחב מוגדרים כאן */}
+          {/* מכל הגלריה */}
           <div className="relative h-[450px] w-[350px]">
             
-            {/* התמונה הראשית (מימין) */}
+            {/* התמונה הראשית (מימין - me.png) */}
             <div className="absolute top-0 right-0 h-80 w-64 overflow-hidden rounded-2xl border-4 border-background shadow-2xl z-10 transition duration-500 hover:scale-[1.03]">
               <img
                 src="/me.png"
@@ -27,10 +27,10 @@ export function About() {
               />
             </div>
             
-            {/* תמונת הפעולה (משמאל למטה) */}
+            {/* תמונת הפעולה (משמאל למטה - macaco.png) */}
             <div className="absolute bottom-0 left-0 h-64 w-60 overflow-hidden rounded-2xl border-4 border-background shadow-2xl z-20 transition duration-500 hover:scale-[1.03]">
               <img
-                src="/macoco.png"
+                src="/macaco.png"
                 alt="איתי ברשי - בפעולה"
                 className="h-full w-full object-cover"
               />
