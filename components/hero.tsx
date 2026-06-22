@@ -2,8 +2,6 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { WHATSAPP_LINK } from "@/lib/site-data"
-import { WhatsappIcon } from "@/components/whatsapp-float"
 
 const easing = [0.22, 1, 0.36, 1] as const
 
@@ -19,18 +17,13 @@ const lineVariants = {
 
 export function Hero() {
   return (
-    <section
-      id="top"
-      className="relative flex min-h-[100svh] items-center overflow-hidden px-5 pt-24"
-    >
-      {/* ambient fiery glows */}
+    <section id="top" className="relative flex min-h-[100svh] items-center overflow-hidden px-5 pt-24">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute left-1/2 top-1/3 size-[42rem] -translate-x-1/2 rounded-full bg-primary/20 blur-[140px]" />
         <div className="absolute bottom-0 right-10 size-[24rem] rounded-full bg-rose-500/10 blur-[120px]" />
       </div>
 
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center text-center">
-        {/* לוגו מוגדל */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -50,25 +43,9 @@ export function Hero() {
           </div>
         </motion.div>
 
-        <motion.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="mb-5 inline-flex items-center rounded-full border border-border bg-card/50 px-4 py-1.5 text-xs font-medium tracking-wide text-muted-foreground"
-        >
-          קליסטניקס · עמידות ידיים · תנועה 
-        </motion.span>
-
         <h1 className="max-w-3xl text-balance text-5xl font-black leading-[1.05] tracking-tight sm:text-7xl">
           {["אימוני קליסטניקס", "לנוער", "בנס ציונה"].map((line, i) => (
-            <motion.span
-              key={line}
-              custom={i}
-              variants={lineVariants}
-              initial="hidden"
-              animate="show"
-              className="block"
-            >
+            <motion.span key={line} custom={i} variants={lineVariants} initial="hidden" animate="show" className="block">
               {i === 1 ? (
                 <span className="bg-gradient-to-l from-primary to-amber-300 bg-clip-text text-transparent">
                   {line}
@@ -96,15 +73,15 @@ export function Hero() {
           className="mt-9 flex flex-col items-center gap-4 sm:flex-row"
         >
           <a
-            href={WHATSAPP_LINK}
+            href="https://wa.me/972500000000" 
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex items-center gap-2.5 overflow-hidden rounded-full bg-primary px-7 py-4 text-base font-bold text-primary-foreground shadow-[0_10px_40px_-10px_rgba(245,180,80,0.6)] transition-transform hover:scale-105"
           >
-            <span className="absolute inset-0 -translate-x-full bg-white/25 transition-transform duration-500 group-hover:translate-x-0" />
-            <WhatsappIcon className="relative size-5" />
             <span className="relative">תיאום אימון היכרות בוואטסאפ</span>
           </a>
-          <a
-            href="#schedule"
-            className="rounded-full border border-border px-7 py-
+        </motion.div>
+      </div>
+    </section>
+  )
+}
