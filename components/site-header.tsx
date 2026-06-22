@@ -22,14 +22,16 @@ export function SiteHeader() {
         
         <a href="#top" className="flex items-center gap-2.5">
           
-          {/* לוגו */}
-          <Image
-            src="/gravitaslogo.png"
-            alt="לוגו GRAVITAS"
-            width={40}
-            height={40}
-            className="h-8 w-auto object-contain"
-          />
+          {/* לוגו עם עיגול פרימיום */}
+          <span className="flex items-center justify-center rounded-full bg-white/10 p-2 backdrop-blur-md border border-white/10">
+            <Image
+              src="/gravitaslogo.png"
+              alt="לוגו GRAVITAS"
+              width={40}
+              height={40}
+              className="h-8 w-auto object-contain"
+            />
+          </span>
 
           {/* טקסט */}
           <span className="text-lg font-black tracking-[0.18em] text-foreground">
