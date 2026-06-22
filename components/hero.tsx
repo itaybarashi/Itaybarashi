@@ -30,21 +30,22 @@ export function Hero() {
       </div>
 
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center text-center">
+        {/* לוגו מוגדל */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: easing }}
-          className="relative mb-6"
+          className="relative mb-8"
         >
-          <div className="absolute inset-0 -z-10 rounded-full bg-primary/25 blur-3xl" />
-          <div className="flex items-center justify-center rounded-full bg-[#f0ece6] p-5 shadow-[0_10px_40px_-10px_rgba(245,180,80,0.5)] sm:p-6">
+          <div className="absolute inset-0 -z-10 rounded-full bg-primary/20 blur-3xl" />
+          <div className="flex items-center justify-center rounded-full bg-[#f0ece6] p-8 shadow-[0_10px_40px_-10px_rgba(245,180,80,0.3)] sm:p-10">
             <Image
               src="/gravitas-transparent.png"
               alt="לוגו GRAVITAS"
-              width={150}
-              height={150}
+              width={200}
+              height={200}
               priority
-              className="size-24 object-contain sm:size-32"
+              className="size-32 object-contain sm:size-48"
             />
           </div>
         </motion.div>
@@ -83,9 +84,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.8, ease: easing }}
-          className="mt-7 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg"
+          className="mt-8 max-w-lg text-pretty text-lg leading-relaxed text-muted-foreground"
         >
-          אימוני משקל גוף לנוער שמכוונים גבוה.
+          מקום להתפתח בו דרך תנועה, לבנות כוח פיזי ומנטלי, ולפגוש חברים בדרך.
         </motion.p>
 
         <motion.div
@@ -106,27 +107,4 @@ export function Hero() {
           </a>
           <a
             href="#schedule"
-            className="rounded-full border border-border px-7 py-4 text-base font-semibold text-foreground transition-colors hover:bg-card"
-          >
-            צפו בלוז האימונים
-          </a>
-        </motion.div>
-      </div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.6, duration: 1 }}
-        className="absolute bottom-7 left-1/2 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.8, ease: "easeInOut" }}
-          className="flex h-9 w-5 items-start justify-center rounded-full border border-border p-1"
-        >
-          <span className="size-1.5 rounded-full bg-primary" />
-        </motion.div>
-      </motion.div>
-    </section>
-  )
-}
+            className="rounded-full border border-border px-7 py-
