@@ -1,0 +1,61 @@
+"use client"
+
+import { motion } from "framer-motion"
+import { Reveal } from "@/components/reveal"
+
+const stats = [
+  { value: "קהילה", label: "אנשים שלומדים, מתאמנים וגדלים יחד" },
+  { value: "הדרכה מקצועית", label: "אימון מעשי ולימוד תיאורטי לצידו" },
+  { value: "ליווי מחוץ לאימון", label: "בניית תוכניות אימון לבית והמשך התקדמות" },
+]
+
+export function Philosophy() {
+  return (
+    <section id="philosophy" className="relative px-5 py-28">
+      <div className="mx-auto max-w-4xl">
+        <Reveal>
+          <p className="mb-5 text-sm font-semibold tracking-[0.25em] text-primary">
+            הגישה
+          </p>
+        </Reveal>
+
+        <Reveal delay={0.05}>
+          <h2 className="text-balance text-3xl font-black leading-tight sm:text-5xl">
+            זה לא מה שאתה משיג,
+            <br />
+            <span className="text-muted-foreground">
+              זה מי שאתה נהיה.
+            </span>
+          </h2>
+        </Reveal>
+
+        <Reveal delay={0.1}>
+          <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
+            תנועה משפיעה באופן ישיר על איך שאנחנו תופסים את המציאות, על איך
+            שאנחנו מרגישים, חושבים וחשים. קליסטניקס היא דרך לפתח כוח מרבי במשקל
+            גוף, הבנה טובה יותר של הגוף והתפתחות מנטלית.
+          </p>
+        </Reveal>
+
+        <div className="mt-14 grid gap-6 sm:grid-cols-3">
+          {stats.map((s, i) => (
+            <motion.div
+              key={s.value}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.7, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ y: -6 }}
+              className="rounded-2xl border border-border bg-card/60 p-7"
+            >
+              <div className="text-3xl font-black text-primary">{s.value}</div>
+              <div className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {s.label}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
