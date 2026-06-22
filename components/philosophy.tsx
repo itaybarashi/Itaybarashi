@@ -8,12 +8,10 @@ export function About() {
   return (
     <section id="about" className="relative px-5 py-28 overflow-hidden">
       
-      {/* Background glow for depth */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 size-[35rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/5 blur-[120px]" />
 
       <div className="mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-2">
 
-        {/* Minimal Action Gallery - Updated to use your specific PNG files */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -21,20 +19,20 @@ export function About() {
           className="flex justify-center md:order-last"
         >
           <div className="relative h-[30rem] w-[26rem] flex items-center justify-center">
-            {/* The primary portrait image (me.png) - Top Layer */}
+            {/* שיניתי ל-me.png */}
             <div className="absolute top-0 right-0 h-80 w-64 overflow-hidden rounded-2xl border border-border bg-muted shadow-2xl z-10 transition duration-500 hover:scale-[1.03]">
               <Image
-                src="/me.png" // תמונת הפנים שלך
+                src="/me.png"
                 alt="איתי ברשי - דיוקן קליסטניקס"
                 fill
                 className="object-cover"
               />
             </div>
-            {/* The complementary action image (me-action.png) - Bottom Layer */}
+            {/* נשאר me-action.png */}
             <div className="absolute bottom-0 left-0 h-64 w-60 overflow-hidden rounded-2xl border border-border bg-muted shadow-lg z-0 transition duration-500 hover:scale-[1.03]">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 via-transparent to-transparent opacity-40 z-10" />
               <Image
-                src="/me-action.png" // התמונה שלך בתנועה
+                src="/me-action.png"
                 alt="איתי ברשי - תרגיל קליסטניקס"
                 fill
                 className="object-cover"
@@ -43,7 +41,6 @@ export function About() {
           </div>
         </motion.div>
 
-        {/* Text and CTA */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -80,6 +77,7 @@ export function About() {
           <a
             href="https://wa.me/972532814545"
             target="_blank"
+            rel="noopener noreferrer"
             className="mt-8 inline-flex items-center gap-3 rounded-full bg-primary px-7 py-4 font-semibold text-black shadow-[0_10px_40px_-10px_rgba(245,180,80,0.4)] transition hover:scale-105"
           >
             <MessageCircle className="h-5 w-5" />
