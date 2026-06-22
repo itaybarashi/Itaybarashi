@@ -8,20 +8,30 @@ export function About() {
     <section id="about" className="relative px-5 py-28">
       <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
 
-        {/* Image */}
+        {/* Image Gallery */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <div className="relative h-80 w-80 overflow-hidden rounded-2xl border border-border bg-muted shadow-xl transition duration-500 hover:scale-[1.03]">
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent opacity-40" />
-            <img
-              src="/me.png"
-              alt="איתי ברשי - קליסטניקס"
-              className="h-full w-full object-cover"
-            />
+          <div className="relative h-[400px] w-[350px]">
+            {/* תמונה ראשית */}
+            <div className="absolute top-0 right-0 h-80 w-64 overflow-hidden rounded-2xl border border-border bg-muted shadow-xl transition duration-500 hover:scale-[1.03] z-10">
+              <img
+                src="/me.png"
+                alt="איתי ברשי - קליסטניקס"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            {/* תמונת Action */}
+            <div className="absolute bottom-0 left-0 h-48 w-48 overflow-hidden rounded-2xl border border-border bg-muted shadow-xl transition duration-500 hover:scale-[1.03] z-20">
+              <img
+                src="/me-action.png"
+                alt="איתי ברשי - בפעולה"
+                className="h-full w-full object-cover"
+              />
+            </div>
           </div>
         </motion.div>
 
