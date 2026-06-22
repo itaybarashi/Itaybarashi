@@ -24,7 +24,7 @@ export function About() {
             {/* The primary portrait image (me.png) */}
             <div className="absolute top-0 right-0 h-80 w-64 overflow-hidden rounded-2xl border border-border bg-muted shadow-2xl z-10 transition duration-500 hover:scale-[1.03]">
               <Image
-                src="/me.png"
+                src="/me.jpg"
                 alt="איתי ברשי - דיוקן קליסטניקס"
                 fill
                 className="object-cover"
