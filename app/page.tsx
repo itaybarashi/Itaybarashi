@@ -12,8 +12,8 @@ export default function Page() {
     <main className="relative min-h-screen overflow-x-hidden">
       <SiteHeader />
       <Hero />
-      <About />
       <Philosophy />
+      <About />
       <Disciplines />
       <Schedule />
       <FinalCta />
