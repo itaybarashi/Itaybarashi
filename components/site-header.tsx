@@ -24,7 +24,7 @@ export function SiteHeader() {
           
           {/* לוגו */}
           <Image
-            src="/graviraslogo.png"
+            src="/gravitaslogo.png"
             alt="לוגו GRAVITAS"
             width={40}
             height={40}
