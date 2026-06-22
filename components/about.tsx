@@ -18,7 +18,7 @@ export function About() {
           <div className="relative h-80 w-80 overflow-hidden rounded-2xl border border-border bg-muted shadow-xl transition duration-500 hover:scale-[1.03]">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent opacity-40" />
             <img
-              src="/me.png"
+              src="/me.jpg"
               alt="איתי ברשי - קליסטניקס"
               className="h-full w-full object-cover"
             />
