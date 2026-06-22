@@ -15,11 +15,14 @@ export function About() {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <div className="h-80 w-80 overflow-hidden rounded-2xl border border-border bg-muted">
-            {/* שים פה תמונה שלך */}
+          <div className="relative h-80 w-80 overflow-hidden rounded-2xl border border-border bg-muted shadow-xl transition duration-500 hover:scale-[1.03]">
+
+            {/* Glow */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent opacity-40" />
+
             <img
               src="/me.jpg"
-              alt="אימון קליסטניקס"
+              alt="איתי ברשי - קליסטניקס"
               className="h-full w-full object-cover"
             />
           </div>
@@ -54,7 +57,7 @@ export function About() {
 
           {/* CTA */}
           <a
-            href="https://wa.me/YOURNUMBER"
+            href="https://wa.me/972532814545"
             target="_blank"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-medium text-black transition hover:scale-105"
           >
@@ -62,6 +65,7 @@ export function About() {
             דבר איתי בוואטסאפ
           </a>
         </motion.div>
+
       </div>
     </section>
   )
