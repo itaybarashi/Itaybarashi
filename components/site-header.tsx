@@ -19,16 +19,19 @@ export function SiteHeader() {
       className="fixed inset-x-0 top-0 z-40 border-b border-border/60 bg-background/70 backdrop-blur-xl"
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
+        
         <a href="#top" className="flex items-center gap-2.5">
-          <span className="flex items-center justify-center rounded-full bg-[#f0ece6] p-1.5">
-            <Image
-              src="/gravitas-transparent.png"
-              alt="לוגו GRAVITAS"
-              width={40}
-              height={40}
-              className="size-7 object-contain"
-            />
-          </span>
+          
+          {/* לוגו */}
+          <Image
+            src="/graviraslogo.png"
+            alt="לוגו GRAVITAS"
+            width={40}
+            height={40}
+            className="h-8 w-auto object-contain"
+          />
+
+          {/* טקסט */}
           <span className="text-lg font-black tracking-[0.18em] text-foreground">
             GRAVITAS
           </span>
