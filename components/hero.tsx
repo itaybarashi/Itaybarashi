@@ -25,23 +25,23 @@ export function Hero() {
       </div>
 
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center text-center">
-        {/* סקשן לוגו מעודכן: הגדלנו את התמונה, הקטנו את העיגול (p-2/p-3) */}
+        {/* סקשן לוגו מעודכן 2: הגדלנו מאוד את התמונה, צמצמנו מאוד את העיגול הלבן (p-1) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: easing }}
           className="relative mb-6"
         >
-          <div className="absolute inset-0 -z-10 rounded-full bg-primary/20 blur-3xl" />
-          <div className="flex items-center justify-center rounded-full bg-[#f0ece6] p-2 shadow-[0_10px_40px_-10px_rgba(245,180,80,0.3)] sm:p-3">
+          <div className="absolute inset-0 -z-10 rounded-full bg-primary/10 blur-3xl" />
+          <div className="flex items-center justify-center rounded-full bg-[#f0ece6] p-1 shadow-[0_10px_40px_-10px_rgba(245,180,80,0.3)] sm:p-1.5">
             <Image
               src="/gravitas-transparent.png"
               alt="לוגו GRAVITAS"
-              width={250} 
-              height={250} 
+              width={280} // הגדלה משמעותית
+              height={280} // הגדלה משמעותית
               priority
               // הגדלנו כאן את הגודל הסופי של התמונה עצמה
-              className="size-36 object-contain sm:size-52"
+              className="size-40 object-contain sm:size-56"
             />
           </div>
         </motion.div>
