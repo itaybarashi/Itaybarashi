@@ -2,11 +2,24 @@
 
 import { motion } from "framer-motion"
 import { Reveal } from "@/components/reveal"
+import { Users, GraduationCap, Compass } from "lucide-react"
 
 const stats = [
-  { value: "קהילה", label: "אנשים שלומדים, מתאמנים וגדלים יחד" },
-  { value: "הדרכה מקצועית", label: "אימון מעשי ולימוד תיאורטי לצידו" },
-  { value: "ליווי מחוץ לאימון", label: "בניית תוכניות אימון לבית והמשך התקדמות" },
+  {
+    value: "קהילה",
+    label: "אנשים שלומדים, מתאמנים וגדלים יחד",
+    icon: Users,
+  },
+  {
+    value: "הדרכה מקצועית",
+    label: "אימון מעשי ולימוד תיאורטי לצידו",
+    icon: GraduationCap,
+  },
+  {
+    value: "ליווי מחוץ לאימון",
+    label: "בניית תוכניות אימון לבית והמשך התקדמות",
+    icon: Compass,
+  },
 ]
 
 export function Philosophy() {
@@ -44,11 +57,25 @@ export function Philosophy() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.7, delay: i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-              whileHover={{ y: -6 }}
-              className="rounded-2xl border border-border bg-card/60 p-7"
+              transition={{
+                duration: 0.7,
+                delay: i * 0.12,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              whileHover={{ y: -8 }}
+              className="rounded-2xl border border-border bg-card/60 p-7 text-center transition-all duration-300 hover:border-primary/40 hover:shadow-lg"
             >
-              <div className="text-3xl font-black text-primary">{s.value}</div>
+              {/* Icon */}
+              <div className="mb-4 flex justify-center">
+                <s.icon className="h-10 w-10 text-primary" />
+              </div>
+
+              {/* Title */}
+              <div className="text-2xl font-black text-primary">
+                {s.value}
+              </div>
+
+              {/* Description */}
               <div className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {s.label}
               </div>
