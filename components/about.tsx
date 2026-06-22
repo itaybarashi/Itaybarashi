@@ -49,7 +49,7 @@ export function About() {
           </p>
 
           <h2 className="text-3xl font-black leading-tight sm:text-4xl">
-            היי, אני איתי
+             היי, אני איתי ברשי
           </h2>
 
           <div className="mt-6 text-lg leading-relaxed text-muted-foreground space-y-4">
