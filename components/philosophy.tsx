@@ -7,17 +7,17 @@ import { Users, GraduationCap, Compass } from "lucide-react"
 const stats = [
   {
     value: "קהילה",
-    label: "אנשים שלומדים, מתאמנים וגדלים יחד",
+    label: "קבוצה שצומחת ומתפתחת יחד",
     icon: Users,
   },
   {
     value: "הדרכה מקצועית",
-    label: "אימון מעשי ולימוד תיאורטי לצידו",
+    label: "אימון מעשי עם הבנה תיאורטית מעמיקה",
     icon: GraduationCap,
   },
   {
-    value: "ליווי מחוץ לאימון",
-    label: "בניית תוכניות אימון לבית והמשך התקדמות",
+    value: "ליווי אישי",
+    label: "ליווי אישי גם מחוץ לאימונים ובניית תוכנית אישית לבית",
     icon: Compass,
   },
 ]
@@ -36,7 +36,7 @@ export function Philosophy() {
           <h2 className="text-balance text-3xl font-black leading-tight sm:text-5xl">
             זה לא מה שאתה משיג,
             <br />
-            <span className="text-muted-foreground">
+            <span className="bg-gradient-to-l from-primary to-amber-300 bg-clip-text text-transparent">
               זה מי שאתה נהיה.
             </span>
           </h2>
@@ -44,9 +44,7 @@ export function Philosophy() {
 
         <Reveal delay={0.1}>
           <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            תנועה משפיעה באופן ישיר על איך שאנחנו תופסים את המציאות, על איך
-            שאנחנו מרגישים, חושבים וחשים. קליסטניקס היא דרך לפתח כוח מרבי במשקל
-            גוף, הבנה טובה יותר של הגוף והתפתחות מנטלית.
+            תנועה משפיעה באופן ישיר על הדרך שבה אנחנו תופסים את המציאות, על איך שאנחנו מרגישים, חושבים ופועלים. קליסטניקס היא דרך לפתח כוח מרבי במשקל גוף, במקביל לשיפור ההבנה של הגוף, פיתוח טווחי תנועה, השגת מטרות וצמיחה מנטלית.
           </p>
         </Reveal>
 
@@ -65,17 +63,14 @@ export function Philosophy() {
               whileHover={{ y: -8 }}
               className="rounded-2xl border border-border bg-card/60 p-7 text-center transition-all duration-300 hover:border-primary/40 hover:shadow-lg"
             >
-              {/* Icon */}
               <div className="mb-4 flex justify-center">
                 <s.icon className="h-10 w-10 text-primary" />
               </div>
 
-              {/* Title */}
-              <div className="text-2xl font-black text-primary">
+              <div className="text-xl font-black text-foreground">
                 {s.value}
               </div>
 
-              {/* Description */}
               <div className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {s.label}
               </div>
