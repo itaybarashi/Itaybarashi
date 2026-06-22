@@ -21,24 +21,22 @@ export function Hero() {
       
       {/* רקע עם זוהרים עדינים */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-1/4 size-[45rem] -translate-x-1/2 rounded-full bg-primary/15 blur-[150px]" />
-        <div className="absolute bottom-20 right-10 size-[30rem] rounded-full bg-rose-500/5 blur-[130px]" />
+        <div className="absolute left-1/2 top-1/4 size-[45rem] -translate-x-1/2 rounded-full bg-primary/10 blur-[150px]" />
       </div>
 
-      {/* שכבת Gradient לחיבור רך עם הסקשן הבא */}
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/80 to-transparent z-10" />
+      {/* שכבת Gradient עדינה בתחתית בלבד */}
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-0" />
 
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-center text-center">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center text-center z-10">
         
-        {/* לוגו: עיגול צמוד מאוד ותמונה גדולה */}
+        {/* לוגו: מסגרת דקה מאוד */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: easing }}
           className="relative mb-8"
         >
-          <div className="absolute inset-0 -z-10 rounded-full bg-primary/20 blur-3xl" />
-          <div className="flex items-center justify-center rounded-full bg-[#f0ece6] p-[2px] shadow-[0_10px_40px_-10px_rgba(245,180,80,0.3)] sm:p-[3px]">
+          <div className="flex items-center justify-center rounded-full bg-[#f0ece6] p-[1px] shadow-[0_10px_30px_-10px_rgba(245,180,80,0.2)]">
             <Image
               src="/gravitas-transparent.png"
               alt="לוגו GRAVITAS"
@@ -54,7 +52,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="mb-5 inline-flex items-center rounded-full border border-border bg-card/50 px-4 py-1.5 text-xs font-medium tracking-wide text-muted-foreground"
+          className="mb-5 inline-flex items-center rounded-full border border-border bg-card/30 px-4 py-1.5 text-xs font-medium tracking-wide text-muted-foreground"
         >
           קליסטניקס · עמידות ידיים · תנועה 
         </motion.span>
@@ -79,14 +77,14 @@ export function Hero() {
           transition={{ delay: 0.9, duration: 0.8, ease: easing }}
           className="mt-8 max-w-lg text-pretty text-lg leading-relaxed text-muted-foreground"
         >
-          מקום להתפתח בו דרך תנועה, לבנות כוח פיזי ומנטלי, ולפגוש חברים בדרך.
+          בית לתנועה, פיתוח יכולות פיזיות מנטליות ויצירתיות, חיבור לקהילה.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.1, duration: 0.8, ease: easing }}
-          className="mt-9 flex flex-col items-center gap-4 sm:flex-row z-20"
+          className="mt-9 flex flex-col items-center gap-4 sm:flex-row"
         >
           <a
             href="https://wa.me/972500000000" 
@@ -94,7 +92,6 @@ export function Hero() {
             rel="noopener noreferrer"
             className="group relative flex items-center gap-2.5 overflow-hidden rounded-full bg-primary px-7 py-4 text-base font-bold text-primary-foreground shadow-[0_10px_40px_-10px_rgba(245,180,80,0.6)] transition-transform hover:scale-105"
           >
-            <span className="absolute inset-0 -translate-x-full bg-white/25 transition-transform duration-500 group-hover:translate-x-0" />
             <span className="relative">תיאום אימון היכרות בוואטסאפ</span>
           </a>
           <a
@@ -105,22 +102,6 @@ export function Hero() {
           </a>
         </motion.div>
       </div>
-
-      {/* אייקון גלילה עדין */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.6, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.8, ease: "easeInOut" }}
-          className="flex h-9 w-5 items-start justify-center rounded-full border border-border p-1"
-        >
-          <span className="size-1.5 rounded-full bg-primary" />
-        </motion.div>
-      </motion.div>
     </section>
   )
 }
