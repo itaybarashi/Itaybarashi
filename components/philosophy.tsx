@@ -1,82 +1,92 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Reveal } from "@/components/reveal"
-import { Users, GraduationCap, Compass } from "lucide-react"
+import { MapPin, MessageCircle } from "lucide-react"
+import Image from "next/image"
 
-const stats = [
-  {
-    value: "קהילה",
-    label: "קבוצה שצומחת ומתפתחת יחד",
-    icon: Users,
-  },
-  {
-    value: "הדרכה מקצועית",
-    label: "אימון מעשי עם הבנה תיאורטית מעמיקה",
-    icon: GraduationCap,
-  },
-  {
-    value: "ליווי אישי",
-    label: "ליווי אישי גם מחוץ לאימונים ובניית תוכנית אישית לבית",
-    icon: Compass,
-  },
-]
-
-export function Philosophy() {
+export function About() {
   return (
-    <section id="philosophy" className="relative px-5 py-28">
-      <div className="mx-auto max-w-4xl">
-        <Reveal>
-          <p className="mb-5 text-sm font-semibold tracking-[0.25em] text-primary">
-            הגישה
-          </p>
-        </Reveal>
+    <section id="about" className="relative px-5 py-28 overflow-hidden">
+      
+      {/* Background glow for depth */}
+      <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 size-[35rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/5 blur-[120px]" />
 
-        <Reveal delay={0.05}>
-          <h2 className="text-balance text-3xl font-black leading-tight sm:text-5xl">
-            זה לא מה שאתה משיג,
-            <br />
-            <span className="bg-gradient-to-l from-primary to-amber-300 bg-clip-text text-transparent">
-              זה מי שאתה נהיה.
-            </span>
+      <div className="mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-2">
+
+        {/* Minimal Action Gallery - Updated to use your specific PNG files */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="flex justify-center md:order-last"
+        >
+          <div className="relative h-[30rem] w-[26rem] flex items-center justify-center">
+            {/* The primary portrait image (me.png) - Top Layer */}
+            <div className="absolute top-0 right-0 h-80 w-64 overflow-hidden rounded-2xl border border-border bg-muted shadow-2xl z-10 transition duration-500 hover:scale-[1.03]">
+              <Image
+                src="/me.png" // תמונת הפנים שלך
+                alt="איתי ברשי - דיוקן קליסטניקס"
+                fill
+                className="object-cover"
+              />
+            </div>
+            {/* The complementary action image (me-action.png) - Bottom Layer */}
+            <div className="absolute bottom-0 left-0 h-64 w-60 overflow-hidden rounded-2xl border border-border bg-muted shadow-lg z-0 transition duration-500 hover:scale-[1.03]">
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 via-transparent to-transparent opacity-40 z-10" />
+              <Image
+                src="/me-action.png" // התמונה שלך בתנועה
+                alt="איתי ברשי - תרגיל קליסטניקס"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Text and CTA */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+        >
+          <p className="mb-4 text-sm font-semibold tracking-[0.25em] text-primary">
+            מי אני
+          </p>
+
+          <h2 className="text-3xl font-black leading-tight sm:text-4xl">
+            היי, אני איתי
           </h2>
-        </Reveal>
 
-        <Reveal delay={0.1}>
-          <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            תנועה משפיעה באופן ישיר על הדרך שבה אנחנו תופסים את המציאות, על איך שאנחנו מרגישים, חושבים ופועלים. קליסטניקס היא דרך לפתח כוח מרבי במשקל גוף, במקביל לשיפור ההבנה של הגוף, פיתוח טווחי תנועה, השגת מטרות וצמיחה מנטלית.
+          <p className="mt-8 text-lg leading-relaxed text-muted-foreground">
+            אני מתעסק בעולם הקליסטניקס והתנועה כבר קרוב לעשור. 
+            הרבה חושבים שזה כישרון, או שהתחלתי מנקודת פתיחה גבוהה — אבל האמת היא שהתחלתי מאפס.
+            <br /><br />
+            לא הצלחתי לעשות אפילו מתח אחד, ולקח לי יותר מחצי שנה להגיע לעליית הכוח הראשונה שלי. תרגילים שלאנשים לוקח כמה חודשים, לי לקחו שנים.
+            <br /><br />
+            דווקא בגלל הדרך הזאת, למדתי להבין את הגוף לעומק, להתמודד עם כשלונות, להבין את החשיבות של התמדה וחזרות, ולעבור גם פציעות — וללמוד איך להתגבר עליהן.
+            <br /><br />
+            מעבר לכוח, מצאתי דרך, קהילה, וחברים לחיים שאני איתם עד היום.
+            <br /><br />
+            <strong className="text-foreground">האני מאמין שלי הוא פשוט: <span className="bg-gradient-to-l from-primary to-amber-300 bg-clip-text text-transparent">זה לא רק מה שאתה משיג — זה מי שאתה נהיה בדרך.</span></strong>
+            <br /><br />
+            אני מאמין בללמד אתכם איך להתאמן, להבין את עקרונות האימון ולדעת לעבוד עם ההיגיון הבריא שלכם, הרבה יותר מאשר רק לחזור אחרי מה שאני עושה. המטרה היא שתבינו את ה'למה' מאחורי כל תנועה, ותהפכו למתאמנים עצמאיים וחזקים יותר.
           </p>
-        </Reveal>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-3">
-          {stats.map((s, i) => (
-            <motion.div
-              key={s.value}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{
-                duration: 0.7,
-                delay: i * 0.12,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              whileHover={{ y: -8 }}
-              className="rounded-2xl border border-border bg-card/60 p-7 text-center transition-all duration-300 hover:border-primary/40 hover:shadow-lg"
-            >
-              <div className="mb-4 flex justify-center">
-                <s.icon className="h-10 w-10 text-primary" />
-              </div>
+          <div className="mt-10 flex items-center gap-2 text-muted-foreground">
+            <MapPin className="h-4 w-4 text-primary" />
+            נס ציונה
+          </div>
 
-              <div className="text-xl font-black text-foreground">
-                {s.value}
-              </div>
+          <a
+            href="https://wa.me/972532814545"
+            target="_blank"
+            className="mt-8 inline-flex items-center gap-3 rounded-full bg-primary px-7 py-4 font-semibold text-black shadow-[0_10px_40px_-10px_rgba(245,180,80,0.4)] transition hover:scale-105"
+          >
+            <MessageCircle className="h-5 w-5" />
+            דבר איתי בוואטסאפ
+          </a>
+        </motion.div>
 
-              <div className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {s.label}
-              </div>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   )
