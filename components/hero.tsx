@@ -55,7 +55,7 @@ export function Hero() {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="mb-5 inline-flex items-center rounded-full border border-border bg-card/50 px-4 py-1.5 text-xs font-medium tracking-wide text-muted-foreground"
         >
-          קליסטניקס · עמידות ידיים · חיבור לגוף
+          קליסטניקס · עמידות ידיים · תנועה 
         </motion.span>
 
         <h1 className="max-w-3xl text-balance text-5xl font-black leading-[1.05] tracking-tight sm:text-7xl">
