@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero"
 import { Philosophy } from "@/components/philosophy"
 import { Disciplines } from "@/components/disciplines"
 import { Schedule } from "@/components/schedule"
+import { About } from "@/components/about"
 import { FinalCta } from "@/components/final-cta"
 import { WhatsappFloat } from "@/components/whatsapp-float"
 
@@ -11,6 +12,7 @@ export default function Page() {
     <main className="relative min-h-screen overflow-x-hidden">
       <SiteHeader />
       <Hero />
+      <About />
       <Philosophy />
       <Disciplines />
       <Schedule />
