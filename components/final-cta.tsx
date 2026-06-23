@@ -36,7 +36,7 @@ export function FinalCta() {
           </span>
         </h2>
         <p className="mt-5 max-w-md text-pretty leading-relaxed text-muted-foreground">
-          חשוב לי שתגיע עם תשוקה ללמוד את הספורט ולהתפתח — ככה בונים צוות מנצח.
+          לפני שאתה מתאם איתי שיעור, חשוב לי שתגיע עם תשוקה ללמוד את הספורט להתפתח ולהכשל בדרך — ככה נבנה צוות מנצח.
         </p>
 
         <motion.a
