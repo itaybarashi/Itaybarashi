@@ -11,7 +11,7 @@ import { Schedule } from "@/components/schedule"
 import { FAQ } from "@/components/FAQ"
 import { FinalCta } from "@/components/final-cta"
 import { WhatsappFloat } from "@/components/whatsapp-float"
-import { InstagramFloat } from "@/components/instagram-float" // הוספנו את הייבוא
+import { InstagramFloat } from "@/components/instagram-float" 
 
 export default function Page() {
   return (
