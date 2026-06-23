@@ -2,7 +2,8 @@ import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
 import { Philosophy } from "@/components/philosophy"
 import { About } from "@/components/about"
-import { Location } from "@/components/location" // הוספנו ייבוא
+import { ForWhom } from "@/components/ForWhom" // הוספנו ייבוא
+import { Location } from "@/components/location"
 import { Disciplines } from "@/components/disciplines"
 import { Schedule } from "@/components/schedule"
 import { FinalCta } from "@/components/final-cta"
@@ -15,7 +16,8 @@ export default function Page() {
       <Hero />
       <Philosophy />
       <About />
-      <Location /> {/* הוספנו את הרכיב כאן מתחת ל-About */}
+      <ForWhom /> {/* הוספנו את הסקשיין החדש */}
+      <Location />
       <Disciplines />
       <Schedule />
       <FinalCta />
