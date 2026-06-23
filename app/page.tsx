@@ -5,7 +5,7 @@ import { About } from "@/components/about"
 import { ForWhom } from "@/components/ForWhom"
 import { Location } from "@/components/location"
 import { Disciplines } from "@/components/disciplines"
-import { InstagramFeed } from "@/components/instagram-feed" // הוספנו את הייבוא החדש
+import { InstagramFeed } from "@/components/instagramFeed" // הוספנו את הייבוא החדש
 import { Schedule } from "@/components/schedule"
 import { FAQ } from "@/components/FAQ"
 import { FinalCta } from "@/components/final-cta"
