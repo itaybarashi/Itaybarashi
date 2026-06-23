@@ -4,7 +4,7 @@ export function Gallery() {
   const images = [
     { src: "/ItayOneArm.png", alt: "איתי בביצוע עמידת ידיים" },
     { src: "/RoniTheTrainer.png", alt: "רוני המאמן" },
-    { src: "/DekelEran.png", alt: "אימון בגרביטס" },
+    { src: "/Eran.png", alt: "אימון בגרביטס" },
   ]
 
   return (
