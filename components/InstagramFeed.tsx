@@ -5,7 +5,7 @@ import Script from 'next/script'
 export function InstagramFeed() {
   return (
     <section className="py-24 px-5 bg-black text-white text-center">
-      <h2 className="text-3xl font-bold mb-12">מתוך האימונים</h2>
+      <h2 className="text-3xl font-bold mb-12"> חלק מהאימונים שלי </h2>
       
       {/* הוספנו min-height כדי שהדפדפן בטלפון לא "יעלים" את הגלריה לפני שהיא נטענת.
         ה-class שקיבלת מ-Elfsight נשמר בדיוק כפי שהוא.
