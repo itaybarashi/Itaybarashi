@@ -13,16 +13,38 @@ export function Location() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl font-black mb-6">איפה אנחנו נמצאים?</h2>
-          <div className="flex justify-center items-center gap-3 text-xl text-primary mb-8">
+          
+          <div className="flex justify-center items-center gap-3 text-xl text-primary mb-6">
             <MapPin className="h-8 w-8" />
-            <span className="font-bold">נס ציונה, ישראל</span>
+            <span className="font-bold">משה לרר 1, נס ציונה</span>
           </div>
-          <p className="text-muted-foreground text-lg">
+
+          <p className="text-muted-foreground text-lg mb-8">
             האימונים מתקיימים באווירה מקצועית ותומכת. 
             מזמין אותך להצטרף לקהילת התנועה שלנו ולהתחיל להתקדם לעבר היעדים שלך.
           </p>
+
+          {/* כפתורי ניווט */}
+          <div className="flex flex-wrap justify-center gap-4">
+            <a 
+              href="https://www.google.com/maps/search/?api=1&query=משה+לרר+1+נס+ציונה" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white text-black px-6 py-3 rounded-full font-bold hover:bg-gray-200 transition"
+            >
+              Google Maps
+            </a>
+            
+            <a 
+              href="https://waze.com/ul?q=משה+לרר+1+נס+ציונה&navigate=yes" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-[#33CCFF] text-black px-6 py-3 rounded-full font-bold hover:bg-[#2bb8e6] transition"
+            >
+              Waze
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>
   )
-}
