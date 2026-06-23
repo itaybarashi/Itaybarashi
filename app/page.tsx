@@ -5,8 +5,9 @@ import { About } from "@/components/about"
 import { ForWhom } from "@/components/ForWhom"
 import { Location } from "@/components/location"
 import { Disciplines } from "@/components/disciplines"
+import { Gallery } from "@/components/gallery" // הוספנו ייבוא
 import { Schedule } from "@/components/schedule"
-import { FAQ } from "@/components/FAQ" // הוספנו ייבוא
+import { FAQ } from "@/components/FAQ"
 import { FinalCta } from "@/components/final-cta"
 import { WhatsappFloat } from "@/components/whatsapp-float"
 
@@ -20,8 +21,9 @@ export default function Page() {
       <ForWhom />
       <Location />
       <Disciplines />
+      <Gallery /> {/* הגלריה החדשה */}
       <Schedule />
-      <FAQ /> {/* הוספנו את ה-FAQ כאן */}
+      <FAQ />
       <FinalCta />
       <WhatsappFloat />
       <footer className="border-t border-border px-5 py-8 text-center text-sm text-muted-foreground">
