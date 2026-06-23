@@ -1,3 +1,17 @@
+import { SiteHeader } from "@/components/site-header"
+import { Hero } from "@/components/hero"
+import { Philosophy } from "@/components/philosophy"
+import { About } from "@/components/about"
+import { ForWhom } from "@/components/ForWhom"
+import { Location } from "@/components/location"
+import { Disciplines } from "@/components/disciplines"
+import { Gallery } from "@/components/Gallery"
+import { InstagramFeed } from "@/components/InstagramFeed"
+import { Schedule } from "@/components/schedule"
+import { FAQ } from "@/components/FAQ"
+import { FinalCta } from "@/components/final-cta"
+import { WhatsappFloat } from "@/components/whatsapp-float"
+
 export default function Page() {
   return (
     <main className="relative min-h-screen overflow-x-hidden">
@@ -9,10 +23,10 @@ export default function Page() {
       <Location />
       <Disciplines />
       
-      {/* הגלריה הידנית - תופיע תמיד */}
-      <Gallery />       
+      {/* הגלריה הידנית תמיד תופיע */}
+      <Gallery />
       
-      {/* האינסטגרם - מוצג רק במחשב (md:block), בטלפון מוחלף בכפתור */}
+      {/* האינסטגרם - מוצג רק במסכים בינוניים ומעלה (מחשב) */}
       <div className="hidden md:block">
         <InstagramFeed />
       </div>
