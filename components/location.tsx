@@ -20,9 +20,15 @@ export function Location() {
           </div>
 
           <p className="text-muted-foreground text-lg mb-8">
-            האימונים מתקיימים באווירה מקצועית ותומכת. 
-            מזמין אותך להצטרף לקהילת התנועה שלנו ולהתחיל להתקדם לעבר היעדים שלך.
+            האימונים מתקיימים באווירה מקצועית ותומכת. מזמין אותך להצטרף לקהילת התנועה שלנו.
           </p>
+
+          <div className="bg-white/5 p-6 rounded-2xl mb-8 border border-white/10">
+            <h3 className="font-bold text-lg mb-2">הוראות הגעה:</h3>
+            <p className="text-muted-foreground">
+              משה לרר 1 ממוקם במרכז מסחרי בשכונת ארגמן. עלה במעלית או במדרגות לקומה 2 והמשך עד שתגיע למבנה עגול (מול מרכז הפילאטיס Meytis Pilates Room).
+            </p>
+          </div>
 
           <div className="flex flex-wrap justify-center gap-4">
             <a 
