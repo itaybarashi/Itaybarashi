@@ -1,17 +1,3 @@
-import { SiteHeader } from "@/components/site-header"
-import { Hero } from "@/components/hero"
-import { Philosophy } from "@/components/philosophy"
-import { About } from "@/components/about"
-import { ForWhom } from "@/components/ForWhom"
-import { Location } from "@/components/location"
-import { Disciplines } from "@/components/disciplines"
-import { Gallery } from "@/components/Gallery"       // הוסף את הגלריה הידנית
-import { InstagramFeed } from "@/components/InstagramFeed" 
-import { Schedule } from "@/components/schedule"
-import { FAQ } from "@/components/FAQ"
-import { FinalCta } from "@/components/final-cta"
-import { WhatsappFloat } from "@/components/whatsapp-float"
-
 export default function Page() {
   return (
     <main className="relative min-h-screen overflow-x-hidden">
@@ -23,9 +9,25 @@ export default function Page() {
       <Location />
       <Disciplines />
       
-      {/* כאן שניהם מופיעים בזה אחר זה */}
+      {/* הגלריה הידנית - תופיע תמיד */}
       <Gallery />       
-      <InstagramFeed /> 
+      
+      {/* האינסטגרם - מוצג רק במחשב (md:block), בטלפון מוחלף בכפתור */}
+      <div className="hidden md:block">
+        <InstagramFeed />
+      </div>
+
+      {/* כפתור אינסטגרם למובייל בלבד */}
+      <div className="md:hidden flex justify-center py-10">
+        <a 
+          href="https://www.instagram.com/itay_barashi_" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:opacity-90 transition-opacity"
+        >
+          עקבו אחריי באינסטגרם
+        </a>
+      </div>
       
       <Schedule />
       <FAQ />
