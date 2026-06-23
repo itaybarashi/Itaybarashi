@@ -24,7 +24,6 @@ export function Location() {
             מזמין אותך להצטרף לקהילת התנועה שלנו ולהתחיל להתקדם לעבר היעדים שלך.
           </p>
 
-          {/* כפתורי ניווט */}
           <div className="flex flex-wrap justify-center gap-4">
             <a 
               href="https://www.google.com/maps/search/?api=1&query=משה+לרר+1+נס+ציונה" 
@@ -48,3 +47,4 @@ export function Location() {
       </div>
     </section>
   )
+}
