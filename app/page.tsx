@@ -5,7 +5,8 @@ import { About } from "@/components/about"
 import { ForWhom } from "@/components/ForWhom"
 import { Location } from "@/components/location"
 import { Disciplines } from "@/components/disciplines"
-import { InstagramFeed } from "@/components/InstagramFeed" // שים לב ל-I ו-F גדולות
+import { Gallery } from "@/components/gallery"       // הוסף את הגלריה הידנית
+import { InstagramFeed } from "@/components/InstagramFeed" 
 import { Schedule } from "@/components/schedule"
 import { FAQ } from "@/components/FAQ"
 import { FinalCta } from "@/components/final-cta"
@@ -21,7 +22,11 @@ export default function Page() {
       <ForWhom />
       <Location />
       <Disciplines />
+      
+      {/* כאן שניהם מופיעים בזה אחר זה */}
+      <Gallery />       
       <InstagramFeed /> 
+      
       <Schedule />
       <FAQ />
       <FinalCta />
