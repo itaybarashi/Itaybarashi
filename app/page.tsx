@@ -6,7 +6,7 @@ import { ForWhom } from "@/components/ForWhom"
 import { Location } from "@/components/location"
 import { Disciplines } from "@/components/disciplines"
 import { Schedule } from "@/components/schedule"
-import { FAQ } from "@/components/faq" // הוספנו ייבוא
+import { FAQ } from "@/components/FAQ" // הוספנו ייבוא
 import { FinalCta } from "@/components/final-cta"
 import { WhatsappFloat } from "@/components/whatsapp-float"
 
