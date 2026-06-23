@@ -2,10 +2,11 @@ import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
 import { Philosophy } from "@/components/philosophy"
 import { About } from "@/components/about"
-import { ForWhom } from "@/components/ForWhom" // הוספנו ייבוא
+import { ForWhom } from "@/components/ForWhom"
 import { Location } from "@/components/location"
 import { Disciplines } from "@/components/disciplines"
 import { Schedule } from "@/components/schedule"
+import { FAQ } from "@/components/faq" // הוספנו ייבוא
 import { FinalCta } from "@/components/final-cta"
 import { WhatsappFloat } from "@/components/whatsapp-float"
 
@@ -16,10 +17,11 @@ export default function Page() {
       <Hero />
       <Philosophy />
       <About />
-      <ForWhom /> {/* הוספנו את הסקשיין החדש */}
+      <ForWhom />
       <Location />
       <Disciplines />
       <Schedule />
+      <FAQ /> {/* הוספנו את ה-FAQ כאן */}
       <FinalCta />
       <WhatsappFloat />
       <footer className="border-t border-border px-5 py-8 text-center text-sm text-muted-foreground">
