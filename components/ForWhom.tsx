@@ -1,12 +1,29 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { Users, Target, Zap, GraduationCap } from "lucide-react"
 
 const items = [
-  { title: "כל הרמות", desc: "אימונים מותאמים אישית, מהבסיס ועד לביצוע תרגילים מורכבים." },
-  { title: "מסלולי אימון", desc: "חלוקה ברורה לקבוצות מתחילים ומתקדמים לפי רמת מיומנות." },
-  { title: "הקהילה שלנו", desc: "מסגרת למתאמנים בעלי רצון להתקדם, להתמיד ולהשתפר." },
-  { title: "אימוני נוער", desc: "קבוצות ייעודיות לגילאי 12-16 לפיתוח כוח, יציבה וביטחון." },
+  { 
+    title: "כל הרמות", 
+    desc: "אימונים מותאמים , מהבסיס ועד לביצוע תרגילים מורכבים.",
+    icon: <Target className="h-6 w-6 text-primary" />
+  },
+  { 
+    title: "מסלולי אימון", 
+    desc: "חלוקה ברורה לקבוצות מתחילים ומתקדמים לפי רמת מיומנות.",
+    icon: <GraduationCap className="h-6 w-6 text-primary" />
+  },
+  { 
+    title: "הקהילה שלנו", 
+    desc: "מסגרת למתאמנים בעלי רצון להתקדם, להתמיד ולהשתפר.",
+    icon: <Users className="h-6 w-6 text-primary" />
+  },
+  { 
+    title: "אימוני נוער", 
+    desc: "קבוצות ייעודיות לגילאי 12-16 .",
+    icon: <Zap className="h-6 w-6 text-primary" />
+  },
 ]
 
 export function ForWhom() {
@@ -23,10 +40,13 @@ export function ForWhom() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="p-6 border border-white/10 rounded-xl bg-white/[0.02]"
+              className="p-6 border border-white/10 rounded-xl bg-white/[0.02] flex items-start gap-4"
             >
-              <h3 className="text-lg font-bold mb-2 text-primary">{item.title}</h3>
-              <p className="text-gray-400 leading-relaxed">{item.desc}</p>
+              <div className="mt-1">{item.icon}</div>
+              <div>
+                <h3 className="text-lg font-bold mb-2 text-white">{item.title}</h3>
+                <p className="text-gray-400 leading-relaxed">{item.desc}</p>
+              </div>
             </motion.div>
           ))}
         </div>
