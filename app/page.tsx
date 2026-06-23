@@ -11,7 +11,7 @@ import { Schedule } from "@/components/schedule"
 import { FAQ } from "@/components/FAQ"
 import { FinalCta } from "@/components/final-cta"
 import { WhatsappFloat } from "@/components/whatsapp-float"
-import { InstagramFloat } from "@/components/instagram-float" 
+import { InstagramFloat } from "@/components/instagram-float"
 
 export default function Page() {
   return (
@@ -24,10 +24,8 @@ export default function Page() {
       <Location />
       <Disciplines />
       
-      {/* הגלריה הידנית תמיד תופיע */}
       <Gallery />
       
-      {/* האינסטגרם - מוצג רק במחשב (md ומעלה) */}
       <div className="hidden md:block">
         <InstagramFeed />
       </div>
@@ -36,7 +34,6 @@ export default function Page() {
       <FAQ />
       <FinalCta />
       
-      {/* כפתורים צפים */}
       <WhatsappFloat />
       <InstagramFloat />
       
