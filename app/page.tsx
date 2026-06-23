@@ -5,7 +5,7 @@ import { About } from "@/components/about"
 import { ForWhom } from "@/components/ForWhom"
 import { Location } from "@/components/location"
 import { Disciplines } from "@/components/disciplines"
-import { Gallery } from "@/components/Gallery" // הנה ה-Import המתוקן
+import { InstagramFeed } from "@/components/instagram-feed" // הוספנו את הייבוא החדש
 import { Schedule } from "@/components/schedule"
 import { FAQ } from "@/components/FAQ"
 import { FinalCta } from "@/components/final-cta"
@@ -21,7 +21,7 @@ export default function Page() {
       <ForWhom />
       <Location />
       <Disciplines />
-      <Gallery /> {/* הוספנו את הגלריה כאן */}
+      <InstagramFeed /> {/* כאן הגלריה המחוברת לאינסטגרם */}
       <Schedule />
       <FAQ />
       <FinalCta />
