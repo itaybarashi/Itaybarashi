@@ -11,6 +11,7 @@ import { Schedule } from "@/components/schedule"
 import { FAQ } from "@/components/FAQ"
 import { FinalCta } from "@/components/final-cta"
 import { WhatsappFloat } from "@/components/whatsapp-float"
+import { InstagramFloat } from "@/components/instagram-float" // הוספנו את הייבוא
 
 export default function Page() {
   return (
@@ -26,27 +27,19 @@ export default function Page() {
       {/* הגלריה הידנית תמיד תופיע */}
       <Gallery />
       
-      {/* האינסטגרם - מוצג רק במסכים בינוניים ומעלה (מחשב) */}
+      {/* האינסטגרם - מוצג רק במחשב (md ומעלה) */}
       <div className="hidden md:block">
         <InstagramFeed />
       </div>
 
-      {/* כפתור אינסטגרם למובייל בלבד */}
-      <div className="md:hidden flex justify-center py-10">
-        <a 
-          href="https://www.instagram.com/itay_barashi_" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:opacity-90 transition-opacity"
-        >
-          עקבו אחריי באינסטגרם
-        </a>
-      </div>
-      
       <Schedule />
       <FAQ />
       <FinalCta />
+      
+      {/* כפתורים צפים */}
       <WhatsappFloat />
+      <InstagramFloat />
+      
       <footer className="border-t border-border px-5 py-8 text-center text-sm text-muted-foreground">
         © {new Date().getFullYear()} GRAVITAS · קליסטניקס · עמידות ידיים · נס ציונה
       </footer>
