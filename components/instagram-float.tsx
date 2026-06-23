@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Instagram } from "lucide-react" // וודא שמותקן אצלך lucide-react
 
 export function InstagramFloat() {
   return (
@@ -17,7 +16,11 @@ export function InstagramFloat() {
       aria-label="בקרו באינסטגרם שלנו"
       className="fixed bottom-24 left-5 z-50 flex items-center justify-center p-3 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white shadow-[0_8px_30px_rgba(238,42,123,0.35)]"
     >
-      <Instagram size={28} />
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+      </svg>
     </motion.a>
   )
 }
