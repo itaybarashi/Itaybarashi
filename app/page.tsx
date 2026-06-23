@@ -5,7 +5,7 @@ import { About } from "@/components/about"
 import { ForWhom } from "@/components/ForWhom"
 import { Location } from "@/components/location"
 import { Disciplines } from "@/components/disciplines"
-import { Gallery } from "@/components/gallery" // הוספנו ייבוא
+import { Gallery } from "@/components/Gallery" // הנה ה-Import המתוקן
 import { Schedule } from "@/components/schedule"
 import { FAQ } from "@/components/FAQ"
 import { FinalCta } from "@/components/final-cta"
@@ -21,7 +21,7 @@ export default function Page() {
       <ForWhom />
       <Location />
       <Disciplines />
-      <Gallery /> {/* הגלריה החדשה */}
+      <Gallery /> {/* הוספנו את הגלריה כאן */}
       <Schedule />
       <FAQ />
       <FinalCta />
