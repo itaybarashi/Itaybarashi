@@ -5,7 +5,7 @@ import { About } from "@/components/about"
 import { ForWhom } from "@/components/ForWhom"
 import { Location } from "@/components/location"
 import { Disciplines } from "@/components/disciplines"
-import { Gallery } from "@/components/gallery"       // הוסף את הגלריה הידנית
+import { Gallery } from "@/components/Gallery"       // הוסף את הגלריה הידנית
 import { InstagramFeed } from "@/components/InstagramFeed" 
 import { Schedule } from "@/components/schedule"
 import { FAQ } from "@/components/FAQ"
