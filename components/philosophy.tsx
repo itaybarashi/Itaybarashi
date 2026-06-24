@@ -7,17 +7,17 @@ import { Users, GraduationCap, Compass } from "lucide-react"
 const stats = [
   {
     value: "קהילה",
-    label: "אנשים שלומדים, מתאמנים ומתפתחים יחד",
+    label: " לומדים, מתאמנים ומתפתחים יחד",
     icon: Users,
   },
   {
     value: "הדרכה מקצועית",
-    label: "אימון מעשי ולימוד תיאורטי על תורת האימון",
+    label: "אימון מעשי ולימוד תיאורטי לצידו  ",
     icon: GraduationCap,
   },
   {
     value: "ליווי מחוץ לאימון",
-    label: "בניית תוכניות אימון לבית והמשך התקדמות מחוץ למסגרת האימון",
+    label: " תוכניות אימון לבית והתקדמות מחוץ לאימון",
     icon: Compass,
   },
 ]
