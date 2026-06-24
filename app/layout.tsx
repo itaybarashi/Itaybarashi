@@ -10,9 +10,9 @@ const heebo = Heebo({
 })
 
 export const metadata: Metadata = {
-  title: 'GRAVITAS · קליסטניקס ותרבות תנועה',
+  title: 'GRAVITAS · קליסטניקס, עמידות ידיים, תנועה',
   description:
-    'GRAVITAS — אימוני קליסטניקס, אקרובטיקה ותנועה בנס ציונה. חוויה של גדילה, שליטה ואש פנימית. תאמו אימון היכרות.',
+    'GRAVITAS — אימוני קליסטניקס, אקרובטיקה ותנועה בנס ציונה.',
   generator: 'v0.app',
 }
 
