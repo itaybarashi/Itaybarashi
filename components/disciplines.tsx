@@ -8,7 +8,19 @@ const disciplines = [
   {
     icon: Dumbbell,
     title: "קליסטניקס",
-    desc: "פיתוח כוח מרבי ביחס למשקל הגוף, ולמידת תרגילים כמו עליית כוח, פרונט לבר ופלאנץ׳.",
+    desc: (
+      <>
+        פיתוח כוח מרבי ביחס למשקל הגוף, ולמידת תרגילים כמו עליית כוח, פרונט לבר ופלאנץ׳.{" "}
+        <a 
+          href="https://he.wikipedia.org/wiki/%D7%90%D7%99%D7%9E%D7%95%D7%9F_%D7%91%D7%A9%D7%A7%D7%95%D7%9C_%D7%92%D7%95%D7%A3" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-primary hover:underline font-medium text-sm"
+        >
+          (מה זה קליסטניקס?)
+        </a>
+      </>
+    ),
     accent: "from-primary/20",
   },
   {
@@ -36,7 +48,7 @@ export function Disciplines() {
         </Reveal>
         <Reveal delay={0.05}>
           <h2 className="max-w-2xl text-balance text-3xl font-black leading-tight sm:text-5xl">
-על מה נעבוד באימונים
+            על מה נעבוד באימונים
           </h2>
         </Reveal>
 
