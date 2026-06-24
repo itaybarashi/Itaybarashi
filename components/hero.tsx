@@ -77,7 +77,8 @@ export function Hero() {
           transition={{ delay: 0.9, duration: 0.8, ease: easing }}
           className="mt-8 max-w-lg text-pretty text-lg leading-relaxed text-muted-foreground"
         >
-          בית לתנועה, פיתוח יכולות פיזיות מנטליות ויצירתיות, חיבור לקהילה.
+          בית לתנועה, פיתוח יכולות פיזיות מנטליות, חיבור לקהילה ויצירתיות לנוער שמכוונים גבוה.
+           
         </motion.p>
 
         <motion.div
