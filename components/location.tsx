@@ -19,10 +19,6 @@ export function Location() {
             <span className="font-bold">משה לרר 1, נס ציונה</span>
           </div>
 
-          <p className="text-muted-foreground text-lg mb-8">
-            האימונים מתקיימים באווירה מקצועית ותומכת. מזמין אותך להצטרף לקהילת התנועה שלנו.
-          </p>
-
           <div className="bg-white/5 p-6 rounded-2xl mb-8 border border-white/10">
             <h3 className="font-bold text-lg mb-2">הוראות הגעה:</h3>
             <p className="text-muted-foreground">
