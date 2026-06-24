@@ -12,7 +12,7 @@ const disciplines = [
       <>
         פיתוח כוח מרבי ביחס למשקל הגוף, ולמידת תרגילים כמו עליית כוח, פרונט לבר ופלאנץ׳.{" "}
         <a 
-          href="https://he.wikipedia.org/wiki/%D7%90%D7%99%D7%9E%D7%95%D7%9F_%D7%91%D7%A9%D7%A7%D7%95%D7%9C_%D7%92%D7%95%D7%A3" 
+          href="https://he.wikipedia.org/wiki/%D7%A7%D7%9C%D7%99%D7%A1%D7%98%D7%A0%D7%99%D7%A7%D7%A1" 
           target="_blank" 
           rel="noopener noreferrer"
           className="text-primary hover:underline font-medium text-sm"
