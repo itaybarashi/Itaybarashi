@@ -11,7 +11,7 @@ export function Merch() {
           <h2 className="text-4xl font-black mb-4 tracking-tighter uppercase">
             GRAVITAS <span className="text-[#FCAE1E]">GEAR</span>
           </h2>
-          <p className="text-zinc-400 text-lg">חולצות בעיצוב ציוד קליסטניקס    .   .</p>
+          <p className="text-zinc-400 text-lg">חולצות בעיצוב ציוד קליסטניקס.</p>
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-12">
