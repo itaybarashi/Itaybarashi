@@ -5,15 +5,15 @@ import { motion, AnimatePresence } from "framer-motion"
 import { ChevronRight, ChevronLeft } from "lucide-react"
 
 const images = [
-  { src: "/RoniTheTrainer.png", alt: "רוני המאמן" },
-  { src: "/Eran.png", alt: "אימון בגרביטס" },
-  { src: "/IMG_3591.jpg", alt: "אימון קליסטניקס 3591" },
-  { src: "/IMG_3592.jpg", alt: "אימון קליסטניקס 3592" },
-  { src: "/IMG_3593.jpg", alt: "אימון קליסטניקס 3593" },
-  { src: "/IMG_3595.jpg", alt: "אימון קליסטניקס 3595" },
-  { src: "/IMG_3596.jpg", alt: "אימון קליסטניקס 3596" },
-  { src: "/IMG_3597.jpg", alt: "אימון קליסטניקס 3597" },
-  { src: "/IMG_3598.jpg", alt: "אימון קליסטניקס 3598" },
+  { src: "/gallery1.jpg", alt: "אימון קליסטניקס 3591" },
+  { src: "/gallery2.jpg", alt: "אימון קליסטניקס 3592" },
+  { src: "/gallery3.jpg", alt: "אימון קליסטניקס 3593" },
+  { src: "/gallery4.jpg", alt: "אימון קליסטניקס 3595" },
+  { src: "/gallery5.jpg", alt: "אימון קליסטניקס 3596" },
+  { src: "/gallery6.jpg", alt: "אימון קליסטניקס 3597" },
+  { src: "/gallery7.jpg", alt: "אימון קליסטניקס 3598" },
+  { src: "/gallery8.jpg", alt: "אימון קליסטניקס 3598" },
+  { src: "/gallery9.jpg", alt: "אימון קליסטניקס 3598" },
 ]
 
 export function Gallery() {
