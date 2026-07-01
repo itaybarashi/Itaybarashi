@@ -5,13 +5,11 @@ import { motion, AnimatePresence } from "framer-motion"
 import { ChevronRight, ChevronLeft } from "lucide-react"
 
 const images = [
-  { src: "/ItayOneArm.png", alt: "איתי בביצוע עמידת ידיים" },
   { src: "/RoniTheTrainer.png", alt: "רוני המאמן" },
   { src: "/Eran.png", alt: "אימון בגרביטס" },
   { src: "/IMG_3591.jpg", alt: "אימון קליסטניקס 3591" },
   { src: "/IMG_3592.jpg", alt: "אימון קליסטניקס 3592" },
   { src: "/IMG_3593.jpg", alt: "אימון קליסטניקס 3593" },
-  { src: "/IMG_3594.jpg", alt: "אימון קליסטניקס 3594" },
   { src: "/IMG_3595.jpg", alt: "אימון קליסטניקס 3595" },
   { src: "/IMG_3596.jpg", alt: "אימון קליסטניקס 3596" },
   { src: "/IMG_3597.jpg", alt: "אימון קליסטניקס 3597" },
