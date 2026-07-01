@@ -47,7 +47,7 @@ export function Merch() {
         {/* כפתור הזמנה */}
         <div className="mt-16 text-center">
           <a 
-            href="https://wa.me/9725XXXXXXXX?text=היי איתי, אשמח להזמין חולצה של גרביטס!" 
+            href="https://wa.me/972532814545?text=היי איתי, אשמח להזמין חולצה של גרביטס!" 
             className="inline-flex items-center gap-3 bg-[#FCAE1E] text-black font-bold py-4 px-10 rounded-full hover:bg-white transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(252,174,30,0.3)]"
           >
             <ShoppingBag size={20} />
