@@ -6,6 +6,7 @@ import { ForWhom } from "@/components/ForWhom"
 import { Location } from "@/components/location"
 import { Disciplines } from "@/components/disciplines"
 import { Gallery } from "@/components/Gallery"
+import { Merch } from "@/components/Merch" // הוספנו את הייבוא
 import { InstagramFeed } from "@/components/InstagramFeed"
 import { Schedule } from "@/components/schedule"
 import { FAQ } from "@/components/FAQ"
@@ -25,6 +26,9 @@ export default function Page() {
       <Disciplines />
       
       <Gallery />
+      
+      {/* כאן הוספנו את המרצ'נדייז */}
+      <Merch />
       
       <div className="hidden md:block">
         <InstagramFeed />
