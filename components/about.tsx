@@ -8,7 +8,7 @@ export function About() {
     <section id="about" className="relative px-5 py-28 bg-background text-foreground">
       <div className="mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-2">
 
-        {/* --- צד שמאל (או ימין ברספונסיביות): קולאז' התמונות --- */}
+        {/* Image Gallery */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -16,10 +16,10 @@ export function About() {
           className="flex justify-center"
         >
           {/* מכל הגלריה */}
-          <div className="relative h-[520px] w-[380px]">
+          <div className="relative h-[450px] w-[350px]">
             
-            {/* 1. התמונה הראשית (מימין למעלה - me.png) */}
-            <div className="absolute top-0 right-0 h-72 w-56 overflow-hidden rounded-2xl border-4 border-background shadow-2xl z-10 transition duration-500 hover:scale-[1.03]">
+            {/* התמונה הראשית (מימין - me.png) */}
+            <div className="absolute top-0 right-0 h-80 w-64 overflow-hidden rounded-2xl border-4 border-background shadow-2xl z-10 transition duration-500 hover:scale-[1.03]">
               <img
                 src="/me.png"
                 alt="איתי ברשי - דיוקן"
@@ -27,8 +27,8 @@ export function About() {
               />
             </div>
             
-            {/* 2. תמונת הפעולה (משמאל למטה - macaco.png) */}
-            <div className="absolute bottom-16 left-0 h-60 w-52 overflow-hidden rounded-2xl border-4 border-background shadow-2xl z-20 transition duration-500 hover:scale-[1.03]">
+            {/* תמונת הפעולה (משמאל למטה - macaco.png) */}
+            <div className="absolute bottom-0 left-0 h-64 w-60 overflow-hidden rounded-2xl border-4 border-background shadow-2xl z-20 transition duration-500 hover:scale-[1.03]">
               <img
                 src="/macaco.png"
                 alt="איתי ברשי - בפעולה"
@@ -36,19 +36,10 @@ export function About() {
               />
             </div>
 
-            {/* 3. התמונה החדשה והצבעונית (ShaiBachar.jpg) - ממוקמת כתוספת יפה למטה מימין */}
-            <div className="absolute bottom-0 right-4 h-48 w-60 overflow-hidden rounded-2xl border-4 border-background shadow-2xl z-30 transition duration-500 hover:scale-[1.03]">
-              <img
-                src="/ShaiBachar.jpg"
-                alt="איתי ברשי - שקיעה"
-                className="h-full w-full object-cover"
-              />
-            </div>
-
           </div>
         </motion.div>
 
-        {/* --- צד ימין: טקסט האודות --- */}
+        {/* Text Content */}
         <div className="text-right space-y-6">
           <span className="inline-block bg-card px-4 py-1.5 rounded-full text-sm font-medium text-primary border border-border">
             מי אני
@@ -60,7 +51,7 @@ export function About() {
 
           <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
             <p>
-              אני מתעסק בעולם הקליסטניקס והתנועה כבר קרוב לעשור. הרבה חושבים שזה כישרון, או שהתחלתי מנקודת פתיחה גבוהה — אבל האמת هي שהתחלתי מאפס.
+              אני מתעסק בעולם הקליסטניקס והתנועה כבר קרוב לעשור. הרבה חושבים שזה כישרון, או שהתחלתי מנקודת פתיחה גבוהה — אבל האמת היא שהתחלתי מאפס.
             </p>
             <p>
               לא הצלחתי לעשות אפילו מתח אחד, ולקח לי יותר מחצי שנה להגיע לעליית הכוח הראשונה שלי. תרגילים שלוקחים לאנשים כמה חודשים, לי לקחו שנים.
