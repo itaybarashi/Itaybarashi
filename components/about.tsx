@@ -1,11 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { MapPin } from "lucide-react"
+import { MapPin, MessageCircle } from "lucide-react"
 
 export function About() {
   return (
-    <section id="about" className="relative px-5 py-28 bg-background text-foreground">
+    <section id="about" className="relative px-5 py-28">
       <div className="mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-2">
 
         {/* Image Gallery */}
