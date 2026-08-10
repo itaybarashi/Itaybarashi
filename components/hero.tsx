@@ -22,7 +22,7 @@ export function Hero() {
       {/* תמונת הרקע המדהימה בשקיעה */}
       <div className="absolute inset-0 -z-20">
         <Image
-          src="/by_Shai_Bachar_IMG_3105-Edit.jpg"
+          src="/ShaiBachar.jpg"
           alt="עמידת ידיים גרביטס בשקיעה"
           fill
           priority
