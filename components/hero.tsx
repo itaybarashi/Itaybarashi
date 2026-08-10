@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { motion } from "framer-motion"
 
 const easing = [0.22, 1, 0.36, 1] as const
@@ -19,54 +18,34 @@ export function Hero() {
   return (
     <section id="top" className="relative flex min-h-[100svh] items-center justify-center overflow-hidden px-5 pt-24 pb-12">
       
-      {/* תמונת הרקע המדהימה בשקיעה */}
+      {/* 1. תמונת הרקע המלאה */}
       <div className="absolute inset-0 -z-20">
-        <Image
-          src="/ShaiBachar.jpg"
+        <img
+          src="/by_Shai_Bachar_IMG_3105-Edit.jpg"
           alt="עמידת ידיים גרביטס בשקיעה"
-          fill
-          priority
-          className="object-cover object-center scale-105 transform transition-transform duration-1000"
+          className="h-full w-full object-cover object-center scale-105 transform transition-transform duration-1000 grayscale contrast-125 brightness-75"
+          // שים לב: הוספתי כאן פילטרים (grayscale, contrast, brightness) כך שהתמונה תהפוך אוטומטית לשחור-לבן דרמטי ומלא קונטרסט שיושב מושלם עם הרקע השחור!
         />
       </div>
 
-      {/* שכבת הצללה (Overlay) כהה ושקופה כדי שהטקסט יהיה חד וקריא לחלוטין */}
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-black/50 backdrop-blur-[2px]" />
+      {/* 2. שכבת הצללה כהה ומטושטשת לשמירה על קריאות הטקסט */}
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-black/60 backdrop-blur-[2px]" />
 
-      {/* שכבת Gradient עדינה בתחתית בלבד להשתלבות חלקה עם הסקשן הבא */}
+      {/* 3. שכבת Gradient עדינה בתחתית למעבר חלק */}
       <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-0" />
 
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center text-center z-10">
         
-        {/* לוגו: מסגרת דקה מאוד */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: easing }}
-          className="relative mb-6"
-        >
-          <div className="flex items-center justify-center rounded-full bg-black/40 backdrop-blur-md p-[2px] border border-white/20 shadow-[0_10px_30px_-10px_rgba(245,180,80,0.4)]">
-            <Image
-              src="/gravitas-transparent.png"
-              alt="לוגו GRAVITAS"
-              width={300} 
-              height={300} 
-              priority
-              className="size-36 object-contain sm:size-48"
-            />
-          </div>
-        </motion.div>
-
         <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
           className="mb-5 inline-flex items-center rounded-full border border-white/20 bg-black/40 backdrop-blur-md px-4 py-1.5 text-xs font-medium tracking-wide text-zinc-200 shadow-lg"
         >
           קליסטניקס · עמידות ידיים · תנועה 
         </motion.span>
 
-        <h1 className="max-w-3xl text-balance text-5xl font-black leading-[1.05] tracking-tight sm:text-7xl text-white drop-shadow-md">
+        <h1 className="max-w-3xl text-balance text-5xl font-black leading-[1.05] tracking-tight sm:text-7xl text-white drop-shadow-lg">
           {["אימוני קליסטניקס", "לנוער", "בנס ציונה"].map((line, i) => (
             <motion.span key={line} custom={i} variants={lineVariants} initial="hidden" animate="show" className="block">
               {i === 1 ? (
@@ -83,7 +62,7 @@ export function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.8, ease: easing }}
+          transition={{ delay: 0.7, duration: 0.8, ease: easing }}
           className="mt-6 max-w-lg text-pretty text-lg leading-relaxed text-zinc-200 drop-shadow"
         >
           בית לתנועה, פיתוח יכולות פיזיות מנטליות, חיבור לקהילה ויצירתיות לנוער שמכוונים גבוה.
@@ -92,7 +71,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.1, duration: 0.8, ease: easing }}
+          transition={{ delay: 0.9, duration: 0.8, ease: easing }}
           className="mt-9 flex flex-col items-center gap-4 sm:flex-row"
         >
           <a
