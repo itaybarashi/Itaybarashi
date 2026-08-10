@@ -17,14 +17,23 @@ const lineVariants = {
 
 export function Hero() {
   return (
-    <section id="top" className="relative flex min-h-[100svh] items-center overflow-hidden px-5 pt-24">
+    <section id="top" className="relative flex min-h-[100svh] items-center justify-center overflow-hidden px-5 pt-24 pb-12">
       
-      {/* רקע עם זוהרים עדינים */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-1/4 size-[45rem] -translate-x-1/2 rounded-full bg-primary/10 blur-[150px]" />
+      {/* תמונת הרקע המדהימה בשקיעה */}
+      <div className="absolute inset-0 -z-20">
+        <Image
+          src="/by_Shai_Bachar_IMG_3105-Edit.jpg"
+          alt="עמידת ידיים גרביטס בשקיעה"
+          fill
+          priority
+          className="object-cover object-center scale-105 transform transition-transform duration-1000"
+        />
       </div>
 
-      {/* שכבת Gradient עדינה בתחתית בלבד */}
+      {/* שכבת הצללה (Overlay) כהה ושקופה כדי שהטקסט יהיה חד וקריא לחלוטין */}
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-black/50 backdrop-blur-[2px]" />
+
+      {/* שכבת Gradient עדינה בתחתית בלבד להשתלבות חלקה עם הסקשן הבא */}
       <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-0" />
 
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center text-center z-10">
@@ -34,16 +43,16 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: easing }}
-          className="relative mb-8"
+          className="relative mb-6"
         >
-          <div className="flex items-center justify-center rounded-full bg-[#f0ece6] p-[1px] shadow-[0_10px_30px_-10px_rgba(245,180,80,0.2)]">
+          <div className="flex items-center justify-center rounded-full bg-black/40 backdrop-blur-md p-[2px] border border-white/20 shadow-[0_10px_30px_-10px_rgba(245,180,80,0.4)]">
             <Image
               src="/gravitas-transparent.png"
               alt="לוגו GRAVITAS"
               width={300} 
               height={300} 
               priority
-              className="size-44 object-contain sm:size-60"
+              className="size-36 object-contain sm:size-48"
             />
           </div>
         </motion.div>
@@ -52,16 +61,16 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="mb-5 inline-flex items-center rounded-full border border-border bg-card/30 px-4 py-1.5 text-xs font-medium tracking-wide text-muted-foreground"
+          className="mb-5 inline-flex items-center rounded-full border border-white/20 bg-black/40 backdrop-blur-md px-4 py-1.5 text-xs font-medium tracking-wide text-zinc-200 shadow-lg"
         >
           קליסטניקס · עמידות ידיים · תנועה 
         </motion.span>
 
-        <h1 className="max-w-3xl text-balance text-5xl font-black leading-[1.05] tracking-tight sm:text-7xl">
+        <h1 className="max-w-3xl text-balance text-5xl font-black leading-[1.05] tracking-tight sm:text-7xl text-white drop-shadow-md">
           {["אימוני קליסטניקס", "לנוער", "בנס ציונה"].map((line, i) => (
             <motion.span key={line} custom={i} variants={lineVariants} initial="hidden" animate="show" className="block">
               {i === 1 ? (
-                <span className="bg-gradient-to-l from-primary to-amber-300 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-l from-primary to-amber-300 bg-clip-text text-transparent drop-shadow">
                   {line}
                 </span>
               ) : (
@@ -75,10 +84,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.8, ease: easing }}
-          className="mt-8 max-w-lg text-pretty text-lg leading-relaxed text-muted-foreground"
+          className="mt-6 max-w-lg text-pretty text-lg leading-relaxed text-zinc-200 drop-shadow"
         >
           בית לתנועה, פיתוח יכולות פיזיות מנטליות, חיבור לקהילה ויצירתיות לנוער שמכוונים גבוה.
-           
         </motion.p>
 
         <motion.div
@@ -97,7 +105,7 @@ export function Hero() {
           </a>
           <a
             href="#schedule"
-            className="rounded-full border border-border px-7 py-4 text-base font-semibold text-foreground transition-colors hover:bg-card"
+            className="rounded-full border border-white/30 bg-black/40 backdrop-blur-md px-7 py-4 text-base font-semibold text-white transition-colors hover:bg-black/60 shadow-lg"
           >
             צפו בלוז האימונים
           </a>
