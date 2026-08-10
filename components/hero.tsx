@@ -21,7 +21,7 @@ export function Hero() {
       {/* 1. תמונת הרקע המלאה */}
       <div className="absolute inset-0 -z-20">
         <img
-          src="/by_Shai_Bachar_IMG_3105-Edit.jpg"
+          src="/ShaiBachar.jpg"
           alt="עמידת ידיים גרביטס בשקיעה"
           className="h-full w-full object-cover object-center scale-105 transform transition-transform duration-1000 grayscale contrast-125 brightness-75"
           // שים לב: הוספתי כאן פילטרים (grayscale, contrast, brightness) כך שהתמונה תהפוך אוטומטית לשחור-לבן דרמטי ומלא קונטרסט שיושב מושלם עם הרקע השחור!
