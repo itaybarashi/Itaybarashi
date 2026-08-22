@@ -1,12 +1,23 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { CheckCircle2, Globe, Shield, Zap } from "lucide-react"
+import { CheckCircle2, Globe, Shield, Zap, ArrowLeft } from "lucide-react"
+import Link from "next/link"
 
 export default function OnlineCoachingPage() {
   return (
     <main className="min-h-screen bg-black text-white selection:bg-primary selection:text-black">
       
+      {/* כפתור חזרה לדף הראשי */}
+      <div className="absolute top-6 left-6 z-20">
+        <Link 
+          href="/"
+          className="inline-flex items-center gap-2 text-sm font-medium text-zinc-300 hover:text-white border border-white/20 rounded-full px-4 py-2 bg-white/5 backdrop-blur-md transition"
+        >
+          <ArrowLeft className="size-4" /> Back to Gateway
+        </Link>
+      </div>
+
       {/* Hero Section */}
       <section className="relative flex min-h-[90vh] items-center justify-center px-5 pt-20 text-center">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(245,180,80,0.08)_0%,transparent_70%)]" />
