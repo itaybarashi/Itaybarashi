@@ -28,7 +28,7 @@ export default function OnlineCoachingPage() {
         </button>
       </div>
 
-      {/* Coaching Plans Section - מתחילים ישר כאן */}
+      {/* Coaching Plans Section */}
       <section className="pt-32 pb-24 px-5 bg-black">
         <div className="max-w-5xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
@@ -44,12 +44,12 @@ export default function OnlineCoachingPage() {
 
           <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 ${lang === "he" ? "text-right" : "text-left"}`}>
             
-            {/* מסלול חודשי / עצמאי */}
+            {/* מסלול חודשי */}
             <div className="bg-zinc-950 border border-white/10 p-8 rounded-3xl flex flex-col justify-between space-y-8 relative shadow-2xl">
               <div className="space-y-6">
                 <div className="text-center space-y-2 border-b border-white/10 pb-6">
                   <h3 className="text-lg font-bold uppercase tracking-wider text-zinc-300">
-                    {lang === "he" ? "ליווי חודשי - מעקב שוטף" : "1 to 1 Coaching - Monthly Feedback"}
+                    {lang === "he" ? "ליווי אישי - חודשי" : "1 to 1 Coaching - Monthly"}
                   </h3>
                   <div className="text-3xl md:text-4xl font-black text-white pt-1">
                     {lang === "he" ? "499 ₪" : "$149.99"} <span className="text-sm font-normal text-zinc-400">/ {lang === "he" ? "חודש" : "month"}</span>
@@ -58,8 +58,8 @@ export default function OnlineCoachingPage() {
 
                 <p className="text-zinc-400 text-sm leading-relaxed">
                   {lang === "he" 
-                    ? "אידיאלי למי שמעדיף להתאמן באופן עצמאי עם תוכנית אישית מותאמת, ולקבל מעקב חודשי מסודר לבדיקת התקדמות ועדכון."
-                    : "Ideal for those who prefer to follow a personalized program independently, with structured monthly check-ins to track progress and adjust the plan."}
+                    ? "מתאים לכל הרמות. ליווי אישי מלא, תוכנית מותאמת אישית, מענה שוטף וביקורות וידאו חודשיות."
+                    : "Suitable for all levels. Full 1-to-1 coaching, custom programming, ongoing support, and regular feedback."}
                 </p>
 
                 <ul className="space-y-3 text-sm text-zinc-300 pt-2">
@@ -69,11 +69,11 @@ export default function OnlineCoachingPage() {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="size-5 text-amber-400 shrink-0 mt-0.5" />
-                    <span>{lang === "he" ? "תוכנית אימונים חודשית (מתחדשת כל 4 שבועות)" : "Monthly Training Plan (4-weeks program updated each month)"}</span>
+                    <span>{lang === "he" ? "תוכנית אימונים חודשית מותאמת אישית" : "Monthly Training Plan (4-weeks program updated each month)"}</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="size-5 text-amber-400 shrink-0 mt-0.5" />
-                    <span>{lang === "he" ? "צ'ק-אין חודשי עם משוב מפורט והתאמות" : "Monthly check-in, with feedback and exercise adjustments"}</span>
+                    <span>{lang === "he" ? "מעקב שוטף, פידבק טכני ומענה על שאלות" : "Ongoing check-ins, feedback and exercise guidance"}</span>
                   </li>
                 </ul>
               </div>
@@ -90,12 +90,12 @@ export default function OnlineCoachingPage() {
               </div>
             </div>
 
-            {/* מסלול מלא / אינטנסיבי */}
+            {/* מסלול שנתי (Full Time) */}
             <div className="bg-zinc-950 border border-amber-400/40 p-8 rounded-3xl flex flex-col justify-between space-y-8 relative shadow-2xl">
               <div className="space-y-6">
                 <div className="text-center space-y-2 border-b border-white/10 pb-6">
                   <h3 className="text-lg font-bold uppercase tracking-wider text-amber-400">
-                    {lang === "he" ? "ליווי אישי מלא - אונליין" : "1 to 1 Coaching - Full Time"}
+                    {lang === "he" ? "ליווי אישי מלא - שנתי (מומלץ)" : "1 to 1 Coaching - Annual"}
                   </h3>
                   <div className="text-3xl md:text-4xl font-black text-white pt-1">
                     {lang === "he" ? "4,299 ₪" : "$1,299"} <span className="text-sm font-normal text-zinc-400">/ {lang === "he" ? "שנה (בהנחה)" : "year (annual)"}</span>
@@ -104,8 +104,8 @@ export default function OnlineCoachingPage() {
 
                 <p className="text-zinc-400 text-sm leading-relaxed">
                   {lang === "he" 
-                    ? "מתאים לכל הרמות. מעניק גישה מלאה אליי, כולל ליווי שוטף, מענה שאלות, ביקורות וידאו שוטפות והכוונה מדויקת לאורך כל התהליך."
-                    : "Suitable for all levels. Offers full access to your coach, including ongoing support, feedback on video submissions, and guidance throughout the entire program."}
+                    ? "מתאים לתהליך עומק ארוך טווח. מעניק גישה מלאה אליי, כולל ליווי שוטף, מענה שאלות, ביקורות וידאו שוטפות והכוונה מדויקת לאורך כל התהליך בהנחה משמעותית."
+                    : "For true, long-term mastery. Full access to your coach, including ongoing support, feedback on video submissions, and guidance throughout the entire year at a discounted rate."}
                 </p>
 
                 <ul className="space-y-3 text-sm text-zinc-300 pt-2">
@@ -130,7 +130,7 @@ export default function OnlineCoachingPage() {
 
               <div className="space-y-4 pt-4">
                 <a 
-                  href={`https://wa.me/972552517518?text=${lang === "he" ? "היי, אשמח להתחיל במסלול הליווי המלא באונליין." : "Hi, I'm interested in the Full Time Coaching plan."}`}
+                  href={`https://wa.me/972552517518?text=${lang === "he" ? "היי, אשמח להתחיל במסלול הליווי השנתי באונליין." : "Hi, I'm interested in the Annual Coaching plan."}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full text-center rounded-xl bg-amber-400 py-3.5 text-base font-bold text-black hover:bg-amber-300 transition-colors shadow-lg"
