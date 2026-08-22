@@ -226,7 +226,7 @@ export default function OnlineCoachingPage() {
               <div className="space-y-6">
                 <div className="text-center space-y-2 border-b border-white/10 pb-6">
                   <h3 className="text-lg font-bold uppercase tracking-wider text-amber-300">
-                    {lang === "he" ? "ליווי אישי מלא - שנתי (מומלץ)" : "1 to 1 Coaching - Annual"}
+                    {lang === "he" ? "ליווי אישי מלא - שנתי" : "1 to 1 Coaching - Annual"}
                   </h3>
                   <div className="text-3xl md:text-4xl font-black text-white pt-1">
                     {lang === "he" ? "4,299 ₪" : "$1,299"} <span className="text-sm font-normal text-zinc-400">/ {lang === "he" ? "שנה (בהנחה)" : "year (annual)"}</span>
