@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { CheckCircle2, Globe, Shield, Zap, ArrowLeft } from "lucide-react"
+import { Check, Globe, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 
 export default function OnlineCoachingPage() {
@@ -85,138 +85,125 @@ export default function OnlineCoachingPage() {
               ? "תוכניות אימון אישיות בקליסטניקס, עמידות ידיים ותנועה. בנויות על עקרונות, כוונה והבנה אמיתית של הגוף מעבר לניחושים."
               : "Individual programming for calisthenics, handbalance, and mobility. Built on principles, intent, and understanding the body over guesswork."}
           </motion.p>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="pt-4"
-          >
-            <a 
-              href="https://wa.me/972552517518?text=Hi,%20I'm%20interested%20in%20Online%20Coaching."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-amber-400 px-8 py-4 text-lg font-bold text-black shadow-[0_10px_30px_-10px_rgba(245,180,80,0.5)] transition-transform hover:scale-105"
-            >
-              {lang === "he" ? "צור קשר בוואטסאפ" : "Contact via WhatsApp"}
-            </a>
-          </motion.div>
         </div>
       </section>
 
-      {/* How It Works / What We Focus On */}
-      <section className="py-24 px-5 border-t border-white/10 bg-zinc-950">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-            <h2 className="text-3xl md:text-5xl font-black">
-              {lang === "he" ? "איך אנחנו עובדים יחד" : "How We Work Together"}
-            </h2>
-            <p className="text-zinc-400">
-              {lang === "he" 
-                ? "גישה מובנית וכנה הממוקדת בהתקדמות לטווח ארוך, טכניקה נכונה ובריאות מבנית."
-                : "A structured, honest approach focused on long-term progress, form, and structural health."}
-            </p>
-          </div>
-
-          <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 ${lang === "he" ? "text-right" : "text-left"}`}>
-            <div className="bg-zinc-900/50 border border-white/10 p-8 rounded-3xl space-y-4">
-              <Zap className="size-10 text-amber-400" />
-              <h3 className="text-xl font-bold">{lang === "he" ? "תכנון אימונים מותאם אישית" : "Custom Programming"}</h3>
-              <p className="text-zinc-400">
-                {lang === "he" 
-                  ? "אימונים המותאמים בדיוק לרמת הפתיחה שלך, למבנה הגוף ולמטרות הספציפיות שלך — פלאנצ', עמידת ידיים או כוח גולמי."
-                  : "Structured training tailored to your current baseline, mechanics, and specific goals—whether it's a planche, handstand, or raw strength."}
-              </p>
-            </div>
-
-            <div className="bg-zinc-900/50 border border-white/10 p-8 rounded-3xl space-y-4">
-              <CheckCircle2 className="size-10 text-amber-400" />
-              <h3 className="text-xl font-bold">{lang === "he" ? "משוב טכניקה ווידאו" : "Form & Technique Feedback"}</h3>
-              <p className="text-zinc-400">
-                {lang === "he" 
-                  ? "בדיקות וידאו שוטפות והתאמות טכניות. עקביות וביצוע נכון חשובים בהרבה מספירת חזרות עיוורת."
-                  : "Ongoing video reviews and technical adjustments. Consistency and proper execution matter more than repetition counts."}
-              </p>
-            </div>
-
-            <div className="bg-zinc-900/50 border border-white/10 p-8 rounded-3xl space-y-4">
-              <Shield className="size-10 text-amber-400" />
-              <h3 className="text-xl font-bold">{lang === "he" ? "גמישות ואריכות ימים" : "Mobility & Longevity"}</h3>
-              <p className="text-zinc-400">
-                {lang === "he" 
-                  ? "גמישות אקטיבית וחיזוק מפרקים שנועדו לשמור על גוף חסין, מאוזן וללא פציעות לאורך זמן."
-                  : "Active flexibility and joint conditioning designed to keep your body resilient, balanced, and injury-free over time."}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section (סקשן המחירים החדש) */}
+      {/* Coaching Plans Section (הסגנון הנקי והמדויק) */}
       <section className="py-24 px-5 bg-black border-t border-white/10">
         <div className="max-w-5xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-            <span className="inline-block bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-sm font-medium text-amber-400">
-              {lang === "he" ? "מסלולים ומחירים" : "Investment"}
-            </span>
-            <h2 className="text-3xl md:text-5xl font-black">
-              {lang === "he" ? "בחר את המסלול המתאים לך" : "Choose Your Plan"}
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight uppercase">
+              {lang === "he" ? "מסלולי אימון" : "Coaching Plans"}
             </h2>
             <p className="text-zinc-400">
               {lang === "he" 
-                ? "התחייבות אמיתית לתהליך עומק. ליווי אישי מלא, מענה שוטף ותוכנית מדויקת."
-                : "A true commitment to deep progress. Full personal guidance, continuous feedback, and tailored programming."}
+                ? "בחר את סוג הליווי המתאים ביותר לקצב ולשגרת האימונים שלך."
+                : "Choose the level of guidance that best fits your training style."}
             </p>
           </div>
 
           <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 ${lang === "he" ? "text-right" : "text-left"}`}>
             
-            {/* חודשי */}
-            <div className="bg-zinc-900/60 border border-white/10 p-8 rounded-3xl flex flex-col justify-between space-y-8 relative">
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold">{lang === "he" ? "מסלול חודשי" : "Monthly Coaching"}</h3>
-                <p className="text-zinc-400 text-sm">
-                  {lang === "he" ? "גמישות מלאה, מתאים למי שרוצה לנסות ולהתקדם צעד אחר צעד." : "Full flexibility, ideal for month-to-month commitment and continuous guidance."}
-                </p>
-                <div className="text-4xl font-black text-white pt-2">
-                  {lang === "he" ? "499 ₪" : "$149.99"} <span className="text-sm font-normal text-zinc-400">/ {lang === "he" ? "חודש" : "month"}</span>
+            {/* מסלול חודשי / עצמאי */}
+            <div className="bg-zinc-950 border border-white/10 p-8 rounded-3xl flex flex-col justify-between space-y-8 relative shadow-2xl">
+              <div className="space-y-6">
+                <div className="text-center space-y-2 border-b border-white/10 pb-6">
+                  <h3 className="text-lg font-bold uppercase tracking-wider text-zinc-300">
+                    {lang === "he" ? "ליווי חודשי - מעקב שוטף" : "1 to 1 Coaching - Monthly Feedback"}
+                  </h3>
+                  <div className="text-3xl md:text-4xl font-black text-white pt-1">
+                    {lang === "he" ? "499 ₪" : "$149.99"} <span className="text-sm font-normal text-zinc-400">/ {lang === "he" ? "חודש" : "month"}</span>
+                  </div>
                 </div>
+
+                <p className="text-zinc-400 text-sm leading-relaxed">
+                  {lang === "he" 
+                    ? "אידיאלי למי שמעדיף להתאמן באופן עצמאי עם תוכנית אישית מותאמת, ולקבל מעקב חודשי מסודר לבדיקת התקדמות ועדכון."
+                    : "Ideal for those who prefer to follow a personalized program independently, with structured monthly check-ins to track progress and adjust the plan."}
+                </p>
+
+                <ul className="space-y-3 text-sm text-zinc-300 pt-2">
+                  <li className="flex items-start gap-3">
+                    <Check className="size-5 text-amber-400 shrink-0 mt-0.5" />
+                    <span>{lang === "he" ? "ניתוח טכניקה ראשוני דרך וידאו" : "Initial analysis via video test"}</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="size-5 text-amber-400 shrink-0 mt-0.5" />
+                    <span>{lang === "he" ? "תוכנית אימונים חודשית (מתחדשת כל 4 שבועות)" : "Monthly Training Plan (4-weeks program updated each month)"}</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="size-5 text-amber-400 shrink-0 mt-0.5" />
+                    <span>{lang === "he" ? "צ'ק-אין חודשי עם משוב מפורט והתאמות" : "Monthly check-in, with feedback and exercise adjustments"}</span>
+                  </li>
+                </ul>
               </div>
 
-              <a 
-                href={`https://wa.me/972552517518?text=${lang === "he" ? "היי, אשמח לשמוע פרטים על המסלול החודשי באונליין קואוצ'ינג." : "Hi, I'm interested in the Monthly Online Coaching plan."}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full text-center rounded-full border border-white/20 hover:border-amber-400 py-3 font-bold transition-colors bg-white/5 hover:bg-amber-400 hover:text-black"
-              >
-                {lang === "he" ? "בחר מסלול חודשי" : "Choose Monthly"}
-              </a>
+              <div className="space-y-4 pt-4">
+                <a 
+                  href={`https://wa.me/972552517518?text=${lang === "he" ? "היי, אשמח להתחיל במסלול הליווי החודשי באונליין." : "Hi, I'm interested in the Monthly Coaching plan."}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center rounded-xl bg-amber-400 py-3.5 text-base font-bold text-black hover:bg-amber-300 transition-colors shadow-lg"
+                >
+                  {lang === "he" ? "התחל עכשיו" : "Join now"}
+                </a>
+                <p className="text-center text-xs text-zinc-500">
+                  {lang === "he" ? "אפשרות למסלול שנתי בהנחה משמעותית" : "Save significantly with annual commitment"}
+                </p>
+              </div>
             </div>
 
-            {/* שנתי (מומלץ) */}
-            <div className="bg-zinc-900 border-2 border-amber-400/60 p-8 rounded-3xl flex flex-col justify-between space-y-8 relative shadow-[0_10px_30px_-15px_rgba(245,180,80,0.3)]">
-              <div className="absolute -top-4 right-8 bg-amber-400 text-black text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full">
-                {lang === "he" ? "המשתלם ביותר" : "Best Value"}
-              </div>
-
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold">{lang === "he" ? "מסלול שנתי" : "Annual Commitment"}</h3>
-                <p className="text-zinc-400 text-sm">
-                  {lang === "he" ? "לתהליך עומק אמיתי, בניית יכולות ארוכות טווח והנחה משמעותית." : "For deep, long-term mastery, sustainable results, and significant savings."}
-                </p>
-                <div className="text-4xl font-black text-amber-400 pt-2">
-                  {lang === "he" ? "4,299 ₪" : "$1,299"} <span className="text-sm font-normal text-zinc-400">/ {lang === "he" ? "שנה" : "year"}</span>
+            {/* מסלול מלא / אינטנסיבי */}
+            <div className="bg-zinc-950 border border-amber-400/40 p-8 rounded-3xl flex flex-col justify-between space-y-8 relative shadow-2xl">
+              <div className="space-y-6">
+                <div className="text-center space-y-2 border-b border-white/10 pb-6">
+                  <h3 className="text-lg font-bold uppercase tracking-wider text-amber-400">
+                    {lang === "he" ? "ליווי אישי מלא - אונליין" : "1 to 1 Coaching - Full Time"}
+                  </h3>
+                  <div className="text-3xl md:text-4xl font-black text-white pt-1">
+                    {lang === "he" ? "4,299 ₪" : "$1,299"} <span className="text-sm font-normal text-zinc-400">/ {lang === "he" ? "שנה (בהנחה)" : "year (annual)"}</span>
+                  </div>
                 </div>
+
+                <p className="text-zinc-400 text-sm leading-relaxed">
+                  {lang === "he" 
+                    ? "מתאים לכל הרמות. מעניק גישה מלאה אליי, כולל ליווי שוטף, מענה שאלות, ביקורות וידאו שוטפות והכוונה מדויקת לאורך כל התהליך."
+                    : "Suitable for all levels. Offers full access to your coach, including ongoing support, feedback on video submissions, and guidance throughout the entire program."}
+                </p>
+
+                <ul className="space-y-3 text-sm text-zinc-300 pt-2">
+                  <li className="flex items-start gap-3">
+                    <Check className="size-5 text-amber-400 shrink-0 mt-0.5" />
+                    <span>{lang === "he" ? "ניתוח טכניקה ראשוני דרך וידאו" : "Initial analysis via video test"}</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="size-5 text-amber-400 shrink-0 mt-0.5" />
+                    <span>{lang === "he" ? "תוכנית אימונים חודשית מותאמת אישית" : "Monthly Training Plan (4-weeks program updated each month)"}</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="size-5 text-amber-400 shrink-0 mt-0.5" />
+                    <span>{lang === "he" ? "מעקב שוטף, פידבק טכני ומענה על שאלות" : "Ongoing check-ins, feedback and exercise guidance"}</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="size-5 text-amber-400 shrink-0 mt-0.5" />
+                    <span>{lang === "he" ? "זמינות לבדיקת סרטוני ביצוע ותיקונים שוטפים" : "Regular video submissions review and technical adjustments"}</span>
+                  </li>
+                </ul>
               </div>
 
-              <a 
-                href={`https://wa.me/972552517518?text=${lang === "he" ? "היי, אשמח לשמוע פרטים על המסלול השנתי באונליין קואוצ'ינג." : "Hi, I'm interested in the Annual Online Coaching plan."}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full text-center rounded-full bg-amber-400 py-3 font-bold text-black hover:scale-[1.02] transition-transform shadow-lg"
-              >
-                {lang === "he" ? "בחר מסלול שנתי" : "Choose Annual"}
-              </a>
+              <div className="space-y-4 pt-4">
+                <a 
+                  href={`https://wa.me/972552517518?text=${lang === "he" ? "היי, אשמח להתחיל במסלול הליווי המלא באונליין." : "Hi, I'm interested in the Full Time Coaching plan."}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center rounded-xl bg-amber-400 py-3.5 text-base font-bold text-black hover:bg-amber-300 transition-colors shadow-lg"
+                >
+                  {lang === "he" ? "התחל עכשיו" : "Join now"}
+                </a>
+                <p className="text-center text-xs text-amber-400/80 font-medium">
+                  {lang === "he" ? "מסלול מומלץ לתהליך עומק אמיתי" : "Recommended for true, long-term progress"}
+                </p>
+              </div>
             </div>
 
           </div>
@@ -295,37 +282,8 @@ export default function OnlineCoachingPage() {
                 ? "המטרה שלי היא ללמד אותך לחשוב, לנוע ולהתאמן באופן עצמאי, בהתבסס על עקרונות ברורים ולא על חיקוי עיוור."
                 : "My goal is to teach you how to think, move, and train independently, based on clear principles rather than blind imitation."}
             </p>
-
-            <div className={`flex items-center gap-2 text-amber-400 font-semibold pt-2 ${lang === "he" ? "justify-start md:justify-start flex-row-reverse" : ""}`}>
-              <span className="text-lg">{lang === "he" ? "מלווה מתאמנים בכל רחבי העולם" : "Coaching practitioners worldwide"}</span>
-              <Globe className="size-5 text-amber-400" />
-            </div>
           </div>
 
-        </div>
-      </section>
-
-      {/* Simple Bottom CTA */}
-      <section className="py-20 px-5 text-center bg-zinc-950 border-t border-white/10">
-        <div className="max-w-3xl mx-auto space-y-6">
-          <h2 className="text-3xl md:text-4xl font-black">
-            {lang === "he" ? "בוא נדבר על האימונים שלך" : "Let&apos;s Talk About Your Training"}
-          </h2>
-          <p className="text-zinc-400">
-            {lang === "he" 
-              ? "אם תרצה לדון במטרות שלך ולבדוק אם אנחנו מתאימים לעבודה משותפת, מרגיש חופשי לפנות."
-              : "If you want to discuss your goals and see if we&apos;re a good fit, feel free to reach out."}
-          </p>
-          <div className="pt-2">
-            <a 
-              href="https://wa.me/972552517518?text=Hi,%20I&apos;d%20like%20to%20discuss%20online%20coaching."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-amber-400 px-8 py-4 text-lg font-bold text-black shadow-[0_10px_30px_-10px_rgba(245,180,80,0.5)] transition-transform hover:scale-105"
-            >
-              {lang === "he" ? "יצירת קשר בוואטסאפ" : "Get in Touch via WhatsApp"}
-            </a>
-          </div>
         </div>
       </section>
 
