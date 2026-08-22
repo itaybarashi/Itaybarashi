@@ -9,7 +9,7 @@ import { Gallery } from "@/components/Gallery"
 import { Merch } from "@/components/Merch"
 import { InstagramFeed } from "@/components/InstagramFeed"
 import { Schedule } from "@/components/schedule"
-import { Pricing } from "@/components/pricing" // 1. ייבוא הקומפוננטה החדשה
+import { Pricing } from "@/components/pricing"
 import { FAQ } from "@/components/FAQ"
 import { FinalCta } from "@/components/final-cta"
 import { WhatsappFloat } from "@/components/whatsapp-float"
@@ -48,33 +48,7 @@ export default function Page() {
       </div>
 
       <Schedule />
-      
-      <Pricing /> {/* 2. הוספת הסקשן כאן, אחרי Schedule */}
-      
-      <FAQ />
-      <FinalCta />
-      
-      <WhatsappFloat />
-      <InstagramFloat />
-      
-      <footer className="border-t border-border px-5 py-8 text-center text-sm text-muted-foreground">
-        © {new Date().getFullYear()} GRAVITAS · קליסטניקס · עמידות ידיים · נס ציונה
-      </footer>
-    </main>
-  )
-}      <ForWhom />
-      <Location />
-      <Disciplines />
-      
-      <Gallery />
-      
-      <Merch />
-      
-      <div className="hidden md:block">
-        <InstagramFeed />
-      </div>
-
-      <Schedule />
+      <Pricing />
       <FAQ />
       <FinalCta />
       
