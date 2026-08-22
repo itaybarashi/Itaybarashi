@@ -1,8 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { CheckCircle2, Globe, Shield, Zap, ArrowLeft } from "lucide-react"
+import { CheckCircle2, Globe, Shield, Zap, ArrowLeft, MapPin } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function OnlineCoachingPage() {
   return (
@@ -70,7 +71,7 @@ export default function OnlineCoachingPage() {
         </div>
       </section>
 
-      {/* Features */}
+      {/* Features / What's Included */}
       <section className="py-24 px-5 border-t border-white/10 bg-zinc-950">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
@@ -96,6 +97,94 @@ export default function OnlineCoachingPage() {
               <h3 className="text-xl font-bold">Mobility & Longevity</h3>
               <p className="text-zinc-400">In-depth active flexibility and joint conditioning protocols to keep your body bulletproof while getting stronger.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- About Me Section (הוספנו את סקשן מי אני מתורגם לאנגלית) --- */}
+      <section className="py-28 px-5 bg-black border-t border-white/10">
+        <div className="mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-2">
+
+          {/* Image Gallery */}
+          <div className="flex justify-center">
+            <div className="relative h-[450px] w-[350px]">
+              
+              {/* התמונה הראשית (me.png) */}
+              <div className="absolute top-0 right-0 h-80 w-64 overflow-hidden rounded-2xl border-4 border-zinc-900 shadow-2xl z-10 transition duration-500 hover:scale-[1.03]">
+                <img
+                  src="/me.png"
+                  alt="Itay Barshi - Portrait"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              
+              {/* תמונת הפעולה (macaco.png) */}
+              <div className="absolute bottom-0 left-0 h-64 w-60 overflow-hidden rounded-2xl border-4 border-zinc-900 shadow-2xl z-20 transition duration-500 hover:scale-[1.03]">
+                <img
+                  src="/macaco.png"
+                  alt="Itay Barshi - Movement"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+
+            </div>
+          </div>
+
+          {/* Text Content */}
+          <div className="text-left space-y-6">
+            <span className="inline-block bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-sm font-medium text-amber-300">
+              About Me
+            </span>
+            
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
+              Hi, I&apos;m <span className="text-primary">Itay</span>
+            </h2>
+
+            <div className="space-y-4 text-lg text-zinc-400 leading-relaxed">
+              <p>
+                I&apos;ve been immersed in the world of calisthenics and movement for nearly a decade. Many assume it’s natural talent or that I started from a high baseline — but the truth is, I started from absolute zero.
+              </p>
+              <p>
+                I couldn&apos;t do a single pull-up, and it took me over half a year to achieve my first muscle-up. Skills that take others a few months took me years.
+              </p>
+              <p>
+                Precisely because of this journey, I learned to understand the body deeply, cope with failures, embrace consistency and repetition, navigate injuries, and figure out how to overcome them.
+              </p>
+            </div>
+
+            <div className="bg-zinc-900/80 p-6 rounded-2xl border border-white/10 shadow-lg">
+              <p className="text-xl font-bold text-white">
+                My guiding principle is simple: It&apos;s not just what you achieve — it&apos;s who you become along the way.
+              </p>
+            </div>
+
+            <p className="text-lg text-zinc-400 leading-relaxed">
+              I believe in teaching you how to train, helping you understand movement principles, and working with your own sound logic — rather than just blindly copying what I do.
+            </p>
+
+            <div className="flex items-center gap-2 text-amber-300 font-semibold pt-2">
+              <Globe className="size-5 text-amber-300" />
+              <span className="text-lg">Coaching worldwide</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* CTA Bottom Section */}
+      <section className="py-20 px-5 text-center bg-zinc-950 border-t border-white/10">
+        <div className="max-w-3xl mx-auto space-y-6">
+          <h2 className="text-3xl md:text-4xl font-black">Ready to Level Up Your Training?</h2>
+          <p className="text-zinc-400">Let&apos;s break your limits together, wherever you are.</p>
+          <div className="pt-2">
+            <a 
+              href="https://wa.me/972532814545?text=Hi,%20I'm%20ready%20to%20start%20Online%20Coaching."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-lg font-bold text-primary-foreground shadow-[0_10px_30px_-10px_rgba(245,180,80,0.5)] transition-transform hover:scale-105"
+            >
+              Get Started via WhatsApp
+            </a>
           </div>
         </div>
       </section>
