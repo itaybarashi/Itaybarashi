@@ -28,7 +28,7 @@ export default function OnlineCoachingPage() {
         </button>
       </div>
 
-      {/* Hero Section */}
+      {/* Hero Section עם תמונת הרקע */}
       <section className="relative flex min-h-[90vh] items-center justify-center px-5 pt-28 text-center overflow-hidden bg-zinc-950">
         
         {/* תמונת הרקע */}
@@ -105,7 +105,7 @@ export default function OnlineCoachingPage() {
               
               <div className="absolute bottom-0 left-0 h-64 w-60 overflow-hidden rounded-2xl border-4 border-zinc-900 shadow-2xl z-20 transition duration-500 hover:scale-[1.03]">
                 <img
-                  src="/macaco.png"
+                  src="/ShaiBachar.jpg"
                   alt="Itay Barshi - Movement"
                   className="h-full w-full object-cover"
                 />
