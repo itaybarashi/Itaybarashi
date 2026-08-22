@@ -152,6 +152,77 @@ export default function OnlineCoachingPage() {
         </div>
       </section>
 
+      {/* Pricing Section (סקשן המחירים החדש) */}
+      <section className="py-24 px-5 bg-black border-t border-white/10">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <span className="inline-block bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-sm font-medium text-amber-400">
+              {lang === "he" ? "מסלולים ומחירים" : "Investment"}
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black">
+              {lang === "he" ? "בחר את המסלול המתאים לך" : "Choose Your Plan"}
+            </h2>
+            <p className="text-zinc-400">
+              {lang === "he" 
+                ? "התחייבות אמיתית לתהליך עומק. ליווי אישי מלא, מענה שוטף ותוכנית מדויקת."
+                : "A true commitment to deep progress. Full personal guidance, continuous feedback, and tailored programming."}
+            </p>
+          </div>
+
+          <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 ${lang === "he" ? "text-right" : "text-left"}`}>
+            
+            {/* חודשי */}
+            <div className="bg-zinc-900/60 border border-white/10 p-8 rounded-3xl flex flex-col justify-between space-y-8 relative">
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold">{lang === "he" ? "מסלול חודשי" : "Monthly Coaching"}</h3>
+                <p className="text-zinc-400 text-sm">
+                  {lang === "he" ? "גמישות מלאה, מתאים למי שרוצה לנסות ולהתקדם צעד אחר צעד." : "Full flexibility, ideal for month-to-month commitment and continuous guidance."}
+                </p>
+                <div className="text-4xl font-black text-white pt-2">
+                  {lang === "he" ? "499 ₪" : "$149.99"} <span className="text-sm font-normal text-zinc-400">/ {lang === "he" ? "חודש" : "month"}</span>
+                </div>
+              </div>
+
+              <a 
+                href={`https://wa.me/972552517518?text=${lang === "he" ? "היי, אשמח לשמוע פרטים על המסלול החודשי באונליין קואוצ'ינג." : "Hi, I'm interested in the Monthly Online Coaching plan."}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full text-center rounded-full border border-white/20 hover:border-amber-400 py-3 font-bold transition-colors bg-white/5 hover:bg-amber-400 hover:text-black"
+              >
+                {lang === "he" ? "בחר מסלול חודשי" : "Choose Monthly"}
+              </a>
+            </div>
+
+            {/* שנתי (מומלץ) */}
+            <div className="bg-zinc-900 border-2 border-amber-400/60 p-8 rounded-3xl flex flex-col justify-between space-y-8 relative shadow-[0_10px_30px_-15px_rgba(245,180,80,0.3)]">
+              <div className="absolute -top-4 right-8 bg-amber-400 text-black text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full">
+                {lang === "he" ? "המשתלם ביותר" : "Best Value"}
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold">{lang === "he" ? "מסלול שנתי" : "Annual Commitment"}</h3>
+                <p className="text-zinc-400 text-sm">
+                  {lang === "he" ? "לתהליך עומק אמיתי, בניית יכולות ארוכות טווח והנחה משמעותית." : "For deep, long-term mastery, sustainable results, and significant savings."}
+                </p>
+                <div className="text-4xl font-black text-amber-400 pt-2">
+                  {lang === "he" ? "4,299 ₪" : "$1,299"} <span className="text-sm font-normal text-zinc-400">/ {lang === "he" ? "שנה" : "year"}</span>
+                </div>
+              </div>
+
+              <a 
+                href={`https://wa.me/972552517518?text=${lang === "he" ? "היי, אשמח לשמוע פרטים על המסלול השנתי באונליין קואוצ'ינג." : "Hi, I'm interested in the Annual Online Coaching plan."}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full text-center rounded-full bg-amber-400 py-3 font-bold text-black hover:scale-[1.02] transition-transform shadow-lg"
+              >
+                {lang === "he" ? "בחר מסלול שנתי" : "Choose Annual"}
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* About Me Section */}
       <section className="py-28 px-5 bg-black border-t border-white/10">
         <div className={`mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-2 ${lang === "he" ? "md:text-right" : "text-left"}`}>
