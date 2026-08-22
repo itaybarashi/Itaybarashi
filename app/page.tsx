@@ -5,7 +5,8 @@ import { Users, Laptop, Globe } from "lucide-react"
 import Link from "next/link"
 
 export default function GatewayPage() {
-  const [lang, setLang] = useState<"he" | "en">("he")
+  // שינינו את הברירת מחדל ל- "en" (אנגלית)
+  const [lang, setLang] = useState<"he" | "en">("en")
 
   return (
     <main className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center px-5">
@@ -29,12 +30,12 @@ export default function GatewayPage() {
             GRAVITAS <span className="text-primary">MOVEMENT</span>
           </h1>
           <p className="text-lg text-zinc-400">
-            {lang === "he" ? "בחר את מסלול האימון המתאים לך" : "Choose your path"}
+            {lang === "he" ? "בחר את מסלול האימון המתאים לך" : "Choose your training path"}
           </p>
         </div>
 
         {/* שתי אפשרויות בחירה */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-right">
+        <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 ${lang === "he" ? "text-right" : "text-left"}`}>
           
           {/* אופציה 1: Face to Face (נוער 12-16) */}
           <Link 
