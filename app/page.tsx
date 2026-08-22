@@ -28,10 +28,18 @@ export default function GatewayPage() {
 
       <div className="max-w-3xl mx-auto text-center space-y-12 z-10">
         
-        {/* כותרת גדולה ומרכזית בלי לוגו */}
+        {/* כותרת גדולה ומרכזית עם נגיעת צבע זהובה */}
         <div className="space-y-3">
           <h1 className="text-4xl md:text-6xl font-black tracking-tight">
-            {lang === "he" ? "בחר את מסלול האימון שלך" : "Choose Your Training Path"}
+            {lang === "he" ? (
+              <>
+                בחר את <span className="bg-gradient-to-l from-amber-300 to-amber-100 bg-clip-text text-transparent">מסלול האימון</span> שלך
+              </>
+            ) : (
+              <>
+                Choose Your <span className="bg-gradient-to-l from-amber-300 to-amber-100 bg-clip-text text-transparent">Training</span> Path
+              </>
+            )}
           </h1>
         </div>
 
@@ -41,10 +49,10 @@ export default function GatewayPage() {
           {/* אופציה 1: Online Coaching */}
           <Link 
             href="/online-coaching" 
-            className="group relative bg-zinc-900/80 border border-white/10 hover:border-primary/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
+            className="group relative bg-zinc-900/80 border border-white/10 hover:border-amber-300/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
           >
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+              <div className="w-12 h-12 rounded-2xl bg-amber-300/10 flex items-center justify-center text-amber-300">
                 <Laptop className="size-6" />
               </div>
               <h2 className="text-2xl font-bold">
@@ -56,7 +64,7 @@ export default function GatewayPage() {
                   : "Custom programming, video form analysis, and global guidance for all levels."}
               </p>
             </div>
-            <span className="mt-8 inline-block text-sm font-bold text-primary group-hover:translate-x-1 transition-transform">
+            <span className="mt-8 inline-block text-sm font-bold text-amber-300 group-hover:translate-x-1 transition-transform">
               {lang === "he" ? "עבור לאונליין →" : "Explore Online →"}
             </span>
           </Link>
@@ -64,10 +72,10 @@ export default function GatewayPage() {
           {/* אופציה 2: Face to Face (נוער 12-16) עם ישראל בסוגריים */}
           <Link 
             href="/local" 
-            className="group relative bg-zinc-900/80 border border-white/10 hover:border-primary/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
+            className="group relative bg-zinc-900/80 border border-white/10 hover:border-amber-300/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
           >
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+              <div className="w-12 h-12 rounded-2xl bg-amber-300/10 flex items-center justify-center text-amber-300">
                 <Users className="size-6" />
               </div>
               <h2 className="text-2xl font-bold">
@@ -79,7 +87,7 @@ export default function GatewayPage() {
                   : "In-person calisthenics and handbalance training for youth (ages 12-16) in Ness Ziona."}
               </p>
             </div>
-            <span className="mt-8 inline-block text-sm font-bold text-primary group-hover:translate-x-1 transition-transform">
+            <span className="mt-8 inline-block text-sm font-bold text-amber-300 group-hover:translate-x-1 transition-transform">
               {lang === "he" ? "הכנס לאתר הישראלי ←" : "Enter Local Site →"}
             </span>
           </Link>
