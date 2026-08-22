@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export default function OnlineCoachingPage() {
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-primary selection:text-black">
+    <main className="min-h-screen bg-black text-white selection:bg-amber-400 selection:text-black">
       
       {/* כפתור חזרה לדף הראשי */}
       <div className="absolute top-6 left-6 z-20">
@@ -37,7 +37,7 @@ export default function OnlineCoachingPage() {
           <motion.span 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-4 py-1.5 text-sm font-medium text-primary backdrop-blur-md shadow-lg"
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-4 py-1.5 text-sm font-medium text-amber-400 backdrop-blur-md shadow-lg"
           >
             <Globe className="size-4" /> Online Coaching
           </motion.span>
@@ -49,7 +49,7 @@ export default function OnlineCoachingPage() {
             className="text-5xl md:text-7xl font-black tracking-tight leading-[1.1] drop-shadow-lg text-white"
           >
             Deep Movement Work, <br />
-            <span className="bg-gradient-to-l from-primary to-amber-300 bg-clip-text text-transparent drop-shadow">
+            <span className="bg-gradient-to-l from-amber-400 to-amber-200 bg-clip-text text-transparent drop-shadow">
               Wherever You Are.
             </span>
           </motion.h1>
@@ -73,7 +73,7 @@ export default function OnlineCoachingPage() {
               href="https://wa.me/972552517518?text=Hi,%20I'm%20interested%20in%20Online%20Coaching."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-lg font-bold text-primary-foreground shadow-[0_10px_30px_-10px_rgba(245,180,80,0.5)] transition-transform hover:scale-105"
+              className="inline-flex items-center justify-center rounded-full bg-amber-400 px-8 py-4 text-lg font-bold text-black shadow-[0_10px_30px_-10px_rgba(245,180,80,0.5)] transition-transform hover:scale-105"
             >
               Contact via WhatsApp
             </a>
@@ -91,19 +91,19 @@ export default function OnlineCoachingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-zinc-900/50 border border-white/10 p-8 rounded-3xl space-y-4">
-              <Zap className="size-10 text-primary" />
+              <Zap className="size-10 text-amber-400" />
               <h3 className="text-xl font-bold">Custom Programming</h3>
               <p className="text-zinc-400">Structured training tailored to your current baseline, mechanics, and specific goals—whether it&apos;s a planche, handstand, or raw strength.</p>
             </div>
 
             <div className="bg-zinc-900/50 border border-white/10 p-8 rounded-3xl space-y-4">
-              <CheckCircle2 className="size-10 text-primary" />
+              <CheckCircle2 className="size-10 text-amber-400" />
               <h3 className="text-xl font-bold">Form & Technique Feedback</h3>
               <p className="text-zinc-400">Ongoing video reviews and technical adjustments. Consistency and proper execution matter more than repetition counts.</p>
             </div>
 
             <div className="bg-zinc-900/50 border border-white/10 p-8 rounded-3xl space-y-4">
-              <Shield className="size-10 text-primary" />
+              <Shield className="size-10 text-amber-400" />
               <h3 className="text-xl font-bold">Mobility & Longevity</h3>
               <p className="text-zinc-400">Active flexibility and joint conditioning designed to keep your body resilient, balanced, and injury-free over time.</p>
             </div>
@@ -138,12 +138,12 @@ export default function OnlineCoachingPage() {
 
           {/* Text Content */}
           <div className="text-left space-y-6">
-            <span className="inline-block bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-sm font-medium text-primary">
+            <span className="inline-block bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-sm font-medium text-amber-400">
               About Me
             </span>
             
             <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
-              Hi, I&apos;m <span className="text-primary">Itay</span>
+              Hi, I&apos;m <span className="text-amber-400">Itay</span>
             </h2>
 
             <div className="space-y-4 text-lg text-zinc-400 leading-relaxed">
@@ -168,8 +168,8 @@ export default function OnlineCoachingPage() {
               My goal is to teach you how to think, move, and train independently, based on clear principles rather than blind imitation.
             </p>
 
-            <div className="flex items-center gap-2 text-primary font-semibold pt-2">
-              <Globe className="size-5 text-primary" />
+            <div className="flex items-center gap-2 text-amber-400 font-semibold pt-2">
+              <Globe className="size-5 text-amber-400" />
               <span className="text-lg">Coaching practitioners worldwide</span>
             </div>
           </div>
@@ -187,7 +187,7 @@ export default function OnlineCoachingPage() {
               href="https://wa.me/972552517518?text=Hi,%20I&apos;d%20like%20to%20discuss%20online%20coaching."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-lg font-bold text-primary-foreground shadow-[0_10px_30px_-10px_rgba(245,180,80,0.5)] transition-transform hover:scale-105"
+              className="inline-flex items-center justify-center rounded-full bg-amber-400 px-8 py-4 text-lg font-bold text-black shadow-[0_10px_30px_-10px_rgba(245,180,80,0.5)] transition-transform hover:scale-105"
             >
               Get in Touch via WhatsApp
             </a>
