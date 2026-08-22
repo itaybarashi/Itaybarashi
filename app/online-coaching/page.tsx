@@ -150,8 +150,8 @@ export default function OnlineCoachingPage() {
             <div className="bg-zinc-900/80 p-6 rounded-2xl border border-white/10 shadow-lg">
               <p className="text-xl font-bold text-white">
                 {lang === "he" 
-                  ? "זה לא רק מה שאתה משיג על המתח — זה מי שאתה הופך להיות בדרך."
-                  : "It&apos;s not just what you achieve on the bars — it&apos;s who you become along the way."}
+                  ? "זה לא רק מה שאתה משיג — זה מי שאתה הופך להיות בדרך."
+                  : "It's not just what you achieve — it's who you become."}
               </p>
             </div>
           </div>
