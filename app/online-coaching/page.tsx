@@ -28,68 +28,8 @@ export default function OnlineCoachingPage() {
         </button>
       </div>
 
-      {/* Hero Section */}
-      <section className="relative flex min-h-[90vh] items-center justify-center px-5 pt-28 text-center overflow-hidden bg-zinc-950">
-        
-        {/* תמונת הרקע */}
-        <div className="absolute inset-0 -z-20">
-          <img
-            src="/ShaiBachar.jpg"
-            alt="Itay Barshi - Background"
-            className="h-full w-full object-cover object-center grayscale contrast-125 brightness-75"
-          />
-        </div>
-
-        {/* שכבת הצללה כהה */}
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-black/75 backdrop-blur-[1px]" />
-        
-        <div className="max-w-4xl mx-auto space-y-8 z-10">
-          <motion.span 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-4 py-1.5 text-sm font-medium text-amber-400 backdrop-blur-md shadow-lg"
-          >
-            <Globe className="size-4" /> {lang === "he" ? "אונליין קואוצ'ינג עולמי" : "Online Coaching"}
-          </motion.span>
-
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-5xl md:text-7xl font-black tracking-tight leading-[1.1] drop-shadow-lg text-white"
-          >
-            {lang === "he" ? (
-              <>
-                עבודת תנועה עמוקה, <br />
-                <span className="bg-gradient-to-l from-amber-400 to-amber-200 bg-clip-text text-transparent drop-shadow">
-                  בכל מקום בעולם.
-                </span>
-              </>
-            ) : (
-              <>
-                Deep Movement Work, <br />
-                <span className="bg-gradient-to-l from-amber-400 to-amber-200 bg-clip-text text-transparent drop-shadow">
-                  Wherever You Are.
-                </span>
-              </>
-            )}
-          </motion.h1>
-
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed drop-shadow"
-          >
-            {lang === "he" 
-              ? "תוכניות אימון אישיות בקליסטניקס, עמידות ידיים ותנועה. בנויות על עקרונות, כוונה והבנה אמיתית של הגוף מעבר לניחושים."
-              : "Individual programming for calisthenics, handbalance, and mobility. Built on principles, intent, and understanding the body over guesswork."}
-          </motion.p>
-        </div>
-      </section>
-
-      {/* Coaching Plans Section (הסגנון הנקי והמדויק) */}
-      <section className="py-24 px-5 bg-black border-t border-white/10">
+      {/* Coaching Plans Section - מתחילים ישר כאן */}
+      <section className="pt-32 pb-24 px-5 bg-black">
         <div className="max-w-5xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-black tracking-tight uppercase">
@@ -147,9 +87,6 @@ export default function OnlineCoachingPage() {
                 >
                   {lang === "he" ? "התחל עכשיו" : "Join now"}
                 </a>
-                <p className="text-center text-xs text-zinc-500">
-                  {lang === "he" ? "אפשרות למסלול שנתי בהנחה משמעותית" : "Save significantly with annual commitment"}
-                </p>
               </div>
             </div>
 
@@ -200,9 +137,6 @@ export default function OnlineCoachingPage() {
                 >
                   {lang === "he" ? "התחל עכשיו" : "Join now"}
                 </a>
-                <p className="text-center text-xs text-amber-400/80 font-medium">
-                  {lang === "he" ? "מסלול מומלץ לתהליך עומק אמיתי" : "Recommended for true, long-term progress"}
-                </p>
               </div>
             </div>
 
