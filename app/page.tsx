@@ -3,7 +3,6 @@
 import { useState } from "react"
 import { Users, Laptop, Globe } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
 
 export default function GatewayPage() {
   const [lang, setLang] = useState<"he" | "en">("en")
@@ -11,7 +10,7 @@ export default function GatewayPage() {
   return (
     <main className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center px-5 overflow-hidden">
       
-      {/* זוהר עדין ברקע מאחורי הלוגו */}
+      {/* זוהר עדין ברקע */}
       <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center">
         <div className="size-[30rem] -translate-y-24 rounded-full bg-primary/10 blur-[150px]" />
       </div>
@@ -27,28 +26,13 @@ export default function GatewayPage() {
         </button>
       </div>
 
-      <div className="max-w-3xl mx-auto text-center space-y-10 z-10">
+      <div className="max-w-3xl mx-auto text-center space-y-12 z-10">
         
-        {/* לוגו נקי בלבד */}
-        <div className="flex flex-col items-center space-y-6">
-          <div className="relative">
-            <div className="flex items-center justify-center rounded-full bg-[#f0ece6] p-[1px] shadow-[0_10px_30px_-10px_rgba(245,180,80,0.2)]">
-              <Image
-                src="/gravitas-transparent.png"
-                alt="לוגו"
-                width={120} 
-                height={120} 
-                priority
-                className="size-28 object-contain"
-              />
-            </div>
-          </div>
-
-          <div className="space-y-2">
-            <p className="text-lg text-zinc-400">
-              {lang === "he" ? "בחר את מסלול האימון המתאים לך" : "Choose your training path"}
-            </p>
-          </div>
+        {/* כותרת גדולה ומרכזית בלי לוגו */}
+        <div className="space-y-3">
+          <h1 className="text-4xl md:text-6xl font-black tracking-tight">
+            {lang === "he" ? "בחר את מסלול האימון שלך" : "Choose Your Training Path"}
+          </h1>
         </div>
 
         {/* שתי אפשרויות בחירה */}
@@ -77,7 +61,7 @@ export default function GatewayPage() {
             </span>
           </Link>
 
-          {/* אופציה 2: Face to Face (נוער 12-16) */}
+          {/* אופציה 2: Face to Face (נוער 12-16) עם ישראל בסוגריים */}
           <Link 
             href="/local" 
             className="group relative bg-zinc-900/80 border border-white/10 hover:border-primary/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
@@ -87,7 +71,7 @@ export default function GatewayPage() {
                 <Users className="size-6" />
               </div>
               <h2 className="text-2xl font-bold">
-                {lang === "he" ? "אימונים פרונטליים (נס ציונה)" : "Face-to-Face Training"}
+                {lang === "he" ? "אימונים פרונטליים (נס ציונה)" : "Face-to-Face (Israel)"}
               </h2>
               <p className="text-zinc-400 text-sm leading-relaxed">
                 {lang === "he" 
