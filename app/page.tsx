@@ -11,7 +11,7 @@ export default function GatewayPage() {
   return (
     <main className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center px-5 overflow-hidden">
       
-      {/* זוהר עדין ברקע מאחורי הלוגו (בצבע המקורי של האתר) */}
+      {/* זוהר עדין ברקע מאחורי הלוגו */}
       <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center">
         <div className="size-[30rem] -translate-y-24 rounded-full bg-primary/10 blur-[150px]" />
       </div>
@@ -29,13 +29,13 @@ export default function GatewayPage() {
 
       <div className="max-w-3xl mx-auto text-center space-y-10 z-10">
         
-        {/* לוגו עם המסגרת המקורית */}
+        {/* לוגו נקי בלבד */}
         <div className="flex flex-col items-center space-y-6">
           <div className="relative">
             <div className="flex items-center justify-center rounded-full bg-[#f0ece6] p-[1px] shadow-[0_10px_30px_-10px_rgba(245,180,80,0.2)]">
               <Image
                 src="/gravitas-transparent.png"
-                alt="לוגו GRAVITAS"
+                alt="לוגו"
                 width={120} 
                 height={120} 
                 priority
@@ -45,12 +45,6 @@ export default function GatewayPage() {
           </div>
 
           <div className="space-y-2">
-            <h1 className="text-5xl md:text-7xl font-black tracking-tight">
-              <span className="bg-gradient-to-l from-primary to-amber-300 bg-clip-text text-transparent">
-                GRAVITAS
-              </span>{" "}
-              <span className="text-white">MOVEMENT</span>
-            </h1>
             <p className="text-lg text-zinc-400">
               {lang === "he" ? "בחר את מסלול האימון המתאים לך" : "Choose your training path"}
             </p>
