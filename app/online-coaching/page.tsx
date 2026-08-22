@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export default function OnlineCoachingPage() {
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-primary selection:text-black">
+    <main className="min-h-screen bg-black text-white selection:bg-amber-400 selection:text-black">
       
       {/* כפתור חזרה לדף הראשי */}
       <div className="absolute top-6 left-6 z-20">
@@ -18,24 +18,22 @@ export default function OnlineCoachingPage() {
         </Link>
       </div>
 
-      {/* Hero Section עם תמונת הרקע שלך בשחור-לבן */}
-      <section className="relative flex min-h-[90vh] items-center justify-center px-5 pt-20 text-center overflow-hidden">
+      {/* Hero Section עם תמונת הרקע בשחור-לבן */}
+      <section className="relative flex min-h-[90vh] items-center justify-center px-5 pt-20 text-center overflow-hidden bg-zinc-950">
         
         {/* תמונת הרקע */}
         <div className="absolute inset-0 -z-20">
           <img
             src="/ShaiBachar.jpg"
             alt="Itay Barshi - Background"
-            className="h-full w-full object-cover object-center scale-105 transform transition-transform duration-1000 grayscale contrast-125 brightness-75"
+            className="h-full w-full object-cover object-center grayscale contrast-125 brightness-75"
           />
         </div>
 
         {/* שכבת הצללה כהה לשמירה על קריאות הטקסט */}
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-black/70 backdrop-blur-[2px]" />
-
-        {/* שכבת Gradient בתחתית למעבר חלק */}
-        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-zinc-950 to-transparent z-0" />
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-black/75 backdrop-blur-[1px]" />
         
+        {/* תוכן ה-Hero */}
         <div className="max-w-4xl mx-auto space-y-8 z-10">
           <motion.span 
             initial={{ opacity: 0, y: 20 }}
@@ -49,7 +47,7 @@ export default function OnlineCoachingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-5xl md:text-7xl font-black tracking-tight leading-[1.1] drop-shadow-lg"
+            className="text-5xl md:text-7xl font-black tracking-tight leading-[1.1] drop-shadow-lg text-white"
           >
             Master Your Body, <br />
             <span className="bg-gradient-to-l from-amber-400 to-amber-200 bg-clip-text text-transparent drop-shadow">
