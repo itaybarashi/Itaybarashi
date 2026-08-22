@@ -3,16 +3,21 @@
 import { useState } from "react"
 import { Users, Laptop, Globe } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function GatewayPage() {
-  // שינינו את הברירת מחדל ל- "en" (אנגלית)
   const [lang, setLang] = useState<"he" | "en">("en")
 
   return (
-    <main className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center px-5">
+    <main className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center px-5 overflow-hidden">
       
+      {/* זוהר עדין ברקע מאחורי הלוגו */}
+      <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center">
+        <div className="size-[30rem] -translate-y-24 rounded-full bg-primary/10 blur-[120px]" />
+      </div>
+
       {/* מתג שפה בפינה */}
-      <div className="absolute top-6 left-6 flex items-center gap-2">
+      <div className="absolute top-6 left-6 z-20 flex items-center gap-2">
         <Globe className="size-4 text-zinc-400" />
         <button 
           onClick={() => setLang(lang === "he" ? "en" : "he")}
@@ -22,16 +27,31 @@ export default function GatewayPage() {
         </button>
       </div>
 
-      <div className="max-w-3xl mx-auto text-center space-y-12">
+      <div className="max-w-3xl mx-auto text-center space-y-10 z-10">
         
-        {/* כותרת ראשית */}
-        <div className="space-y-4">
-          <h1 className="text-5xl md:text-7xl font-black tracking-tight">
-            GRAVITAS <span className="text-primary">MOVEMENT</span>
-          </h1>
-          <p className="text-lg text-zinc-400">
-            {lang === "he" ? "בחר את מסלול האימון המתאים לך" : "Choose your training path"}
-          </p>
+        {/* לוגו ואייקון מודגש */}
+        <div className="flex flex-col items-center space-y-6">
+          <div className="relative">
+            <div className="flex items-center justify-center rounded-full bg-black/60 backdrop-blur-md p-[2px] border border-white/20 shadow-[0_10px_30px_-10px_rgba(245,180,80,0.4)]">
+              <Image
+                src="/gravitas-transparent.png"
+                alt="לוגו GRAVITAS"
+                width={120} 
+                height={120} 
+                priority
+                className="size-28 object-contain"
+              />
+            </div>
+          </div>
+
+          <div className="space-y-2">
+            <h1 className="text-5xl md:text-7xl font-black tracking-tight">
+              <span className="text-primary drop-shadow-[0_0_25px_rgba(245,180,80,0.3)]">GRAVITAS</span> <span className="text-white">MOVEMENT</span>
+            </h1>
+            <p className="text-lg text-zinc-400">
+              {lang === "he" ? "בחר את מסלול האימון המתאים לך" : "Choose your training path"}
+            </p>
+          </div>
         </div>
 
         {/* שתי אפשרויות בחירה */}
@@ -40,7 +60,7 @@ export default function GatewayPage() {
           {/* אופציה 1: Face to Face (נוער 12-16) */}
           <Link 
             href="/local" 
-            className="group relative bg-zinc-900/80 border border-white/10 hover:border-primary/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
+            className="group relative bg-zinc-900/80 border border-white/10 hover:border-primary/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
           >
             <div className="space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
@@ -63,7 +83,7 @@ export default function GatewayPage() {
           {/* אופציה 2: Online Coaching (לכולם, באנגלית) */}
           <Link 
             href="/online-coaching" 
-            className="group relative bg-zinc-900/80 border border-white/10 hover:border-primary/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
+            className="group relative bg-zinc-900/80 border border-white/10 hover:border-primary/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
           >
             <div className="space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
