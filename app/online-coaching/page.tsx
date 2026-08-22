@@ -2,14 +2,14 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Check, Globe, ArrowLeft, Shield, Zap, CheckCircle2 } from "lucide-react"
+import { Check, Globe, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 
 export default function OnlineCoachingPage() {
   const [lang, setLang] = useState<"he" | "en">("en")
 
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-amber-400 selection:text-black">
+    <main className="min-h-screen bg-black text-white selection:bg-amber-300 selection:text-black">
       
       {/* כפתור חזרה לדף הראשי ומתג שפה */}
       <div className="absolute top-6 left-6 right-6 z-20 flex items-center justify-between pointer-events-none">
@@ -47,7 +47,7 @@ export default function OnlineCoachingPage() {
           <motion.span 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-4 py-1.5 text-sm font-medium text-amber-400 backdrop-blur-md shadow-lg"
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-4 py-1.5 text-sm font-medium text-amber-300 backdrop-blur-md shadow-lg"
           >
             <Globe className="size-4" /> {lang === "he" ? "אונליין קואוצ'ינג עולמי" : "Online Coaching"}
           </motion.span>
@@ -61,14 +61,14 @@ export default function OnlineCoachingPage() {
             {lang === "he" ? (
               <>
                 עבודת תנועה עמוקה, <br />
-                <span className="bg-gradient-to-l from-amber-400 to-amber-200 bg-clip-text text-transparent drop-shadow">
+                <span className="bg-gradient-to-l from-amber-300 to-amber-100 bg-clip-text text-transparent drop-shadow">
                   בכל מקום בעולם.
                 </span>
               </>
             ) : (
               <>
                 Deep Movement Work, <br />
-                <span className="bg-gradient-to-l from-amber-400 to-amber-200 bg-clip-text text-transparent drop-shadow">
+                <span className="bg-gradient-to-l from-amber-300 to-amber-100 bg-clip-text text-transparent drop-shadow">
                   Wherever You Are.
                 </span>
               </>
@@ -88,7 +88,7 @@ export default function OnlineCoachingPage() {
         </div>
       </section>
 
-      {/* About Me Section (קודם מספרים מי אנחנו ולמה אנחנו עושים את זה) */}
+      {/* About Me Section */}
       <section className="py-28 px-5 bg-black border-t border-white/10">
         <div className={`mx-auto grid max-w-6xl items-center gap-16 md:grid-cols-2 ${lang === "he" ? "md:text-right" : "text-left"}`}>
 
@@ -115,12 +115,12 @@ export default function OnlineCoachingPage() {
 
           {/* Text Content */}
           <div className="space-y-6">
-            <span className="inline-block bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-sm font-medium text-amber-400">
+            <span className="inline-block bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-sm font-medium text-amber-300">
               {lang === "he" ? "קצת עלי" : "About Me"}
             </span>
             
             <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
-              {lang === "he" ? <>היי, אני <span className="text-amber-400">איתי</span></> : <>Hi, I&apos;m <span className="text-amber-400">Itay</span></>}
+              {lang === "he" ? <>היי, אני <span className="bg-gradient-to-l from-amber-300 to-amber-100 bg-clip-text text-transparent">איתי</span></> : <>Hi, I&apos;m <span className="bg-gradient-to-l from-amber-300 to-amber-100 bg-clip-text text-transparent">Itay</span></>}
             </h2>
 
             <div className="space-y-4 text-lg text-zinc-400 leading-relaxed">
@@ -159,7 +159,7 @@ export default function OnlineCoachingPage() {
         </div>
       </section>
 
-      {/* Coaching Plans Section (אחרי שהכרנו, עוברים למסלולים והמחירים) */}
+      {/* Coaching Plans Section */}
       <section className="py-24 px-5 bg-zinc-950 border-t border-white/10">
         <div className="max-w-5xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
@@ -195,15 +195,15 @@ export default function OnlineCoachingPage() {
 
                 <ul className="space-y-3 text-sm text-zinc-300 pt-2">
                   <li className="flex items-start gap-3">
-                    <Check className="size-5 text-amber-400 shrink-0 mt-0.5" />
+                    <Check className="size-5 text-amber-300 shrink-0 mt-0.5" />
                     <span>{lang === "he" ? "ניתוח טכניקה ראשוני דרך וידאו" : "Initial analysis via video test"}</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="size-5 text-amber-400 shrink-0 mt-0.5" />
+                    <Check className="size-5 text-amber-300 shrink-0 mt-0.5" />
                     <span>{lang === "he" ? "תוכנית אימונים חודשית מותאמת אישית" : "Monthly Training Plan (4-weeks program updated each month)"}</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="size-5 text-amber-400 shrink-0 mt-0.5" />
+                    <Check className="size-5 text-amber-300 shrink-0 mt-0.5" />
                     <span>{lang === "he" ? "מעקב שוטף, פידבק טכני ומענה על שאלות" : "Ongoing check-ins, feedback and exercise guidance"}</span>
                   </li>
                 </ul>
@@ -214,7 +214,7 @@ export default function OnlineCoachingPage() {
                   href={`https://wa.me/972552517518?text=${lang === "he" ? "היי, אשמח להתחיל במסלול הליווי החודשי באונליין." : "Hi, I'm interested in the Monthly Coaching plan."}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full text-center rounded-xl bg-amber-400 py-3.5 text-base font-bold text-black hover:bg-amber-300 transition-colors shadow-lg"
+                  className="block w-full text-center rounded-xl bg-gradient-to-r from-amber-300 to-amber-200 py-3.5 text-base font-bold text-black hover:opacity-90 transition-opacity shadow-lg"
                 >
                   {lang === "he" ? "התחל עכשיו" : "Join now"}
                 </a>
@@ -222,10 +222,10 @@ export default function OnlineCoachingPage() {
             </div>
 
             {/* מסלול שנתי (Full Time) */}
-            <div className="bg-black border border-amber-400/40 p-8 rounded-3xl flex flex-col justify-between space-y-8 relative shadow-2xl">
+            <div className="bg-black border border-amber-300/40 p-8 rounded-3xl flex flex-col justify-between space-y-8 relative shadow-2xl">
               <div className="space-y-6">
                 <div className="text-center space-y-2 border-b border-white/10 pb-6">
-                  <h3 className="text-lg font-bold uppercase tracking-wider text-amber-400">
+                  <h3 className="text-lg font-bold uppercase tracking-wider text-amber-300">
                     {lang === "he" ? "ליווי אישי מלא - שנתי (מומלץ)" : "1 to 1 Coaching - Annual"}
                   </h3>
                   <div className="text-3xl md:text-4xl font-black text-white pt-1">
@@ -241,19 +241,19 @@ export default function OnlineCoachingPage() {
 
                 <ul className="space-y-3 text-sm text-zinc-300 pt-2">
                   <li className="flex items-start gap-3">
-                    <Check className="size-5 text-amber-400 shrink-0 mt-0.5" />
+                    <Check className="size-5 text-amber-300 shrink-0 mt-0.5" />
                     <span>{lang === "he" ? "ניתוח טכניקה ראשוני דרך וידאו" : "Initial analysis via video test"}</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="size-5 text-amber-400 shrink-0 mt-0.5" />
+                    <Check className="size-5 text-amber-300 shrink-0 mt-0.5" />
                     <span>{lang === "he" ? "תוכנית אימונים חודשית מותאמת אישית" : "Monthly Training Plan (4-weeks program updated each month)"}</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="size-5 text-amber-400 shrink-0 mt-0.5" />
+                    <Check className="size-5 text-amber-300 shrink-0 mt-0.5" />
                     <span>{lang === "he" ? "מעקב שוטף, פידבק טכני ומענה על שאלות" : "Ongoing check-ins, feedback and exercise guidance"}</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="size-5 text-amber-400 shrink-0 mt-0.5" />
+                    <Check className="size-5 text-amber-300 shrink-0 mt-0.5" />
                     <span>{lang === "he" ? "זמינות לבדיקת סרטוני ביצוע ותיקונים שוטפים" : "Regular video submissions review and technical adjustments"}</span>
                   </li>
                 </ul>
@@ -264,7 +264,7 @@ export default function OnlineCoachingPage() {
                   href={`https://wa.me/972552517518?text=${lang === "he" ? "היי, אשמח להתחיל במסלול הליווי השנתי באונליין." : "Hi, I'm interested in the Annual Coaching plan."}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full text-center rounded-xl bg-amber-400 py-3.5 text-base font-bold text-black hover:bg-amber-300 transition-colors shadow-lg"
+                  className="block w-full text-center rounded-xl bg-gradient-to-r from-amber-300 to-amber-200 py-3.5 text-base font-bold text-black hover:opacity-90 transition-opacity shadow-lg"
                 >
                   {lang === "he" ? "התחל עכשיו" : "Join now"}
                 </a>
