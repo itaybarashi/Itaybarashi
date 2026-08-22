@@ -11,9 +11,9 @@ export default function GatewayPage() {
   return (
     <main className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center px-5 overflow-hidden">
       
-      {/* זוהר עדין ברקע מאחורי הלוגו */}
+      {/* זוהר עדין ברקע מאחורי הלוגו (בצבע המקורי של האתר) */}
       <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center">
-        <div className="size-[30rem] -translate-y-24 rounded-full bg-amber-500/10 blur-[120px]" />
+        <div className="size-[30rem] -translate-y-24 rounded-full bg-primary/10 blur-[150px]" />
       </div>
 
       {/* מתג שפה בפינה */}
@@ -29,10 +29,10 @@ export default function GatewayPage() {
 
       <div className="max-w-3xl mx-auto text-center space-y-10 z-10">
         
-        {/* לוגו עם המסגרת הבהירה המקורית */}
+        {/* לוגו עם המסגרת המקורית */}
         <div className="flex flex-col items-center space-y-6">
           <div className="relative">
-            <div className="flex items-center justify-center rounded-full bg-[#f0ece6] p-[2px] shadow-[0_10px_30px_-10px_rgba(245,180,80,0.3)]">
+            <div className="flex items-center justify-center rounded-full bg-[#f0ece6] p-[1px] shadow-[0_10px_30px_-10px_rgba(245,180,80,0.2)]">
               <Image
                 src="/gravitas-transparent.png"
                 alt="לוגו GRAVITAS"
@@ -46,7 +46,10 @@ export default function GatewayPage() {
 
           <div className="space-y-2">
             <h1 className="text-5xl md:text-7xl font-black tracking-tight">
-              <span className="text-amber-400 drop-shadow-[0_0_25px_rgba(245,180,80,0.4)]">GRAVITAS</span> <span className="text-white">MOVEMENT</span>
+              <span className="bg-gradient-to-l from-primary to-amber-300 bg-clip-text text-transparent">
+                GRAVITAS
+              </span>{" "}
+              <span className="text-white">MOVEMENT</span>
             </h1>
             <p className="text-lg text-zinc-400">
               {lang === "he" ? "בחר את מסלול האימון המתאים לך" : "Choose your training path"}
@@ -60,10 +63,10 @@ export default function GatewayPage() {
           {/* אופציה 1: Online Coaching */}
           <Link 
             href="/online-coaching" 
-            className="group relative bg-zinc-900/80 border border-white/10 hover:border-amber-400/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
+            className="group relative bg-zinc-900/80 border border-white/10 hover:border-primary/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
           >
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-400">
+              <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
                 <Laptop className="size-6" />
               </div>
               <h2 className="text-2xl font-bold">
@@ -75,7 +78,7 @@ export default function GatewayPage() {
                   : "Custom programming, video form analysis, and global guidance for all levels."}
               </p>
             </div>
-            <span className="mt-8 inline-block text-sm font-bold text-amber-400 group-hover:translate-x-1 transition-transform">
+            <span className="mt-8 inline-block text-sm font-bold text-primary group-hover:translate-x-1 transition-transform">
               {lang === "he" ? "עבור לאונליין →" : "Explore Online →"}
             </span>
           </Link>
@@ -83,10 +86,10 @@ export default function GatewayPage() {
           {/* אופציה 2: Face to Face (נוער 12-16) */}
           <Link 
             href="/local" 
-            className="group relative bg-zinc-900/80 border border-white/10 hover:border-amber-400/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
+            className="group relative bg-zinc-900/80 border border-white/10 hover:border-primary/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
           >
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-400">
+              <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
                 <Users className="size-6" />
               </div>
               <h2 className="text-2xl font-bold">
@@ -98,7 +101,7 @@ export default function GatewayPage() {
                   : "In-person calisthenics and handbalance training for youth (ages 12-16) in Ness Ziona."}
               </p>
             </div>
-            <span className="mt-8 inline-block text-sm font-bold text-amber-400 group-hover:translate-x-1 transition-transform">
+            <span className="mt-8 inline-block text-sm font-bold text-primary group-hover:translate-x-1 transition-transform">
               {lang === "he" ? "הכנס לאתר הישראלי ←" : "Enter Local Site →"}
             </span>
           </Link>
