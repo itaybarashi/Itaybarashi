@@ -18,7 +18,7 @@ export default function OnlineCoachingPage() {
         </Link>
       </div>
 
-      {/* Hero Section עם תמונת הרקע בשחור-לבן */}
+      {/* Hero Section */}
       <section className="relative flex min-h-[90vh] items-center justify-center px-5 pt-20 text-center overflow-hidden bg-zinc-950">
         
         {/* תמונת הרקע */}
@@ -30,17 +30,16 @@ export default function OnlineCoachingPage() {
           />
         </div>
 
-        {/* שכבת הצללה כהה לשמירה על קריאות הטקסט */}
+        {/* שכבת הצללה כהה */}
         <div className="pointer-events-none absolute inset-0 -z-10 bg-black/75 backdrop-blur-[1px]" />
         
-        {/* תוכן ה-Hero */}
         <div className="max-w-4xl mx-auto space-y-8 z-10">
           <motion.span 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-4 py-1.5 text-sm font-medium text-amber-400 backdrop-blur-md shadow-lg"
           >
-            <Globe className="size-4" /> Global Online Coaching
+            <Globe className="size-4" /> Online Coaching
           </motion.span>
 
           <motion.h1 
@@ -49,9 +48,9 @@ export default function OnlineCoachingPage() {
             transition={{ delay: 0.1 }}
             className="text-5xl md:text-7xl font-black tracking-tight leading-[1.1] drop-shadow-lg text-white"
           >
-            Master Your Body, <br />
+            Deep Movement Work, <br />
             <span className="bg-gradient-to-l from-amber-400 to-amber-200 bg-clip-text text-transparent drop-shadow">
-              Anywhere in the World.
+              Wherever You Are.
             </span>
           </motion.h1>
 
@@ -59,9 +58,9 @@ export default function OnlineCoachingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-lg md:text-xl text-zinc-200 max-w-2xl mx-auto leading-relaxed drop-shadow"
+            className="text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed drop-shadow"
           >
-            Customized calisthenics, handbalance, and mobility programming designed to break your plateaus. Built on deep movement principles, not guesswork.
+            Individual programming for calisthenics, handbalance, and mobility. Built on principles, intent, and understanding the body over guesswork.
           </motion.p>
 
           <motion.div 
@@ -71,42 +70,42 @@ export default function OnlineCoachingPage() {
             className="pt-4"
           >
             <a 
-              href="https://wa.me/972532814545?text=Hi,%20I'm%20interested%20in%20Online%20Coaching."
+              href="https://wa.me/972552517518?text=Hi,%20I'm%20interested%20in%20Online%20Coaching."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-amber-400 px-8 py-4 text-lg font-bold text-black shadow-[0_10px_30px_-10px_rgba(245,180,80,0.5)] transition-transform hover:scale-105"
             >
-              Apply For Coaching
+              Contact via WhatsApp
             </a>
           </motion.div>
         </div>
       </section>
 
-      {/* Features / What's Included */}
+      {/* How It Works / What We Focus On */}
       <section className="py-24 px-5 border-t border-white/10 bg-zinc-950">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
-            <h2 className="text-3xl md:text-5xl font-black">What You Get</h2>
-            <p className="text-zinc-400">A rigorous, science-backed approach tailored entirely to your goals and biomechanics.</p>
+            <h2 className="text-3xl md:text-5xl font-black">How We Work Together</h2>
+            <p className="text-zinc-400">A structured, honest approach focused on long-term progress, form, and structural health.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-zinc-900/50 border border-white/10 p-8 rounded-3xl space-y-4">
               <Zap className="size-10 text-amber-400" />
               <h3 className="text-xl font-bold">Custom Programming</h3>
-              <p className="text-zinc-400">Tailored routines focusing on planche, handstands, levers, or raw structural strength based on your current level.</p>
+              <p className="text-zinc-400">Structured training tailored to your current baseline, mechanics, and specific goals—whether it&apos;s a planche, handstand, or raw strength.</p>
             </div>
 
             <div className="bg-zinc-900/50 border border-white/10 p-8 rounded-3xl space-y-4">
               <CheckCircle2 className="size-10 text-amber-400" />
-              <h3 className="text-xl font-bold">Video Form Analysis</h3>
-              <p className="text-zinc-400">Direct feedback loops. Send your training videos and get precise technical corrections to prevent injuries and accelerate progress.</p>
+              <h3 className="text-xl font-bold">Form & Technique Feedback</h3>
+              <p className="text-zinc-400">Ongoing video reviews and technical adjustments. Consistency and proper execution matter more than repetition counts.</p>
             </div>
 
             <div className="bg-zinc-900/50 border border-white/10 p-8 rounded-3xl space-y-4">
               <Shield className="size-10 text-amber-400" />
               <h3 className="text-xl font-bold">Mobility & Longevity</h3>
-              <p className="text-zinc-400">In-depth active flexibility and joint conditioning protocols to keep your body bulletproof while getting stronger.</p>
+              <p className="text-zinc-400">Active flexibility and joint conditioning designed to keep your body resilient, balanced, and injury-free over time.</p>
             </div>
           </div>
         </div>
@@ -129,7 +128,7 @@ export default function OnlineCoachingPage() {
               
               <div className="absolute bottom-0 left-0 h-64 w-60 overflow-hidden rounded-2xl border-4 border-zinc-900 shadow-2xl z-20 transition duration-500 hover:scale-[1.03]">
                 <img
-                  src="/macaco.png"
+                  src="/ShaiBachar.jpg"
                   alt="Itay Barshi - Movement"
                   className="h-full w-full object-cover"
                 />
@@ -149,48 +148,48 @@ export default function OnlineCoachingPage() {
 
             <div className="space-y-4 text-lg text-zinc-400 leading-relaxed">
               <p>
-                I&apos;ve been immersed in the world of calisthenics and movement for nearly a decade. Many assume it’s natural talent or that I started from a high baseline — but the truth is, I started from absolute zero.
+                I have spent nearly a decade exploring calisthenics, movement, and bodyweight strength. I didn&apos;t start with natural talent or a high baseline — I started from absolute zero.
               </p>
               <p>
-                I couldn&apos;t do a single pull-up, and it took me over half a year to achieve my first muscle-up. Skills that take others a few months took me years.
+                I couldn&apos;t do a single pull-up when I began, and learning basic skills took me years of trial, error, and patience.
               </p>
               <p>
-                Precisely because of this journey, I learned to understand the body deeply, cope with failures, embrace consistency and repetition, navigate injuries, and figure out how to overcome them.
+                Because of that journey, my coaching isn&apos;t about quick fixes. It&apos;s about understanding your own body, respecting the process, learning from plateaus, and building real, sustainable capability.
               </p>
             </div>
 
             <div className="bg-zinc-900/80 p-6 rounded-2xl border border-white/10 shadow-lg">
               <p className="text-xl font-bold text-white">
-                My guiding principle is simple: It&apos;s not just what you achieve — it&apos;s who you become along the way.
+                It&apos;s not just about what you achieve on the bars — it&apos;s who you become along the way.
               </p>
             </div>
 
             <p className="text-lg text-zinc-400 leading-relaxed">
-              I believe in teaching you how to train, helping you understand movement principles, and working with your own sound logic — rather than just blindly copying what I do.
+              My goal is to teach you how to think, move, and train independently, based on clear principles rather than blind imitation.
             </p>
 
             <div className="flex items-center gap-2 text-amber-400 font-semibold pt-2">
               <Globe className="size-5 text-amber-400" />
-              <span className="text-lg">Coaching worldwide</span>
+              <span className="text-lg">Coaching practitioners worldwide</span>
             </div>
           </div>
 
         </div>
       </section>
 
-      {/* CTA Bottom Section */}
+      {/* Simple Bottom CTA */}
       <section className="py-20 px-5 text-center bg-zinc-950 border-t border-white/10">
         <div className="max-w-3xl mx-auto space-y-6">
-          <h2 className="text-3xl md:text-4xl font-black">Ready to Level Up Your Training?</h2>
-          <p className="text-zinc-400">Let&apos;s break your limits together, wherever you are.</p>
+          <h2 className="text-3xl md:text-4xl font-black">Let&apos;s Talk About Your Training</h2>
+          <p className="text-zinc-400">If you want to discuss your goals and see if we're a good fit, feel free to reach out.</p>
           <div className="pt-2">
             <a 
-              href="https://wa.me/972552517518?text=Hi,%20I'm%20ready%20to%20start%20Online%20Coaching."
+              href="https://wa.me/972552517518?text=Hi,%20I'd%20like%20to%20discuss%20online%20coaching."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-amber-400 px-8 py-4 text-lg font-bold text-black shadow-[0_10px_30px_-10px_rgba(245,180,80,0.5)] transition-transform hover:scale-105"
             >
-              Get Started via WhatsApp
+              Get in Touch via WhatsApp
             </a>
           </div>
         </div>
