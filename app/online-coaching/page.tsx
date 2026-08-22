@@ -185,7 +185,7 @@ export default function OnlineCoachingPage() {
           <p className="text-zinc-400">Let&apos;s break your limits together, wherever you are.</p>
           <div className="pt-2">
             <a 
-              href="https://wa.me/972532814545?text=Hi,%20I'm%20ready%20to%20start%20Online%20Coaching."
+              href="https://wa.me/972552517518?text=Hi,%20I'm%20ready%20to%20start%20Online%20Coaching."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-amber-400 px-8 py-4 text-lg font-bold text-black shadow-[0_10px_30px_-10px_rgba(245,180,80,0.5)] transition-transform hover:scale-105"
