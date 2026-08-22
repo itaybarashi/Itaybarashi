@@ -26,7 +26,7 @@ export function Pricing() {
                 גמישות מלאה, מתאים להשתלבות שוטפת באימוני הקליסטניקס והתנועה בסטודיו ללא התחייבות ארוכת טווח.
               </p>
               <div className="text-4xl font-black text-foreground pt-2">
-                500 ₪ <span className="text-sm font-normal text-muted-foreground">/ חודש</span>
+                499 ₪ <span className="text-sm font-normal text-muted-foreground">/ חודש</span>
               </div>
             </div>
 
