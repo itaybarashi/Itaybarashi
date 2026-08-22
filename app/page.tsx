@@ -1,49 +1,90 @@
-import { SiteHeader } from "@/components/site-header"
-import { Hero } from "@/components/hero"
-import { Philosophy } from "@/components/philosophy"
-import { About } from "@/components/about"
-import { ForWhom } from "@/components/ForWhom"
-import { Location } from "@/components/location"
-import { Disciplines } from "@/components/disciplines"
-import { Gallery } from "@/components/Gallery"
-import { Merch } from "@/components/Merch" // הוספנו את הייבוא
-import { InstagramFeed } from "@/components/InstagramFeed"
-import { Schedule } from "@/components/schedule"
-import { FAQ } from "@/components/FAQ"
-import { FinalCta } from "@/components/final-cta"
-import { WhatsappFloat } from "@/components/whatsapp-float"
-import { InstagramFloat } from "@/components/instagram-float"
+"use client"
 
-export default function Page() {
+import { useState } from "react"
+import { Users, Laptop, Globe } from "lucide-react"
+import Link from "next/link"
+
+export default function GatewayPage() {
+  const [lang, setLang] = useState<"he" | "en">("he")
+
   return (
-    <main className="relative min-h-screen overflow-x-hidden">
-      <SiteHeader />
-      <Hero />
-      <Philosophy />
-      <About />
-      <ForWhom />
-      <Location />
-      <Disciplines />
+    <main className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center px-5">
       
-      <Gallery />
-      
-      {/* כאן הוספנו את המרצ'נדייז */}
-      <Merch />
-      
-      <div className="hidden md:block">
-        <InstagramFeed />
+      {/* מתג שפה בפינה */}
+      <div className="absolute top-6 left-6 flex items-center gap-2">
+        <Globe className="size-4 text-zinc-400" />
+        <button 
+          onClick={() => setLang(lang === "he" ? "en" : "he")}
+          className="text-sm font-medium text-zinc-300 hover:text-white border border-white/20 rounded-full px-3 py-1 bg-white/5 transition"
+        >
+          {lang === "he" ? "English" : "עברית"}
+        </button>
       </div>
 
-      <Schedule />
-      <FAQ />
-      <FinalCta />
-      
-      <WhatsappFloat />
-      <InstagramFloat />
-      
-      <footer className="border-t border-border px-5 py-8 text-center text-sm text-muted-foreground">
-        © {new Date().getFullYear()} GRAVITAS · קליסטניקס · עמידות ידיים · נס ציונה
-      </footer>
+      <div className="max-w-3xl mx-auto text-center space-y-12">
+        
+        {/* כותרת ראשית */}
+        <div className="space-y-4">
+          <h1 className="text-5xl md:text-7xl font-black tracking-tight">
+            GRAVITAS <span className="text-primary">MOVEMENT</span>
+          </h1>
+          <p className="text-lg text-zinc-400">
+            {lang === "he" ? "בחר את מסלול האימון המתאים לך" : "Choose your path"}
+          </p>
+        </div>
+
+        {/* שתי אפשרויות בחירה */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-right">
+          
+          {/* אופציה 1: Face to Face (נוער 12-16) */}
+          <Link 
+            href="/local" 
+            className="group relative bg-zinc-900/80 border border-white/10 hover:border-primary/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
+          >
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+                <Users className="size-6" />
+              </div>
+              <h2 className="text-2xl font-bold">
+                {lang === "he" ? "אימונים פרונטליים (נס ציונה)" : "Face-to-Face Training"}
+              </h2>
+              <p className="text-zinc-400 text-sm leading-relaxed">
+                {lang === "he" 
+                  ? "אימוני קליסטניקס, עמידות ידיים ותנועה לבני נוער בגילאי 12-16 בסטודיו."
+                  : "In-person calisthenics and handbalance training for youth (ages 12-16) in Ness Ziona."}
+              </p>
+            </div>
+            <span className="mt-8 inline-block text-sm font-bold text-primary group-hover:translate-x-1 transition-transform">
+              {lang === "he" ? "הכנס לאתר הישראלי ←" : "Enter Local Site →"}
+            </span>
+          </Link>
+
+          {/* אופציה 2: Online Coaching (לכולם, באנגלית) */}
+          <Link 
+            href="/online-coaching" 
+            className="group relative bg-zinc-900/80 border border-white/10 hover:border-primary/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
+          >
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+                <Laptop className="size-6" />
+              </div>
+              <h2 className="text-2xl font-bold">
+                {lang === "he" ? "אונליין קואוצ'ינג (עולמי)" : "Online Coaching"}
+              </h2>
+              <p className="text-zinc-400 text-sm leading-relaxed">
+                {lang === "he" 
+                  ? "תוכניות אימון אישיות, ניתוח טכניקה וליווי לכל הגילאים ולכל הרמות ברחבי העולם (באנגלית)."
+                  : "Custom programming, video form analysis, and global guidance for all levels."}
+              </p>
+            </div>
+            <span className="mt-8 inline-block text-sm font-bold text-primary group-hover:translate-x-1 transition-transform">
+              {lang === "he" ? "עבור לאונליין →" : "Explore Online →"}
+            </span>
+          </Link>
+
+        </div>
+
+      </div>
     </main>
   )
 }
