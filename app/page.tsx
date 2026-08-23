@@ -1,18 +1,18 @@
 "use client"
 
 import { useState } from "react"
-import { Users, Laptop, Globe } from "lucide-react"
+import { Users, Laptop, Globe, HandMetal } from "lucide-react"
 import Link from "next/link"
 
 export default function GatewayPage() {
   const [lang, setLang] = useState<"he" | "en">("en")
 
   return (
-    <main className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center px-5 overflow-hidden">
+    <main className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center px-5 py-12 overflow-hidden">
       
       {/* זוהר עדין ברקע */}
       <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center">
-        <div className="size-[30rem] -translate-y-24 rounded-full bg-primary/10 blur-[150px]" />
+        <div className="size-[35rem] -translate-y-24 rounded-full bg-primary/10 blur-[150px]" />
       </div>
 
       {/* מתג שפה בפינה */}
@@ -26,9 +26,9 @@ export default function GatewayPage() {
         </button>
       </div>
 
-      <div className="max-w-3xl mx-auto text-center space-y-12 z-10">
+      <div className="max-w-4xl mx-auto text-center space-y-12 z-10">
         
-        {/* כותרת גדולה ומרכזית עם נגיעת צבע זהובה */}
+        {/* כותרת גדולה ומרכזית */}
         <div className="space-y-3">
           <h1 className="text-4xl md:text-6xl font-black tracking-tight">
             {lang === "he" ? (
@@ -43,52 +43,75 @@ export default function GatewayPage() {
           </h1>
         </div>
 
-        {/* שתי אפשרויות בחירה */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 ${lang === "he" ? "text-right" : "text-left"}`}>
+        {/* שלוש אפשרויות בחירה */}
+        <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 ${lang === "he" ? "text-right" : "text-left"}`}>
           
           {/* אופציה 1: Online Coaching */}
           <Link 
             href="/online-coaching" 
-            className="group relative bg-zinc-900/80 border border-white/10 hover:border-amber-300/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
+            className="group relative bg-zinc-900/80 border border-white/10 hover:border-amber-300/50 p-6 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
           >
             <div className="space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-amber-300/10 flex items-center justify-center text-amber-300">
                 <Laptop className="size-6" />
               </div>
-              <h2 className="text-2xl font-bold">
+              <h2 className="text-xl font-bold">
                 {lang === "he" ? "אונליין קואוצ'ינג (עולמי)" : "Online Coaching"}
               </h2>
-              <p className="text-zinc-400 text-sm leading-relaxed">
+              <p className="text-zinc-400 text-xs md:text-sm leading-relaxed">
                 {lang === "he" 
-                  ? "תוכניות אימון אישיות, ניתוח טכניקה וליווי לכל הגילאים ולכל הרמות ברחבי העולם (באנגלית)."
+                  ? "תוכניות אימון אישיות, ניתוח טכניקה וליווי לכל הרמות ברחבי העולם."
                   : "Custom programming, video form analysis, and global guidance for all levels."}
               </p>
             </div>
-            <span className="mt-8 inline-block text-sm font-bold text-amber-300 group-hover:translate-x-1 transition-transform">
+            <span className="mt-6 inline-block text-xs md:text-sm font-bold text-amber-300 group-hover:translate-x-1 transition-transform">
               {lang === "he" ? "עבור לאונליין →" : "Explore Online →"}
             </span>
           </Link>
 
-          {/* אופציה 2: Face to Face (נוער 12-16) עם ישראל בסוגריים */}
+          {/* אופציה 2: Handbalance Courses (החדש!) */}
+          <Link 
+            href="/handbalance-course" 
+            className="group relative bg-zinc-900/80 border border-white/10 hover:border-amber-300/50 p-6 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
+          >
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-amber-300/10 flex items-center justify-center text-amber-300">
+                <HandMetal className="size-6" />
+              </div>
+              <h2 className="text-xl font-bold">
+                {lang === "he" ? "קורסי עמידות ידיים (פרונטלי)" : "Handbalance Courses"}
+              </h2>
+              <p className="text-zinc-400 text-xs md:text-sm leading-relaxed">
+                {lang === "he" 
+                  ? "קורס ממוקד למתחילים — 5 מפגשים פרונטליים לבניית יסודות ועמידה יציבה."
+                  : "Focused beginner courses — 5 in-person sessions to master handbalance basics."}
+              </p>
+            </div>
+            <span className="mt-6 inline-block text-xs md:text-sm font-bold text-amber-300 group-hover:translate-x-1 transition-transform">
+              {lang === "he" ? "לפרטים על הקורס →" : "Explore Courses →"}
+            </span>
+          </Link>
+
+          {/* אופציה 3: Face to Face (נוער 12-16) */}
           <Link 
             href="/local" 
-            className="group relative bg-zinc-900/80 border border-white/10 hover:border-amber-300/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
+            className="group relative bg-zinc-900/80 border border-white/10 hover:border-amber-300/50 p-6 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
           >
             <div className="space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-amber-300/10 flex items-center justify-center text-amber-300">
                 <Users className="size-6" />
               </div>
-              <h2 className="text-2xl font-bold">
-                {lang === "he" ? "אימונים פרונטליים (נס ציונה)" : "Face-to-Face (Israel)"}
+              <h2 className="text-xl font-bold">
+                {lang === "he" ? "אימונים פרונטליים לנוער" : "Face-to-Face (Youth)"}
               </h2>
-              <p className="text-zinc-400 text-sm leading-relaxed">
+              <p className="text-zinc-400 text-xs md:text-sm leading-relaxed">
                 {lang === "he" 
-                  ? "אימוני קליסטניקס, עמידות ידיים ותנועה לבני נוער בגילאי 12-16 בסטודיו."
+                  ? "אימוני קליסטניקס, עמידות ידיים ותנועה לבני נוער בגילאי 12-16 בנס ציונה."
                   : "In-person calisthenics and handbalance training for youth (ages 12-16) in Ness Ziona."}
               </p>
             </div>
-            <span className="mt-8 inline-block text-sm font-bold text-amber-300 group-hover:translate-x-1 transition-transform">
-              {lang === "he" ? "הכנס לאתר הישראלי ←" : "Enter Local Site →"}
+            <span className="mt-6 inline-block text-xs md:text-sm font-bold text-amber-300 group-hover:translate-x-1 transition-transform">
+              {lang === "he" ? "הכנס לאתר הסטודיו ←" : "Enter Local Site →"}
             </span>
           </Link>
 
