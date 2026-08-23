@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Check, X, Globe, ArrowLeft, Target, BookOpen, Users, Calendar, Clock } from "lucide-react"
+import { Check, X, Globe, ArrowLeft, Target, Users, Calendar, Clock } from "lucide-react"
 import Link from "next/link"
 
 export default function HandbalanceCoursePage() {
@@ -49,14 +49,14 @@ export default function HandbalanceCoursePage() {
           >
             {lang === "he" ? (
               <>
-                סילבוס קורס עמידת ידיים <br />
+                קורס עמידות ידיים למתחילים <br />
                 <span className="bg-gradient-to-l from-amber-300 to-amber-100 bg-clip-text text-transparent drop-shadow">
                   שליטה, איזון ועצמאות.
                 </span>
               </>
             ) : (
               <>
-                Handbalance Course Syllabus <br />
+                Beginner Handbalance Course <br />
                 <span className="bg-gradient-to-l from-amber-300 to-amber-100 bg-clip-text text-transparent drop-shadow">
                   Control, Balance & Independence.
                 </span>
@@ -225,7 +225,7 @@ export default function HandbalanceCoursePage() {
           <div className="bg-zinc-950 border-2 border-amber-300/60 p-8 md:p-12 rounded-3xl text-center space-y-6 shadow-2xl">
             <h3 className="text-2xl font-bold">{lang === "he" ? "עלות הקורס המלא (5 מפגשים)" : "Full Course Investment (5 Sessions)"}</h3>
             <div className="text-5xl font-black text-amber-300">
-              {lang === "he" ? "1,000 ₪" : "₪1,000"}
+              {lang === "he" ? "999 ₪" : "₪999"}
             </div>
             <p className="text-zinc-400 text-sm max-w-xl mx-auto">
               {lang === "he" 
@@ -234,7 +234,7 @@ export default function HandbalanceCoursePage() {
             </p>
             <div className="pt-4">
               <a 
-                href={`https://wa.me/972552517518?text=${lang === "he" ? "היי איתי, אשמח לשמוע פרטים נוספים ולהירשם לקורס עמידות הידיים (1000 ₪ ל-5 מפגשים)." : "Hi Itay, I'd like to join the Handbalance course (₪1,000)."}`}
+                href={`https://wa.me/972552517518?text=${lang === "he" ? "היי איתי, אשמח לשמוע פרטים נוספים ולהירשם לקורס עמידות הידיים (999 ₪ ל-5 מפגשים)." : "Hi Itay, I'd like to join the Handbalance course (₪999)."}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block w-full md:w-auto px-10 text-center rounded-xl bg-gradient-to-r from-amber-300 to-amber-200 py-4 text-lg font-bold text-black hover:opacity-90 transition-opacity shadow-lg"
