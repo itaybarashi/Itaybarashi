@@ -12,9 +12,7 @@ import { Schedule } from "@/components/schedule"
 import { Pricing } from "@/components/pricing"
 import { FAQ } from "@/components/FAQ"
 import { FinalCta } from "@/components/final-cta"
-import { WhatsappFloat } from "@/components/whatsapp-float"
-import { InstagramFloat } from "@/components/instagram-float"
-import { MobileQuickNav } from "@/components/mobile-quick-nav" // 1. ייבוא הסרגל החדש
+import { MobileQuickNav } from "@/components/mobile-quick-nav"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 
@@ -55,10 +53,8 @@ export default function Page() {
       </div>
       <FinalCta />
       
-      <WhatsappFloat />
-      <InstagramFloat />
-      
-      <MobileQuickNav /> {/* 2. הצגת הסרגל התחתון בנייד בלבד */}
+      {/* סרגל הניווט המהיר התחתון בנייד (נשאר לנוחות המשתמש) */}
+      <MobileQuickNav />
       
       <footer className="border-t border-border px-5 py-8 text-center text-sm text-muted-foreground">
         © {new Date().getFullYear()} GRAVITAS · קליסטניקס · עמידות ידיים · נס ציונה
