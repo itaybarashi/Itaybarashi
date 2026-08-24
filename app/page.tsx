@@ -12,7 +12,6 @@ export default function GatewayPage() {
   useEffect(() => {
     async function detectUserLanguage() {
       try {
-        // בדיקת שפת דפדפן כגיבוי ראשוני מהיר
         const browserLang = navigator.language || navigator.languages[0];
         if (browserLang && browserLang.startsWith("he")) {
           setLang("he");
@@ -20,7 +19,6 @@ export default function GatewayPage() {
           return;
         }
 
-        // בדיקת מיקום מבוססת IP (חינמי ומהיר)
         const response = await fetch("https://ipapi.co/json/");
         const data = await response.json();
         
@@ -30,7 +28,6 @@ export default function GatewayPage() {
           setLang("en");
         }
       } catch (error) {
-        // ברירת מחדל במקרה של שגיאת ברשת
         setLang("en");
       } finally {
         setIsLoading(false);
@@ -40,7 +37,6 @@ export default function GatewayPage() {
     detectUserLanguage();
   }, []);
 
-  // בזמן זיהוי קצרצר אפשר להציג מסך שחור נקי כדי שלא יהפוך שפות מול עיני המשתמש
   if (isLoading) {
     return <main className="min-h-screen bg-black" />;
   }
@@ -53,7 +49,7 @@ export default function GatewayPage() {
         <div className="size-[35rem] -translate-y-24 rounded-full bg-primary/10 blur-[150px]" />
       </div>
 
-      {/* מתג שפה ידני בפינה (למקרה שמישהו רוצה להחליף) */}
+      {/* מתג שפה ידני בפינה */}
       <div className="absolute top-6 left-6 z-20 flex items-center gap-2">
         <Globe className="size-4 text-zinc-400" />
         <button 
@@ -66,9 +62,9 @@ export default function GatewayPage() {
 
       <div className="max-w-4xl mx-auto text-center space-y-12 z-10">
         
-        {/* כותרת גדולה ומרכזית */}
+        {/* כותרת מותאמת למובייל שלא נחתכת בצורה מוזרה */}
         <div className="space-y-3">
-          <h1 className="text-4xl md:text-6xl font-black tracking-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight">
             {lang === "he" ? (
               <>
                 בחר את <span className="bg-gradient-to-l from-amber-300 to-amber-100 bg-clip-text text-transparent">מסלול האימון</span> שלך
@@ -81,10 +77,33 @@ export default function GatewayPage() {
           </h1>
         </div>
 
-        {/* שלוש אפשרויות בחירה */}
+        {/* שלוש אפשרויות בחירה בסדר החדש: פרונטלי -> אונליין -> קורסים */}
         <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 ${lang === "he" ? "text-right" : "text-left"}`}>
           
-          {/* אופציה 1: Online Coaching */}
+          {/* אופציה 1: Face to Face (נוער 12-16) - ראשון */}
+          <Link 
+            href="/local" 
+            className="group relative bg-zinc-900/80 border border-white/10 hover:border-amber-300/50 p-6 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
+          >
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-amber-300/10 flex items-center justify-center text-amber-300">
+                <Users className="size-6" />
+              </div>
+              <h2 className="text-xl font-bold">
+                {lang === "he" ? "אימונים פרונטליים לנוער" : "Face-to-Face (Israel)"}
+              </h2>
+              <p className="text-zinc-400 text-xs md:text-sm leading-relaxed">
+                {lang === "he" 
+                  ? "אימוני קליסטניקס, עמידות ידיים ותנועה לבני נוער בגילאי 12-16 בנס ציונה."
+                  : "In-person calisthenics and handbalance training for youth (ages 12-16) in Ness Ziona."}
+              </p>
+            </div>
+            <span className="mt-6 inline-block text-xs md:text-sm font-bold text-amber-300 group-hover:translate-x-1 transition-transform">
+              {lang === "he" ? "הכנס לאתר הסטודיו ←" : "Enter Local Site →"}
+            </span>
+          </Link>
+
+          {/* אופציה 2: Online Coaching - שני */}
           <Link 
             href="/online-coaching" 
             className="group relative bg-zinc-900/80 border border-white/10 hover:border-amber-300/50 p-6 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
@@ -107,7 +126,7 @@ export default function GatewayPage() {
             </span>
           </Link>
 
-          {/* אופציה 2: Handbalance Courses */}
+          {/* אופציה 3: Handbalance Courses - שלישי */}
           <Link 
             href="/handbalance-course" 
             className="group relative bg-zinc-900/80 border border-white/10 hover:border-amber-300/50 p-6 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
@@ -127,29 +146,6 @@ export default function GatewayPage() {
             </div>
             <span className="mt-6 inline-block text-xs md:text-sm font-bold text-amber-300 group-hover:translate-x-1 transition-transform">
               {lang === "he" ? "לפרטים על הקורס →" : "Explore Courses →"}
-            </span>
-          </Link>
-
-          {/* אופציה 3: Face to Face (נוער 12-16) */}
-          <Link 
-            href="/local" 
-            className="group relative bg-zinc-900/80 border border-white/10 hover:border-amber-300/50 p-6 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
-          >
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-amber-300/10 flex items-center justify-center text-amber-300">
-                <Users className="size-6" />
-              </div>
-              <h2 className="text-xl font-bold">
-                {lang === "he" ? "אימונים פרונטליים לנוער" : "Face-to-Face (Israel)"}
-              </h2>
-              <p className="text-zinc-400 text-xs md:text-sm leading-relaxed">
-                {lang === "he" 
-                  ? "אימוני קליסטניקס, עמידות ידיים ותנועה לבני נוער בגילאי 12-16 בנס ציונה."
-                  : "In-person calisthenics and handbalance training for youth (ages 12-16) in Ness Ziona."}
-              </p>
-            </div>
-            <span className="mt-6 inline-block text-xs md:text-sm font-bold text-amber-300 group-hover:translate-x-1 transition-transform">
-              {lang === "he" ? "הכנס לאתר הסטודיו ←" : "Enter Local Site →"}
             </span>
           </Link>
 
