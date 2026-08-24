@@ -1,11 +1,49 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Users, Laptop, Globe, HandMetal } from "lucide-react"
 import Link from "next/link"
 
 export default function GatewayPage() {
   const [lang, setLang] = useState<"he" | "en">("en")
+  const [isLoading, setIsLoading] = useState(true)
+
+  // זיהוי מיקום אוטומטי בכניסה הראשונה
+  useEffect(() => {
+    async function detectUserLanguage() {
+      try {
+        // בדיקת שפת דפדפן כגיבוי ראשוני מהיר
+        const browserLang = navigator.language || navigator.languages[0];
+        if (browserLang && browserLang.startsWith("he")) {
+          setLang("he");
+          setIsLoading(false);
+          return;
+        }
+
+        // בדיקת מיקום מבוססת IP (חינמי ומהיר)
+        const response = await fetch("https://ipapi.co/json/");
+        const data = await response.json();
+        
+        if (data && data.country_code === "IL") {
+          setLang("he");
+        } else {
+          setLang("en");
+        }
+      } catch (error) {
+        // ברירת מחדל במקרה של שגיאת ברשת
+        setLang("en");
+      } finally {
+        setIsLoading(false);
+      }
+    }
+
+    detectUserLanguage();
+  }, []);
+
+  // בזמן זיהוי קצרצר אפשר להציג מסך שחור נקי כדי שלא יהפוך שפות מול עיני המשתמש
+  if (isLoading) {
+    return <main className="min-h-screen bg-black" />;
+  }
 
   return (
     <main className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center px-5 py-12 overflow-hidden">
@@ -15,7 +53,7 @@ export default function GatewayPage() {
         <div className="size-[35rem] -translate-y-24 rounded-full bg-primary/10 blur-[150px]" />
       </div>
 
-      {/* מתג שפה בפינה */}
+      {/* מתג שפה ידני בפינה (למקרה שמישהו רוצה להחליף) */}
       <div className="absolute top-6 left-6 z-20 flex items-center gap-2">
         <Globe className="size-4 text-zinc-400" />
         <button 
@@ -69,7 +107,7 @@ export default function GatewayPage() {
             </span>
           </Link>
 
-          {/* אופציה 2: Handbalance Courses (החדש!) */}
+          {/* אופציה 2: Handbalance Courses */}
           <Link 
             href="/handbalance-course" 
             className="group relative bg-zinc-900/80 border border-white/10 hover:border-amber-300/50 p-6 rounded-3xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between shadow-xl"
@@ -102,7 +140,7 @@ export default function GatewayPage() {
                 <Users className="size-6" />
               </div>
               <h2 className="text-xl font-bold">
-                {lang === "he" ? "אימונים פרונטליים לנוער" : "Face-to-Face (Youth)"}
+                {lang === "he" ? "אימונים פרונטליים לנוער" : "Face-to-Face (Israel)"}
               </h2>
               <p className="text-zinc-400 text-xs md:text-sm leading-relaxed">
                 {lang === "he" 
