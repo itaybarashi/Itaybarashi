@@ -9,15 +9,17 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 w-full border-b border-white/10 bg-black/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-2" dir="rtl">
         
-        {/* צד ימין: הלוגו של הסטודיו */}
-        <Link href="/local" className="flex items-center gap-2 shrink-0">
-          <Image
-            src="/gravitas-transparent.png"
-            alt="Gravitas Logo"
-            width={40}
-            height={40}
-            className="object-contain"
-          />
+        {/* צד ימין: הלוגו המקורי (ללא שינוי) */}
+        <Link href="/local" className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center justify-center rounded-full bg-[#f0ece6] p-[1px] shadow-sm">
+            <Image
+              src="/gravitas-transparent.png"
+              alt="Gravitas Logo"
+              width={40}
+              height={40}
+              className="size-9 object-contain"
+            />
+          </div>
           <span className="font-black tracking-wider text-white hidden sm:inline-block text-base">
             GRAVITAS
           </span>
