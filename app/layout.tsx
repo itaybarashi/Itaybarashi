@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="he" dir="rtl" className={`${heebo.variable} dark`}>
       <body className="font-sans antialiased bg-background">
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        <Analytics />
       </body>
     </html>
   )
