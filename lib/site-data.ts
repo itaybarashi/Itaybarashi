@@ -52,35 +52,23 @@ export const SCHEDULE: Day[] = [
   {
     name: "ראשון",
     sessions: [
-      { time: "15:00", title: "מתחילים", group: "נוער (13+)", level: "youthBeginner" },
-      { time: "16:00", title: "מתקדמים", group: "נוער (13+)", level: "advanced" },
+      { time: "16:00", title: "מתחילים", group: "תיכון", level: "youthBeginner" },
+      { time: "17:00", title: "מתקדמים", group: "תיכון", level: "advanced" },
     ],
   },
   {
     name: "שני",
     sessions: [
-      { time: "16:00", title: "מתקדמים", group: "נוער (13+)", level: "advanced" },
-      { time: "17:30", title: "מתחילים", group: "ילדים (11-12)", level: "kidsBeginner" },
-    ],
-  },
-  {
-    name: "שלישי",
-    sessions: [
-      { time: "15:00", title: "אימון פתוח", group: "כל הרמות", level: "open" },
+      { time: "15:30", title: "מתקדמים", group: "תיכון", level: "advanced" },
+      { time: "17:00", title: "מתחילים", group: "חטיבה", level: "kidsBeginner" },
     ],
   },
   {
     name: "חמישי",
     sessions: [
-      { time: "15:00", title: "מתקדמים", group: "נוער (13+)", level: "advanced" },
-      { time: "16:30", title: "מתחילים", group: "ילדים (11-12)", level: "kidsBeginner" },
-      { time: "17:30", title: "מתחילים", group: "נוער (13+)", level: "youthBeginner" },
-    ],
-  },
-  {
-    name: "שישי",
-    sessions: [
-      { time: "16:00", title: "אימון פתוח", group: "מתקדמים", level: "open" },
+      { time: "15:30", title: "מתחילים", group: "חטיבה", level: "kidsBeginner" },
+      { time: "17:00", title: "מתקדמים", group: "תיכון", level: "advanced" },
+      { time: "18:00", title: "מתחילים", group: "תיכון", level: "youthBeginner" },
     ],
   },
 ]
