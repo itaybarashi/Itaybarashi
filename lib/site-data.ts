@@ -64,11 +64,23 @@ export const SCHEDULE: Day[] = [
     ],
   },
   {
+    name: "שלישי",
+    sessions: [
+      { time: "16:30", title: "אימון פתוח", group: "כל הרמות", level: "open" },
+    ],
+  },
+  {
     name: "חמישי",
     sessions: [
       { time: "15:30", title: "מתחילים", group: "חטיבה", level: "kidsBeginner" },
       { time: "17:00", title: "מתקדמים", group: "תיכון", level: "advanced" },
       { time: "18:00", title: "מתחילים", group: "תיכון", level: "youthBeginner" },
+    ],
+  },
+  {
+    name: "שישי",
+    sessions: [
+      { time: "16:00", title: "אימון פתוח", group: "מתקדמים", level: "open" },
     ],
   },
 ]
