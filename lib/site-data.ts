@@ -4,26 +4,20 @@ export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIC
   WHATSAPP_MESSAGE,
 )}`
 
-export type LevelKey = "youthBeginner" | "advanced" | "kidsBeginner" | "open"
+export type LevelKey = "highSchool" | "middleSchool" | "open"
 
 export const LEVELS: Record<
   LevelKey,
   { label: string; dot: string; ring: string; soft: string }
 > = {
-  youthBeginner: {
-    label: "נוער · מתחילים",
+  highSchool: {
+    label: "תיכון",
     dot: "bg-sky-400",
     ring: "ring-sky-400/40",
     soft: "bg-sky-400/10 text-sky-300",
   },
-  advanced: {
-    label: "נוער · מתקדמים",
-    dot: "bg-rose-500",
-    ring: "ring-rose-500/40",
-    soft: "bg-rose-500/10 text-rose-300",
-  },
-  kidsBeginner: {
-    label: "ילדים · מתחילים",
+  middleSchool: {
+    label: "חטיבה",
     dot: "bg-emerald-400",
     ring: "ring-emerald-400/40",
     soft: "bg-emerald-400/10 text-emerald-300",
@@ -52,15 +46,15 @@ export const SCHEDULE: Day[] = [
   {
     name: "ראשון",
     sessions: [
-      { time: "16:00", title: "מתחילים", group: "תיכון", level: "youthBeginner" },
-      { time: "17:00", title: "מתקדמים", group: "תיכון", level: "advanced" },
+      { time: "16:00", title: "מתחילים", group: "תיכון", level: "highSchool" },
+      { time: "17:00", title: "מתקדמים", group: "תיכון", level: "highSchool" },
     ],
   },
   {
     name: "שני",
     sessions: [
-      { time: "15:30", title: "מתקדמים", group: "תיכון", level: "advanced" },
-      { time: "17:00", title: "מתחילים", group: "חטיבה", level: "kidsBeginner" },
+      { time: "15:30", title: "מתקדמים", group: "תיכון", level: "highSchool" },
+      { time: "17:00", title: "מתחילים", group: "חטיבה", level: "middleSchool" },
     ],
   },
   {
@@ -72,9 +66,9 @@ export const SCHEDULE: Day[] = [
   {
     name: "חמישי",
     sessions: [
-      { time: "15:30", title: "מתחילים", group: "חטיבה", level: "kidsBeginner" },
-      { time: "17:00", title: "מתקדמים", group: "תיכון", level: "advanced" },
-      { time: "18:00", title: "מתחילים", group: "תיכון", level: "youthBeginner" },
+      { time: "15:30", title: "מתחילים", group: "חטיבה", level: "middleSchool" },
+      { time: "17:00", title: "מתקדמים", group: "תיכון", level: "highSchool" },
+      { time: "18:00", title: "מתחילים", group: "תיכון", level: "highSchool" },
     ],
   },
   {
