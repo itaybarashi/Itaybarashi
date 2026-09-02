@@ -23,7 +23,7 @@ export const LEVELS: Record<
     soft: "bg-emerald-400/10 text-emerald-300",
   },
   open: {
-    label: "אימון פתוח",
+    label: "אימון פתוח למתקדמים",
     dot: "bg-amber-400",
     ring: "ring-amber-400/40",
     soft: "bg-amber-400/10 text-amber-300",
@@ -74,7 +74,7 @@ export const SCHEDULE: Day[] = [
   {
     name: "שישי",
     sessions: [
-      { time: "16:00", title: "אימון פתוח", group: "מתקדמים", level: "open" },
+      { time: "16:00", title: "אימון פתוח למתקדמים", group: "מתקדמים", level: "open" },
     ],
   },
 ]
