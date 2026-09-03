@@ -88,22 +88,25 @@ export function Schedule() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.4, delay: i * 0.08, ease: easing }}
                         whileHover={{ x: -4 }}
-                        className={`group flex items-center gap-3 rounded-2xl border border-transparent bg-secondary/40 p-3 ring-1 ring-inset transition-colors hover:bg-secondary ${lvl.ring}`}
+                        className={`group flex items-center justify-between gap-3 rounded-2xl border border-transparent bg-secondary/40 p-3 ring-1 ring-inset transition-colors hover:bg-secondary ${lvl.ring}`}
                       >
-                        <span className={`mt-0.5 size-3 shrink-0 rounded-full ${lvl.dot}`} />
-                        <div className="flex-1">
-                          <div className="flex items-center gap-1.5 font-bold">
-                            <Clock className="size-3.5 text-muted-foreground" />
-                            {s.time}
-                            <span className="text-foreground">· {s.title}</span>
-                          </div>
-                          <div className="mt-1 flex items-center gap-1.5 text-xs text-muted-foreground">
-                            <Users className="size-3.5" />
-                            {s.group}
+                        <div className="flex items-center gap-3">
+                          <span className={`size-3 shrink-0 rounded-full ${lvl.dot}`} />
+                          <div>
+                            <div className="flex items-center gap-1.5 font-bold">
+                              <Clock className="size-3.5 text-muted-foreground" />
+                              {s.time}
+                              <span className="text-foreground">· {s.title}</span>
+                            </div>
+                            <div className="mt-1 flex items-center gap-1.5 text-xs text-muted-foreground">
+                              <Users className="size-3.5" />
+                              {s.group}
+                            </div>
                           </div>
                         </div>
+
                         <span
-                          className={`rounded-full px-2.5 py-1 text-[11px] font-semibold ${lvl.soft}`}
+                          className={`rounded-full px-2.5 py-1 text-[11px] font-semibold shrink-0 ${lvl.soft}`}
                         >
                           {lvl.label}
                         </span>
