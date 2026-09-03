@@ -18,51 +18,51 @@ export function Pricing() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-right" dir="rtl">
           
-          {/* מסלול חודשי */}
+          {/* מסלול חד-שבוע */}
           <div className="bg-card/50 border border-border p-8 rounded-3xl flex flex-col justify-between space-y-8 relative">
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold">מסלול חודשי</h3>
+              <h3 className="text-2xl font-bold">מסלול חד-שבועי</h3>
               <p className="text-muted-foreground text-sm">
-                גמישות מלאה, מתאים להשתלבות שוטפת באימוני הקליסטניקס והתנועה בסטודיו ללא התחייבות ארוכת טווח.
+                4 אימונים בחודש. מתאים למתאמנים שרוצים לשלב אימון קליסטניקס ממוקד לצד פעילות נוספת.
               </p>
               <div className="text-4xl font-black text-foreground pt-2">
-                499 ₪ <span className="text-sm font-normal text-muted-foreground">/ חודש</span>
+                300 ₪ <span className="text-sm font-normal text-muted-foreground">/ חודש</span>
               </div>
             </div>
 
             <a 
-              href="https://wa.me/972552517518?text=היי,%20אשמח%20לשמוע%20פרטים%20על%20המסלול%20החודשי%20בסטודיו."
+              href="https://wa.me/972552517518?text=היי,%20אשמח%20לשמוע%20פרטים%20על%20מסלול%20חד-שבועי%20בסטודיו."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full text-center rounded-full border border-border hover:border-primary py-3 font-bold transition-colors bg-background hover:bg-card"
             >
-              בחירת מסלול חודשי
+              בחירת מסלול חד-שבועי
             </a>
           </div>
 
-          {/* מסלול חצי-שנתי (מומלץ) */}
+          {/* מסלול דו-שבוע (מומלץ) */}
           <div className="bg-card border-2 border-primary/60 p-8 rounded-3xl flex flex-col justify-between space-y-8 relative shadow-xl">
             <div className="absolute -top-4 left-8 bg-primary text-primary-foreground text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full">
               המשתלם ביותר
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold">מסלול חצי-שנתי</h3>
+              <h3 className="text-2xl font-bold">מסלול דו-שבועי</h3>
               <p className="text-muted-foreground text-sm">
-                לתהליך עבודה אמיתי, יצירת התמדה ובניית יכולות עומק בסטודיו בהנחה משמעותית.
+                8 אימונים בחודש. לתהליך עבודה אמיתי, יצירת התמדה מהירה ובניית יכולות עומק בסטודיו.
               </p>
               <div className="text-4xl font-black text-primary pt-2">
-                2,499 ₪ <span className="text-sm font-normal text-muted-foreground">/ חצי שנה</span>
+                500 ₪ <span className="text-sm font-normal text-muted-foreground">/ חודש</span>
               </div>
             </div>
 
             <a 
-              href="https://wa.me/972552517518?text=היי,%20אשמח%20לשמוע%20פרטים%20על%20המסלול%20החצי-שנתי%20בסטודיו."
+              href="https://wa.me/972552517518?text=היי,%20אשמח%20לשמוע%20פרטים%20על%20מסלול%20דו-שבועי%20בסטודיו."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full text-center rounded-full bg-primary py-3 font-bold text-primary-foreground hover:scale-[1.02] transition-transform shadow-lg"
             >
-              בחירת מסלול חצי-שנתי
+              בחירת מסלול דו-שבועי
             </a>
           </div>
 
