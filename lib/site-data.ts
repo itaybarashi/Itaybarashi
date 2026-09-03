@@ -11,19 +11,19 @@ export const LEVELS: Record<
   { label: string; dot: string; ring: string; soft: string }
 > = {
   youthBeginner: {
-    label: "תיכון · מתחילים",
+    label: "נוער · מתחילים",
     dot: "bg-sky-400",
     ring: "ring-sky-400/40",
     soft: "bg-sky-400/10 text-sky-300",
   },
   advanced: {
-    label: "תיכון · מתקדמים",
+    label: "נוער מתקדמים",
     dot: "bg-rose-500",
     ring: "ring-rose-500/40",
     soft: "bg-rose-500/10 text-rose-300",
   },
   kidsBeginner: {
-    label: "חטיבה · מתחילים",
+    label: "נוער צעיר · מתחילים",
     dot: "bg-emerald-400",
     ring: "ring-emerald-400/40",
     soft: "bg-emerald-400/10 text-emerald-300",
@@ -52,15 +52,15 @@ export const SCHEDULE: Day[] = [
   {
     name: "ראשון",
     sessions: [
-      { time: "16:00", title: "מתחילים", group: "תיכון", level: "youthBeginner" },
-      { time: "17:00", title: "מתקדמים", group: "תיכון", level: "advanced" },
+      { time: "16:00", title: "מתחילים", group: "נוער", level: "youthBeginner" },
+      { time: "17:00", title: "מתקדמים", group: "נוער", level: "advanced" },
     ],
   },
   {
     name: "שני",
     sessions: [
-      { time: "15:30", title: "מתקדמים", group: "תיכון", level: "advanced" },
-      { time: "17:00", title: "מתחילים", group: "חטיבה", level: "kidsBeginner" },
+      { time: "15:30", title: "מתקדמים", group: "נוער", level: "advanced" },
+      { time: "17:00", title: "מתחילים", group: "נוער צעיר", level: "kidsBeginner" },
     ],
   },
   {
@@ -72,9 +72,9 @@ export const SCHEDULE: Day[] = [
   {
     name: "חמישי",
     sessions: [
-      { time: "15:30", title: "מתחילים", group: "חטיבה", level: "kidsBeginner" },
-      { time: "17:00", title: "מתקדמים", group: "תיכון", level: "advanced" },
-      { time: "18:00", title: "מתחילים", group: "תיכון", level: "youthBeginner" },
+      { time: "15:30", title: "מתחילים", group: "נוער צעיר", level: "kidsBeginner" },
+      { time: "17:00", title: "מתקדמים", group: "נוער", level: "advanced" },
+      { time: "18:00", title: "מתחילים", group: "נוער", level: "youthBeginner" },
     ],
   },
   {
