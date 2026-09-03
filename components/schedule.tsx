@@ -90,8 +90,9 @@ export function Schedule() {
                         whileHover={{ x: -4 }}
                         className={`group flex items-center justify-between gap-3 rounded-2xl border border-transparent bg-secondary/40 p-3 ring-1 ring-inset transition-colors hover:bg-secondary ${lvl.ring}`}
                       >
-                        <div className="flex items-center gap-3">
-                          <span className={`size-3 shrink-0 rounded-full ${lvl.dot}`} />
+                        <div className="flex items-start gap-3">
+                          {/* הנקודה מיושרת עכשיו ישירות שורה-אחת עם השעה */}
+                          <span className={`mt-2 size-3 shrink-0 rounded-full ${lvl.dot}`} />
                           <div>
                             <div className="flex items-center gap-1.5 font-bold">
                               <Clock className="size-3.5 text-muted-foreground" />
