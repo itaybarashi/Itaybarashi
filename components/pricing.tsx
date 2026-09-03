@@ -23,7 +23,7 @@ export function Pricing() {
             <div className="space-y-4">
               <h3 className="text-2xl font-bold">מסלול חד-שבועי</h3>
               <p className="text-muted-foreground text-sm">
-                4 אימונים בחודש. מתאים למתאמנים שרוצים לשלב אימון קליסטניקס ממוקד לצד פעילות נוספת.
+                4 אימונים בחודש (כ-6 שעות אימון חודשיות). מתאים למתאמנים שרוצים לשלב אימון קליסטניקס ממוקד לצד פעילות נוספת.
               </p>
               <div className="text-4xl font-black text-foreground pt-2">
                 300 ₪ <span className="text-sm font-normal text-muted-foreground">/ חודש</span>
@@ -49,7 +49,7 @@ export function Pricing() {
             <div className="space-y-4">
               <h3 className="text-2xl font-bold">מסלול דו-שבועי</h3>
               <p className="text-muted-foreground text-sm">
-                8 אימונים בחודש. לתהליך עבודה אמיתי, יצירת התמדה מהירה ובניית יכולות עומק בסטודיו.
+                8 אימונים בחודש (12 שעות אימון חודשיות). לתהליך עבודה אמיתי, יצירת התמדה מהירה ובניית יכולות עומק בסטודיו.
               </p>
               <div className="text-4xl font-black text-primary pt-2">
                 500 ₪ <span className="text-sm font-normal text-muted-foreground">/ חודש</span>
