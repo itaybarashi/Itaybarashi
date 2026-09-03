@@ -90,27 +90,33 @@ export function Schedule() {
                         whileHover={{ x: -4 }}
                         className={`group flex items-center justify-between gap-3 rounded-2xl border border-transparent bg-secondary/40 p-3 ring-1 ring-inset transition-colors hover:bg-secondary ${lvl.ring}`}
                       >
-                        <div className="flex items-start gap-3">
-                          {/* הנקודה מיושרת עכשיו ישירות שורה-אחת עם השעה */}
-                          <span className={`mt-2 size-3 shrink-0 rounded-full ${lvl.dot}`} />
-                          <div>
-                            <div className="flex items-center gap-1.5 font-bold">
-                              <Clock className="size-3.5 text-muted-foreground" />
-                              {s.time}
-                              <span className="text-foreground">· {s.title}</span>
-                            </div>
-                            <div className="mt-1 flex items-center gap-1.5 text-xs text-muted-foreground">
-                              <Users className="size-3.5" />
-                              {s.group}
-                            </div>
+                        {/* צד ימין: שם האימון והקבוצה */}
+                        <div>
+                          <div className="font-bold text-foreground">
+                            {s.title}
+                          </div>
+                          <div className="mt-1 flex items-center gap-1.5 text-xs text-muted-foreground">
+                            <Users className="size-3.5" />
+                            {s.group}
                           </div>
                         </div>
 
-                        <span
-                          className={`rounded-full px-2.5 py-1 text-[11px] font-semibold shrink-0 ${lvl.soft}`}
-                        >
-                          {lvl.label}
-                        </span>
+                        {/* צד שמאל: השעה, הנקודה והתגית יחד */}
+                        <div className="flex items-center gap-3">
+                          <div className="flex items-center gap-2">
+                            <span className={`size-2.5 shrink-0 rounded-full ${lvl.dot}`} />
+                            <div className="flex items-center gap-1 font-mono font-bold text-sm">
+                              <Clock className="size-3.5 text-muted-foreground" />
+                              {s.time}
+                            </div>
+                          </div>
+
+                          <span
+                            className={`rounded-full px-2.5 py-1 text-[11px] font-semibold shrink-0 ${lvl.soft}`}
+                          >
+                            {lvl.label}
+                          </span>
+                        </div>
                       </motion.div>
                     )
                   })}
