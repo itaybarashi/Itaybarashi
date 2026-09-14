@@ -73,7 +73,7 @@ export const SCHEDULE: Day[] = [
     name: "חמישי",
     sessions: [
       { time: "15:30", title: "מתחילים", group: "נוער צעיר", level: "kidsBeginner" },
-      { time: "17:00", title: "מתקדמים", group: "נוער", level: "advanced" },
+      { time: "16:30", title: "מתקדמים", group: "נוער", level: "advanced" },
       { time: "18:00", title: "מתחילים", group: "נוער", level: "youthBeginner" },
     ],
   },
