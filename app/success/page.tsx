@@ -5,11 +5,10 @@ import { CheckCircle2, MessageCircle, BellRing, ArrowRight, Copy, Check } from "
 import Link from "next/link"
 
 export default function SuccessPage() {
+  const parentsGroup = "https://chat.whatsapp.com/DDGY273J0i47mZ7MRYlG3T"
   const announcementsGroup = "https://chat.whatsapp.com/JM9dyaE8IfmFyIYERz11dW"
   const communityGroup = "https://chat.whatsapp.com/Edn2e0z9zR6KVMPfinD8EA"
-  const parentsGroup = "https://chat.whatsapp.com/DDGY273J0i47mZ7MRYlG3T"
 
-  // מצב מעקב אחרי איזה קישור הועתק כרגע
   const [copiedKey, setCopiedKey] = useState<string | null>(null)
 
   const handleCopy = (url: string, key: string) => {
@@ -41,14 +40,14 @@ export default function SuccessPage() {
             התשלום עבר בהצלחה!
           </h1>
           <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
-            ברוך הבא למשפחת <span className="text-amber-300 font-bold">GRAVITAS</span>. כדי שלא תפספס שום דבר, הצטרף עכשיו לקבוצות שלנו:
+            ברוך הבא למשפחת <span className="text-amber-300 font-bold">GRAVITAS</span>. הנה הקישורים לקבוצות הוואטסאפ שלנו:
           </p>
         </div>
 
         {/* כפתורים לקבוצות הוואטסאפ עם אופציית העתקה */}
         <div className="space-y-3.5 pt-2 text-right">
           
-          {/* 1. קבוצת הורים */}
+          {/* 1. קבוצת הורים הודעות */}
           <div className="flex items-center gap-2">
             <a
               href={parentsGroup}
@@ -57,7 +56,7 @@ export default function SuccessPage() {
               className="flex-1 flex items-center justify-center gap-2.5 rounded-xl border border-white/20 bg-zinc-900 py-3.5 px-4 text-sm font-bold text-white hover:bg-zinc-800 transition-colors shadow-lg"
             >
               <MessageCircle className="size-5 text-amber-300 shrink-0" />
-              <span className="truncate">קבוצת הורים</span>
+              <span className="truncate">1. קבוצת הורים הודעות</span>
             </a>
             <button
               onClick={() => handleCopy(parentsGroup, "parents")}
@@ -68,7 +67,7 @@ export default function SuccessPage() {
             </button>
           </div>
 
-          {/* 2. קבוצת הודעות בלבד */}
+          {/* 2. קבוצת נוער הודעות בלבד */}
           <div className="flex items-center gap-2">
             <a
               href={announcementsGroup}
@@ -77,7 +76,7 @@ export default function SuccessPage() {
               className="flex-1 flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-amber-300 to-amber-200 py-3.5 px-4 text-sm font-bold text-black hover:opacity-95 transition-opacity shadow-lg"
             >
               <BellRing className="size-5 shrink-0" />
-              <span className="truncate">קבוצת עדכונים (שקטה)</span>
+              <span className="truncate">2. קבוצת נוער הודעות בלבד</span>
             </a>
             <button
               onClick={() => handleCopy(announcementsGroup, "announcements")}
@@ -88,7 +87,7 @@ export default function SuccessPage() {
             </button>
           </div>
 
-          {/* 3. קבוצת מתאמנים */}
+          {/* 3. קבוצת נוער דיבורים */}
           <div className="flex items-center gap-2">
             <a
               href={communityGroup}
@@ -97,7 +96,7 @@ export default function SuccessPage() {
               className="flex-1 flex items-center justify-center gap-2.5 rounded-xl border border-white/20 bg-zinc-900 py-3.5 px-4 text-sm font-bold text-white hover:bg-zinc-800 transition-colors shadow-lg"
             >
               <MessageCircle className="size-5 text-amber-300 shrink-0" />
-              <span className="truncate">קבוצת הקהילה והמתאמנים</span>
+              <span className="truncate">3. קבוצת נוער דיבורים</span>
             </a>
             <button
               onClick={() => handleCopy(communityGroup, "community")}
@@ -108,8 +107,8 @@ export default function SuccessPage() {
             </button>
           </div>
 
-          <p className="text-xs text-zinc-500 pt-1 text-center">
-            הורים יכולים להעתיק את הקישורים ולשלוח לילדים בקלות באמצעות כפתור ההעתקה שבצד.
+          <p className="text-xs text-zinc-400 pt-2 text-center leading-relaxed">
+            💡 <span className="text-amber-300 font-semibold">הקבוצה הראשונה מיועדת להורה.</span> ניתן ללחוץ על כפתור ההעתקה בצד שתי הקבוצות האחרות כדי לשלוח אותן לילד/ה.
           </p>
         </div>
 
