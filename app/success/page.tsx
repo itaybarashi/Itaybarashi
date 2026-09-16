@@ -1,11 +1,24 @@
 "use client"
 
-import { CheckCircle2, MessageCircle, BellRing, ArrowRight } from "lucide-react"
+import { useState } from "react"
+import { CheckCircle2, MessageCircle, BellRing, ArrowRight, Copy, Check } from "lucide-react"
 import Link from "next/link"
 
 export default function SuccessPage() {
   const announcementsGroup = "https://chat.whatsapp.com/JM9dyaE8IfmFyIYERz11dW"
   const communityGroup = "https://chat.whatsapp.com/Edn2e0z9zR6KVMPfinD8EA"
+  const parentsGroup = "https://chat.whatsapp.com/DDGY273J0i47mZ7MRYlG3T"
+
+  // מצב מעקב אחרי איזה קישור הועתק כרגע
+  const [copiedKey, setCopiedKey] = useState<string | null>(null)
+
+  const handleCopy = (url: string, key: string) => {
+    navigator.clipboard.writeText(url)
+    setCopiedKey(key)
+    setTimeout(() => {
+      setCopiedKey(null)
+    }, 2000)
+  }
 
   return (
     <main className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center px-5 py-12 overflow-hidden" dir="rtl">
@@ -28,37 +41,75 @@ export default function SuccessPage() {
             התשלום עבר בהצלחה!
           </h1>
           <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
-            ברוך הבא למשפחת <span className="text-amber-300 font-bold">GRAVITAS</span>. כדי שלא תפספס שום דבר, הצטרף עכשיו לשתי הקבוצות שלנו:
+            ברוך הבא למשפחת <span className="text-amber-300 font-bold">GRAVITAS</span>. כדי שלא תפספס שום דבר, הצטרף עכשיו לקבוצות שלנו:
           </p>
         </div>
 
-        {/* כפתורים לקבוצות הוואטסאפ */}
-        <div className="space-y-4 pt-2">
+        {/* כפתורים לקבוצות הוואטסאפ עם אופציית העתקה */}
+        <div className="space-y-3.5 pt-2 text-right">
           
-          {/* קבוצת הודעות בלבד */}
-          <a
-            href={announcementsGroup}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2.5 w-full rounded-xl bg-gradient-to-r from-amber-300 to-amber-200 py-4 text-sm md:text-base font-bold text-black hover:opacity-95 transition-opacity shadow-lg"
-          >
-            <BellRing className="size-5" />
-            <span>1. קבוצת הודעות ועדכונים (שקטה)</span>
-          </a>
+          {/* 1. קבוצת הורים */}
+          <div className="flex items-center gap-2">
+            <a
+              href={parentsGroup}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-2.5 rounded-xl border border-white/20 bg-zinc-900 py-3.5 px-4 text-sm font-bold text-white hover:bg-zinc-800 transition-colors shadow-lg"
+            >
+              <MessageCircle className="size-5 text-amber-300 shrink-0" />
+              <span className="truncate">קבוצת הורים</span>
+            </a>
+            <button
+              onClick={() => handleCopy(parentsGroup, "parents")}
+              title="העתק קישור לקבוצה"
+              className="flex items-center justify-center size-12 shrink-0 rounded-xl border border-white/20 bg-zinc-900 text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors"
+            >
+              {copiedKey === "parents" ? <Check className="size-4 text-emerald-400" /> : <Copy className="size-4" />}
+            </button>
+          </div>
 
-          {/* קבוצת מתאמנים */}
-          <a
-            href={communityGroup}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2.5 w-full rounded-xl border border-white/20 bg-zinc-900 py-4 text-sm md:text-base font-bold text-white hover:bg-zinc-800 transition-colors shadow-lg"
-          >
-            <MessageCircle className="size-5 text-amber-300" />
-            <span>2. קבוצת הקהילה והמתאמנים</span>
-          </a>
+          {/* 2. קבוצת הודעות בלבד */}
+          <div className="flex items-center gap-2">
+            <a
+              href={announcementsGroup}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-amber-300 to-amber-200 py-3.5 px-4 text-sm font-bold text-black hover:opacity-95 transition-opacity shadow-lg"
+            >
+              <BellRing className="size-5 shrink-0" />
+              <span className="truncate">קבוצת עדכונים (שקטה)</span>
+            </a>
+            <button
+              onClick={() => handleCopy(announcementsGroup, "announcements")}
+              title="העתק קישור לקבוצה"
+              className="flex items-center justify-center size-12 shrink-0 rounded-xl border border-white/20 bg-zinc-900 text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors"
+            >
+              {copiedKey === "announcements" ? <Check className="size-4 text-emerald-400" /> : <Copy className="size-4" />}
+            </button>
+          </div>
 
-          <p className="text-xs text-zinc-500 pt-1">
-            מומלץ להיכנס לשתי הקבוצות כדי להישאר מחוברים לכל מה שקורה בסטודיו.
+          {/* 3. קבוצת מתאמנים */}
+          <div className="flex items-center gap-2">
+            <a
+              href={communityGroup}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-2.5 rounded-xl border border-white/20 bg-zinc-900 py-3.5 px-4 text-sm font-bold text-white hover:bg-zinc-800 transition-colors shadow-lg"
+            >
+              <MessageCircle className="size-5 text-amber-300 shrink-0" />
+              <span className="truncate">קבוצת הקהילה והמתאמנים</span>
+            </a>
+            <button
+              onClick={() => handleCopy(communityGroup, "community")}
+              title="העתק קישור לקבוצה"
+              className="flex items-center justify-center size-12 shrink-0 rounded-xl border border-white/20 bg-zinc-900 text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors"
+            >
+              {copiedKey === "community" ? <Check className="size-4 text-emerald-400" /> : <Copy className="size-4" />}
+            </button>
+          </div>
+
+          <p className="text-xs text-zinc-500 pt-1 text-center">
+            הורים יכולים להעתיק את הקישורים ולשלוח לילדים בקלות באמצעות כפתור ההעתקה שבצד.
           </p>
         </div>
 
